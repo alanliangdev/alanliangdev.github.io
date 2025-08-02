@@ -333,8 +333,8 @@ Staff Platform Engineer with extensive experience in cloud infrastructure, DevOp
         <p>Template development, stack management</p>
       </div>
       <div class="skill-item">
-        <h4>Pulumi</h4>
-        <p>Infrastructure automation with modern programming languages</p>
+        <h4>Crossplane</h4>
+        <p>Infrastructure management via the Kubernetes API</p>
       </div>
     </div>
   </div>
@@ -347,12 +347,12 @@ Staff Platform Engineer with extensive experience in cloud infrastructure, DevOp
         <p>Workflow automation, custom actions, enterprise deployment</p>
       </div>
       <div class="skill-item">
-        <h4>ArgoCD</h4>
+        <h4>Argo CD</h4>
         <p>GitOps deployment, application management, multi-cluster setup</p>
       </div>
       <div class="skill-item">
-        <h4>Jenkins</h4>
-        <p>Pipeline development, plugin management, enterprise integration</p>
+        <h4>AWS CodeBuild</h4>
+        <p>Pipeline development, custom build environments, enterprise integration</p>
       </div>
     </div>
   </div>
@@ -361,16 +361,20 @@ Staff Platform Engineer with extensive experience in cloud infrastructure, DevOp
     <h3>Monitoring & Observability</h3>
     <div class="skills-grid">
       <div class="skill-item">
-        <h4>Prometheus</h4>
+        <h4>Prometheus/Thanos/AlertManager</h4>
         <p>Metrics collection, alerting rules, service discovery</p>
       </div>
       <div class="skill-item">
-        <h4>Grafana</h4>
+        <h4>Grafana/Mimir</h4>
         <p>Dashboard development, data source integration</p>
       </div>
       <div class="skill-item">
-        <h4>DataDog</h4>
+        <h4>FluentBit/Observe/Splunk</h4>
         <p>APM, infrastructure monitoring, log management</p>
+      </div>
+      <div class="skill-item">
+        <h4>Telegraf</h4>
+        <p>Custom metrics collection, custom processors, data lakes</p>
       </div>
     </div>
   </div>
@@ -387,10 +391,6 @@ Staff Platform Engineer with extensive experience in cloud infrastructure, DevOp
         <p>CLI tools, microservices, Kubernetes operators</p>
       </div>
       <div class="skill-item">
-        <h4>TypeScript/JavaScript</h4>
-        <p>Web applications, automation tools</p>
-      </div>
-      <div class="skill-item">
         <h4>Bash</h4>
         <p>System administration, deployment scripts</p>
       </div>
@@ -403,18 +403,17 @@ Staff Platform Engineer with extensive experience in cloud infrastructure, DevOp
 <div class="education-section">
   <div class="education-item">
     <div class="education-header">
-      <h3>Bachelor of Computer Science</h3>
+      <h3>Bachelor of Engineering (Honours) & Bachelor of Information Technology (IT)</h3>
       <div class="education-meta">
-        <span class="institution">University of Technology Sydney</span>
-        <span class="duration">2014 - 2018</span>
-        <span class="location">Sydney, Australia</span>
+        <span class="institution">James Cook University</span>
+        <span class="duration">2015 - 2019</span>
+        <span class="location">Townsville, Australia</span>
       </div>
     </div>
     
     <ul class="education-details">
-      <li>Relevant coursework in distributed systems, software engineering, and computer networks</li>
-      <li>Focus on cloud computing and infrastructure automation</li>
-      <li>Final year project on container orchestration and microservices architecture</li>
+      <li>Relevant coursework in electrical engineering, software engineering, and computer networks</li>
+      <li>Final year thesis on building a LLM for vehicle detection</li>
     </ul>
   </div>
 </div>
