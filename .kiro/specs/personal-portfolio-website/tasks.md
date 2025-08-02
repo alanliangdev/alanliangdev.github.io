@@ -75,6 +75,7 @@
 - [-] 4. Enhance home page with portfolio integration
 
 
+
 - [ ] 4.1 Update home page hero section
   - Modify index.md to include enhanced hero section with professional tagline
   - Add call-to-action buttons linking to portfolio and resume sections
