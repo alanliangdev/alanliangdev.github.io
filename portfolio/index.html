@@ -488,6 +488,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#filter-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filter Projects
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#featured-projects" class="md-nav__link">
     <span class="md-ellipsis">
       Featured Projects
@@ -573,6 +582,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#filter-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filter Projects
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#featured-projects" class="md-nav__link">
     <span class="md-ellipsis">
       Featured Projects
@@ -617,9 +635,22 @@
 
 <h1 id="portfolio">Portfolio</h1>
 <p>Welcome to my portfolio showcasing the projects and solutions I've built throughout my career as a Staff Platform Engineer. Here you'll find a collection of work spanning cloud infrastructure, DevOps automation, Kubernetes platforms, and enterprise-scale solutions.</p>
+<h2 id="filter-projects">Filter Projects</h2>
+<div class="portfolio-filters">
+  <button class="filter-btn active" data-filter="all">All Projects</button>
+  <button class="filter-btn" data-filter="AWS">AWS</button>
+  <button class="filter-btn" data-filter="Kubernetes">Kubernetes</button>
+  <button class="filter-btn" data-filter="Terraform">Terraform</button>
+  <button class="filter-btn" data-filter="Python">Python</button>
+  <button class="filter-btn" data-filter="ArgoCD">ArgoCD</button>
+  <button class="filter-btn" data-filter="Prometheus">Prometheus</button>
+  <button class="filter-btn" data-filter="Security">Security</button>
+  <button class="filter-btn" data-filter="GitOps">GitOps</button>
+</div>
+
 <h2 id="featured-projects">Featured Projects</h2>
 <div class="portfolio-grid">
-  <div class="project-card">
+  <div class="project-card" data-technologies="Kubernetes,AWS,Terraform,ArgoCD">
     <div class="project-image kubernetes">
       <i class="fas fa-dharmachakra"></i>
     </div>
@@ -638,7 +669,7 @@
     </div>
   </div>
 
-  <div class="project-card">
+  <div class="project-card" data-technologies="AWS,CloudFormation,Python,Cost Optimization">
     <div class="project-image aws">
       <i class="fab fa-aws"></i>
     </div>
@@ -657,7 +688,7 @@
     </div>
   </div>
 
-  <div class="project-card">
+  <div class="project-card" data-technologies="ArgoCD,GitHub Actions,Helm,GitOps">
     <div class="project-image gitops">
       <i class="fas fa-code-branch"></i>
     </div>
@@ -676,7 +707,7 @@
     </div>
   </div>
 
-  <div class="project-card">
+  <div class="project-card" data-technologies="Prometheus,Grafana,DataDog,Go">
     <div class="project-image monitoring">
       <i class="fas fa-chart-line"></i>
     </div>
@@ -695,7 +726,7 @@
     </div>
   </div>
 
-  <div class="project-card">
+  <div class="project-card" data-technologies="Terraform,Pulumi,Python,AWS">
     <div class="project-image infrastructure">
       <i class="fas fa-server"></i>
     </div>
@@ -714,7 +745,7 @@
     </div>
   </div>
 
-  <div class="project-card">
+  <div class="project-card" data-technologies="Security,Compliance,Python,AWS Security">
     <div class="project-image security">
       <i class="fas fa-shield-alt"></i>
     </div>
@@ -883,6 +914,8 @@
       <script src="../assets/javascripts/bundle.50899def.min.js"></script>
       
         <script src="../assets/js/theme-toggle.js"></script>
+      
+        <script src="../assets/js/portfolio-filter.js"></script>
       
     
   </body>
