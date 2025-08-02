@@ -554,6 +554,28 @@ Ensure content aligns with navigation tabs */
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
+.project-card.clickable-card {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card.clickable-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.project-card.clickable-card:active {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-card.clickable-card:focus {
+  outline: 2px solid var(--md-primary-fg-color);
+  outline-offset: 2px;
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
 .project-card.filtered-out {
   opacity: 0;
   transform: scale(0.8);
@@ -655,6 +677,27 @@ Ensure content aligns with navigation tabs */
   color: var(--md-primary-bg-color);
 }
 
+/* Style for clickable cards */
+.clickable-card .project-links {
+  position: relative;
+}
+
+.clickable-card .project-links::after {
+  content: "Click anywhere to view";
+  position: absolute;
+  top: -1.5rem;
+  left: 0;
+  font-size: 0.75rem;
+  color: var(--md-default-fg-color--light);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-style: italic;
+}
+
+.clickable-card:hover .project-links::after {
+  opacity: 1;
+}
+
 /* Responsive adjustments for portfolio */
 @media screen and (max-width: 768px) {
   .portfolio-filters {
@@ -709,6 +752,17 @@ Ensure content aligns with navigation tabs */
   .tech-tag {
     font-size: 0.75rem;
     padding: 0.2rem 0.6rem;
+  }
+  
+  /* Mobile-specific clickable card styles */
+  .clickable-card .project-links::after {
+    font-size: 0.7rem;
+    top: -1.2rem;
+  }
+  
+  .project-card.clickable-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   }
 }
 /* Resu
