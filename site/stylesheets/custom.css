@@ -656,26 +656,7 @@ Ensure content aligns with navigation tabs */
   white-space: nowrap;
 }
 
-.project-links {
-  margin-top: auto;
-}
 
-.project-link {
-  display: inline-block;
-  background-color: var(--md-primary-fg-color);
-  color: var(--md-primary-bg-color);
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 0.9rem;
-  transition: background-color 0.2s ease;
-}
-
-.project-link:hover {
-  background-color: var(--md-primary-fg-color--dark);
-  color: var(--md-primary-bg-color);
-}
 
 
 
