@@ -100,14 +100,9 @@ function initializeClickableCards(projectCards) {
         
         // Add click event listener
         card.addEventListener('click', function(e) {
-            // Don't trigger if clicking on the actual "View Details" link
-            if (e.target.classList.contains('project-link') || 
-                e.target.closest('.project-link')) {
-                return;
-            }
-            
             // Get the href from data attribute
             const href = this.dataset.href;
+            console.log('Card clicked, navigating to:', href);
             if (href) {
                 // Navigate to the project page
                 window.location.href = href;
@@ -119,6 +114,7 @@ function initializeClickableCards(projectCards) {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
                 const href = this.dataset.href;
+                console.log('Keyboard navigation to:', href);
                 if (href) {
                     window.location.href = href;
                 }

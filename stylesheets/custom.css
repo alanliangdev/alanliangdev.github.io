@@ -656,47 +656,9 @@ Ensure content aligns with navigation tabs */
   white-space: nowrap;
 }
 
-.project-links {
-  margin-top: auto;
-}
 
-.project-link {
-  display: inline-block;
-  background-color: var(--md-primary-fg-color);
-  color: var(--md-primary-bg-color);
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 0.9rem;
-  transition: background-color 0.2s ease;
-}
 
-.project-link:hover {
-  background-color: var(--md-primary-fg-color--dark);
-  color: var(--md-primary-bg-color);
-}
 
-/* Style for clickable cards */
-.clickable-card .project-links {
-  position: relative;
-}
-
-.clickable-card .project-links::after {
-  content: "Click anywhere to view";
-  position: absolute;
-  top: -1.5rem;
-  left: 0;
-  font-size: 0.75rem;
-  color: var(--md-default-fg-color--light);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  font-style: italic;
-}
-
-.clickable-card:hover .project-links::after {
-  opacity: 1;
-}
 
 /* Responsive adjustments for portfolio */
 @media screen and (max-width: 768px) {
