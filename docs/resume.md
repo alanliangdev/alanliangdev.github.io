@@ -126,9 +126,9 @@ Staff Platform Engineer with extensive experience in cloud infrastructure, DevOp
         <span class="location">Sydney, Australia</span>
       </div>
     </div>
-    
+
     <p class="experience-description">Leading enterprise-scale platform engineering initiatives, focusing on AWS migration, Kubernetes platform development, and DevOps transformation.</p>
-    
+
     <div class="achievements">
       <h4>Key Responsibilities & Achievements:</h4>
       <ul>
@@ -139,7 +139,7 @@ Staff Platform Engineer with extensive experience in cloud infrastructure, DevOp
         <li>Mentored junior engineers and contributed to platform engineering best practices</li>
       </ul>
     </div>
-    
+
     <div class="key-metrics">
       <h4>Impact & Results:</h4>
       <ul class="metrics-list">
@@ -153,16 +153,50 @@ Staff Platform Engineer with extensive experience in cloud infrastructure, DevOp
 
   <div class="experience-item">
     <div class="experience-header">
-      <h3>Senior DevOps Engineer</h3>
+      <h3>Senior Platform Engineer</h3>
       <div class="experience-meta">
-        <span class="company">Previous Company</span>
-        <span class="duration">2018 - 2020</span>
+        <span class="company">Commonwealth Bank of Australia</span>
+        <span class="duration">August 2023 - February 2025</span>
         <span class="location">Melbourne, Australia</span>
       </div>
     </div>
-    
-    <p class="experience-description">Focused on cloud infrastructure automation and CI/CD pipeline development.</p>
-    
+
+    <p class="experience-description">Leading enterprise-scale platform engineering initiatives, focusing on AWS migration, Kubernetes platform development, and DevOps transformation.</p>
+
+    <div class="achievements">
+      <h4>Key Responsibilities & Achievements:</h4>
+      <ul>
+        <li>Built and managed 100+ production-grade EKS clusters, including patching, vulnerability management, upgrades, and support.</li>
+        <li>Engineered and scaled a monitoring stack across 100+ EKS clusters, ensuring 99.95% uptime SLA by implementing highly available Prometheus with a centralized Thanos/AMP backend.</li>
+        <li>Enhanced developer experience by releasing self-service Argo CD deployments and accelerating image retrieval by up to 3 hours through migration to ECR Pull Through Cache.</li>
+        <li>Led key platform improvements, including PSP migration, implementation of Kyverno security guardrails, and delivering a secure EFS Cross-Account feature for critical clients.</li>
+        <li>Championed customer success by resolving 88 tenant queries, developing an EFS Cross Account feature, building a feature request dashboard, and leading a documentation uplift to empower users with self-service capabilities.</li>
+      </ul>
+    </div>
+
+    <div class="key-metrics">
+      <h4>Impact & Results:</h4>
+      <ul class="metrics-list">
+        <li>Achieved significant AWS cost reductions, including up to 58.33% weekly savings by integrating an auto-shutdown solution for EKS nodes and pioneering the use of Spot and Graviton instances.</li>
+        <li>Ensured 99.95% uptime SLA for 100+ EKS clusters.</li>
+        <li>Accelerated image retrieval by up to 3 hours through migration to ECR Pull Through Cache.</li>
+        <li>Resolved 88 tenant queries.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="experience-item">
+    <div class="experience-header">
+      <h3>Systems Engineer</h3>
+      <div class="experience-meta">
+        <span class="company">Commonwealth Bank of Australia</span>
+        <span class="duration">August 2022 - August 2023</span>
+        <span class="location">Melbourne, Australia</span>
+      </div>
+    </div>
+
+    <p class="experience-description">Focused on building a scalable Kubernetes platform for the group.</p>
+
     <div class="achievements">
       <h4>Key Responsibilities & Achievements:</h4>
       <ul>
@@ -171,7 +205,7 @@ Staff Platform Engineer with extensive experience in cloud infrastructure, DevOp
         <li>Established monitoring and alerting systems for production applications</li>
       </ul>
     </div>
-    
+
     <div class="key-metrics">
       <h4>Impact & Results:</h4>
       <ul class="metrics-list">
@@ -180,6 +214,72 @@ Staff Platform Engineer with extensive experience in cloud infrastructure, DevOp
       </ul>
     </div>
   </div>
+
+  <div class="experience-item">
+    <div class="experience-header">
+      <h3>Cloud Support Engineer (II) - Containers</h3>
+      <div class="experience-meta">
+        <span class="company">Amazon Web Services (AWS)</span>
+        <span class="duration">September 2021 - August 2022</span>
+        <span class="location">Melbourne, Australia</span>
+      </div>
+    </div>
+
+    <p class="experience-description">Focused on providing world class support for large enterprise organisations using containerised platforms at scale at AWS such as EKS and ECS.</p>
+
+    <div class="achievements">
+      <h4>Key Responsibilities & Achievements:</h4>
+      <ul>
+        <li>Assisted customers with a wide range of container-related challenges across AWS services like EKS, ECS, and ECR.</li>
+        <li>Advised customers on container technologies, offering solution recommendations and architectural guidance for deploying applications on AWS.</li>
+        <li>Created proof of concepts and replicated customer issues to accelerate resolution and analysis.</li>
+        <li>Provided timely and effective support through various channels (phone, live-chat, email), addressing technical challenges related to containers and CI/CD.</li>
+        <li>Participated in the recruitment process by interviewing candidates for Cloud Support Engineer roles.</li>
+        <li>Developed a Python-based tool to automate the collection and analysis of employee performance data, providing valuable insights.</li>
+      </ul>
+    </div>
+
+    <div class="key-metrics">
+      <h4>Impact & Results:</h4>
+      <ul class="metrics-list">
+        <li>Automated the collection and analysis of employee performance data using a Python-based tool, providing valuable insights. Reducing the time required to analyse team performance and backlog from days to minutes.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="experience-item">
+    <div class="experience-header">
+      <h3>Integration Engineer</h3>
+      <div class="experience-meta">
+        <span class="company">Ericsson</span>
+        <span class="duration">March 2020 - September 2021</span>
+        <span class="location">Melbourne, Australia</span>
+      </div>
+    </div>
+
+    <p class="experience-description">Focused on building Ericsson's world first BSS system built ontop of Kubernetes and integrating it into Telstra's ecosystem.</p>
+
+    <div class="achievements">
+      <h4>Key Responsibilities & Achievements:</h4>
+      <ul>
+        <li>Leveraged Kubernetes, Docker, and agile methodologies to ensure efficient and reliable releases on cloud platforms.</li>
+        <li>Automated testing and deployment processes, streamlining software delivery.</li>
+        <li>Proactively identified and resolved operational issues and critical defects, minimising downtime.</li>
+        <li>Enhanced Ericsson product functionality and integration by developing REST APIs using Velocity Javascript.</li>
+        <li>Created Python and Ansible scripts to automate tasks like backup/restore, infrastructure management, and environment monitoring.</li>
+        <li>Worked with customers and internal teams on production deployments, minimising disruptions and conducting knowledge transfer sessions.</li>
+        <li>Contributed to the design and optimisation of environment clusters to ensure high availability and performance.</li>
+      </ul>
+    </div>
+
+    <div class="key-metrics">
+      <h4>Impact & Results:</h4>
+      <ul class="metrics-list">
+        <li>Successfully delivered the project within commitment dates without needing to delay the delivery.</li>
+      </ul>
+    </div>
+  </div>
+
 </div>
 
 ## Technical Skills
