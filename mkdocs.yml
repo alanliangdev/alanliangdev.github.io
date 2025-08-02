@@ -68,7 +68,7 @@ plugins:
         - Infrastructure
         - Monitoring
         - Observability
-      authors_file: "{blog}/authors.yml"
+      authors_file: "{blog}/.authors.yml"
       categories_name: Categories
       categories_url_format: "category/{slug}"
       categories_slugify: !!python/object/apply:pymdownx.slugs.slugify
@@ -81,7 +81,6 @@ plugins:
   - search:
       separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
       lang: en
-      indexing: 'full'
 
 markdown_extensions:
   - pymdownx.highlight:
