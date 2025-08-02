@@ -32,9 +32,7 @@ Welcome to my portfolio showcasing the projects and solutions I've built through
         <span class="tech-tag">Terraform</span>
         <span class="tech-tag">ArgoCD</span>
       </div>
-      <div class="project-links">
-        <a href="kubernetes-platform/" class="project-link">View Details</a>
-      </div>
+
     </div>
   </div>
 
@@ -51,9 +49,7 @@ Welcome to my portfolio showcasing the projects and solutions I've built through
         <span class="tech-tag">Python</span>
         <span class="tech-tag">Cost Optimization</span>
       </div>
-      <div class="project-links">
-        <a href="aws-migration/" class="project-link">View Details</a>
-      </div>
+
     </div>
   </div>
 
@@ -70,9 +66,7 @@ Welcome to my portfolio showcasing the projects and solutions I've built through
         <span class="tech-tag">Helm</span>
         <span class="tech-tag">GitOps</span>
       </div>
-      <div class="project-links">
-        <a href="gitops-pipeline/" class="project-link">View Details</a>
-      </div>
+
     </div>
   </div>
 
@@ -89,9 +83,7 @@ Welcome to my portfolio showcasing the projects and solutions I've built through
         <span class="tech-tag">DataDog</span>
         <span class="tech-tag">Go</span>
       </div>
-      <div class="project-links">
-        <a href="observability-platform/" class="project-link">View Details</a>
-      </div>
+
     </div>
   </div>
 
@@ -108,9 +100,7 @@ Welcome to my portfolio showcasing the projects and solutions I've built through
         <span class="tech-tag">Python</span>
         <span class="tech-tag">AWS</span>
       </div>
-      <div class="project-links">
-        <a href="iac-framework/" class="project-link">View Details</a>
-      </div>
+
     </div>
   </div>
 
@@ -127,9 +117,7 @@ Welcome to my portfolio showcasing the projects and solutions I've built through
         <span class="tech-tag">Python</span>
         <span class="tech-tag">AWS Security</span>
       </div>
-      <div class="project-links">
-        <a href="security-automation/" class="project-link">View Details</a>
-      </div>
+
     </div>
   </div>
 </div>

@@ -677,26 +677,7 @@ Ensure content aligns with navigation tabs */
   color: var(--md-primary-bg-color);
 }
 
-/* Style for clickable cards */
-.clickable-card .project-links {
-  position: relative;
-}
 
-.clickable-card .project-links::after {
-  content: "Click anywhere to view";
-  position: absolute;
-  top: -1.5rem;
-  left: 0;
-  font-size: 0.75rem;
-  color: var(--md-default-fg-color--light);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  font-style: italic;
-}
-
-.clickable-card:hover .project-links::after {
-  opacity: 1;
-}
 
 /* Responsive adjustments for portfolio */
 @media screen and (max-width: 768px) {
