@@ -63,7 +63,25 @@ plugins:
         - GitOps
         - CI/CD
         - ArgoCD
-  - search
+        - Security
+        - Automation
+        - Infrastructure
+        - Monitoring
+        - Observability
+      authors_file: "{blog}/authors.yml"
+      categories_name: Categories
+      categories_url_format: "category/{slug}"
+      categories_slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+      archive: true
+      archive_name: Archive
+      archive_date_format: "%Y"
+      archive_url_format: "archive/{date}"
+  - search:
+      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+      lang: en
+      indexing: 'full'
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -90,6 +108,8 @@ extra_css:
 extra_javascript:
   - assets/js/theme-toggle.js
   - assets/js/portfolio-filter.js
+  - assets/js/blog-filter.js
+  - assets/js/blog-search.js
 
 nav:
   - Home: index.md

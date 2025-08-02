@@ -10,12 +10,15 @@ tags:
   - enterprise
   - platform
   - multi-tenancy
+  - governance
 authors:
   - alan
 readtime: 10
 comments: true
 image: assets/images/blog/kubernetes-scaling.svg
 description: Taking enterprise Kubernetes from complex to manageable with proper governance and automation
+slug: kubernetes-enterprise-scaling
+draft: false
 ---
 
 # Scaling Kubernetes at Enterprise Level

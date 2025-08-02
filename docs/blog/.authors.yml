@@ -4,3 +4,8 @@ authors:
     description: Staff Platform Engineer at Commonwealth Bank of Australia
     avatar: /assets/images/profile-photo.jpeg
     url: https://github.com/alanliangdev
+    social:
+      - icon: fontawesome/brands/github
+        link: https://github.com/alanliangdev
+      - icon: fontawesome/brands/linkedin
+        link: https://www.linkedin.com/in/alanliangdev/

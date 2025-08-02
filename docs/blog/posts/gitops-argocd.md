@@ -9,12 +9,15 @@ tags:
   - argocd
   - kubernetes
   - deployment
+  - automation
 authors:
   - alan
 readtime: 12
 comments: true
 image: assets/images/blog/gitops-argocd.svg
 description: Implementing GitOps workflows that scale across multiple environments and teams
+slug: gitops-argocd-best-practices
+draft: false
 ---
 
 # GitOps with ArgoCD: Best Practices
