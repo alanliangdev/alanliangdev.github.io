@@ -423,26 +423,34 @@ Staff Platform Engineer with extensive experience in cloud infrastructure, DevOp
 
 <div class="certifications-section">
   <div class="certification-item">
-    <h3>AWS Certified Solutions Architect - Professional</h3>
+    <h3>AWS Certified Solutions Architect - Associate</h3>
     <div class="certification-status">
       <span class="status status-in-progress">In Progress</span>
-      <span class="expected">Expected: 2024</span>
+      <span class="expected">Expected: 2025</span>
+    </div>
+  </div>
+  
+  <div class="certification-item">
+    <h3>Certified Kubernetes Application Developer (CKAD)</h3>
+    <div class="certification-status">
+      <span class="status status-in-progress">Completed</span>
+      <span class="expected">Issued: 2022</span>
     </div>
   </div>
   
   <div class="certification-item">
     <h3>Certified Kubernetes Administrator (CKA)</h3>
     <div class="certification-status">
-      <span class="status status-in-progress">In Progress</span>
-      <span class="expected">Expected: 2024</span>
+      <span class="status status-in-progress">Completed</span>
+      <span class="expected">Issued: 2022</span>
     </div>
   </div>
-  
+
   <div class="certification-item">
-    <h3>AWS Certified DevOps Engineer - Professional</h3>
+    <h3>Certified Kubernetes and Cloud Native Associate (KCNA)</h3>
     <div class="certification-status">
-      <span class="status status-planned">Planned</span>
-      <span class="expected">Expected: 2025</span>
+      <span class="status status-in-progress">Completed</span>
+      <span class="expected">Issued: 2021</span>
     </div>
   </div>
 </div>
