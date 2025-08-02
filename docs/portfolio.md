@@ -19,7 +19,7 @@ Welcome to my portfolio showcasing the projects and solutions I've built through
 ## Featured Projects
 
 <div class="portfolio-grid">
-  <div class="project-card" data-technologies="Kubernetes,AWS,Terraform,ArgoCD">
+  <div class="project-card clickable-card" data-technologies="Kubernetes,AWS,Terraform,ArgoCD" data-href="kubernetes-platform/">
     <div class="project-image kubernetes">
       <i class="fas fa-dharmachakra"></i>
     </div>
@@ -38,7 +38,7 @@ Welcome to my portfolio showcasing the projects and solutions I've built through
     </div>
   </div>
 
-  <div class="project-card" data-technologies="AWS,CloudFormation,Python,Cost Optimization">
+  <div class="project-card clickable-card" data-technologies="AWS,CloudFormation,Python,Cost Optimization" data-href="aws-migration/">
     <div class="project-image aws">
       <i class="fab fa-aws"></i>
     </div>
@@ -57,7 +57,7 @@ Welcome to my portfolio showcasing the projects and solutions I've built through
     </div>
   </div>
 
-  <div class="project-card" data-technologies="ArgoCD,GitHub Actions,Helm,GitOps">
+  <div class="project-card clickable-card" data-technologies="ArgoCD,GitHub Actions,Helm,GitOps" data-href="gitops-pipeline/">
     <div class="project-image gitops">
       <i class="fas fa-code-branch"></i>
     </div>
@@ -76,7 +76,7 @@ Welcome to my portfolio showcasing the projects and solutions I've built through
     </div>
   </div>
 
-  <div class="project-card" data-technologies="Prometheus,Grafana,DataDog,Go">
+  <div class="project-card clickable-card" data-technologies="Prometheus,Grafana,DataDog,Go" data-href="observability-platform/">
     <div class="project-image monitoring">
       <i class="fas fa-chart-line"></i>
     </div>
@@ -95,7 +95,7 @@ Welcome to my portfolio showcasing the projects and solutions I've built through
     </div>
   </div>
 
-  <div class="project-card" data-technologies="Terraform,Pulumi,Python,AWS">
+  <div class="project-card clickable-card" data-technologies="Terraform,Pulumi,Python,AWS" data-href="iac-framework/">
     <div class="project-image infrastructure">
       <i class="fas fa-server"></i>
     </div>
@@ -114,7 +114,7 @@ Welcome to my portfolio showcasing the projects and solutions I've built through
     </div>
   </div>
 
-  <div class="project-card" data-technologies="Security,Compliance,Python,AWS Security">
+  <div class="project-card clickable-card" data-technologies="Security,Compliance,Python,AWS Security" data-href="security-automation/">
     <div class="project-image security">
       <i class="fas fa-shield-alt"></i>
     </div>

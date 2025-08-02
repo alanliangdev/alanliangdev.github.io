@@ -73,6 +73,79 @@ function initializePortfolioFilters() {
     
     // Initialize with all projects visible
     filterProjects('all', freshProjectCards);
+    
+    // Add clickable card functionality
+    initializeClickableCards(freshProjectCards);
+}
+
+function initializeClickableCards(projectCards) {
+    projectCards.forEach(card => {
+        // Only add click functionality if the card has the clickable-card class and data-href
+        if (card.classList.contains('clickable-card') && card.dataset.href) {
+            // Remove any existing click listeners
+            const newCard = card.cloneNode(true);
+            card.parentNode.replaceChild(newCard, card);
+        }
+    });
+    
+    // Get fresh references after cloning
+    const clickableCards = document.querySelectorAll('.clickable-card[data-href]');
+    
+    clickableCards.forEach(card => {
+        // Add cursor pointer style and accessibility attributes
+        card.style.cursor = 'pointer';
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('role', 'button');
+        card.setAttribute('aria-label', `View details for ${card.querySelector('.project-title')?.textContent || 'project'}`);
+        
+        // Add click event listener
+        card.addEventListener('click', function(e) {
+            // Don't trigger if clicking on the actual "View Details" link
+            if (e.target.classList.contains('project-link') || 
+                e.target.closest('.project-link')) {
+                return;
+            }
+            
+            // Get the href from data attribute
+            const href = this.dataset.href;
+            if (href) {
+                // Navigate to the project page
+                window.location.href = href;
+            }
+        });
+        
+        // Add keyboard navigation support
+        card.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                const href = this.dataset.href;
+                if (href) {
+                    window.location.href = href;
+                }
+            }
+        });
+        
+        // Add hover effects
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-8px)';
+            this.style.boxShadow = '0 12px 30px rgba(0, 0, 0, 0.2)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(-4px)';
+            this.style.boxShadow = '0 8px 25px rgba(0, 0, 0, 0.15)';
+        });
+        
+        // Add focus styles for keyboard navigation
+        card.addEventListener('focus', function() {
+            this.style.outline = '2px solid var(--md-primary-fg-color)';
+            this.style.outlineOffset = '2px';
+        });
+        
+        card.addEventListener('blur', function() {
+            this.style.outline = 'none';
+        });
+    });
 }
 
 // Initialize on DOM content loaded
