@@ -94,4 +94,6 @@ extra_javascript:
 nav:
   - Home: index.md
   - About: about.md
+  - Resume: resume.md
+  - Portfolio: portfolio.md
   - Blog: blog/index.md
