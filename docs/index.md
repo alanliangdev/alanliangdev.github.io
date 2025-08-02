@@ -6,8 +6,8 @@
     <p class="hero-bio">I architect and scale cloud infrastructure at Commonwealth Bank of Australia, specializing in AWS, DevOps, and Kubernetes solutions. I love solving complex distributed systems challenges and mentoring teams on cloud-native best practices.</p>
     
     <div class="hero-actions">
-      <a href="portfolio/" class="cta-button primary">View My Work</a>
-      <a href="resume/" class="cta-button secondary">Download Resume</a>
+      <a href="portfolio.html" class="cta-button primary">View My Work</a>
+      <a href="resume.html" class="cta-button secondary">Download Resume</a>
     </div>
     
     <div class="social-links">
@@ -29,7 +29,7 @@
 
 <div class="featured-projects">
   <div class="featured-project">
-    <a href="portfolio/kubernetes-platform/" class="featured-project-link">
+    <a href="portfolio/kubernetes-platform.html" class="featured-project-link">
       <div class="featured-project-image kubernetes">
         <i class="fas fa-dharmachakra"></i>
       </div>
