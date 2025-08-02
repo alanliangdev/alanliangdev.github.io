@@ -14,7 +14,7 @@
       <a href="https://github.com/alanliangdev" class="social-link" aria-label="GitHub">
         <i class="fab fa-github"></i>
       </a>
-      <a href="https://www.linkedin.com/in/alanliangdev/" class="social-link" aria-label="LinkedIn">
+      <a href="https://www.linkedin.com/in/alanliangdev" class="social-link" aria-label="LinkedIn">
         <i class="fab fa-linkedin-in"></i>
       </a>
     </div>
@@ -29,7 +29,7 @@
 
 <div class="featured-projects">
   <div class="featured-project">
-    <a href="portfolio/kubernetes-platform.html" class="featured-project-link">
+    <a href="portfolio/kubernetes-platform" class="featured-project-link">
       <div class="featured-project-image kubernetes">
         <i class="fas fa-dharmachakra"></i>
       </div>
@@ -46,7 +46,7 @@
   </div>
   
   <div class="featured-project">
-    <a href="portfolio/aws-migration/" class="featured-project-link">
+    <a href="portfolio/aws-migration" class="featured-project-link">
       <div class="featured-project-image aws">
         <i class="fab fa-aws"></i>
       </div>
@@ -63,7 +63,7 @@
   </div>
   
   <div class="featured-project">
-    <a href="portfolio/gitops-pipeline/" class="featured-project-link">
+    <a href="portfolio/gitops-pipeline" class="featured-project-link">
       <div class="featured-project-image gitops">
         <i class="fas fa-code-branch"></i>
       </div>
@@ -81,14 +81,14 @@
 </div>
 
 <div class="view-all-projects">
-  <a href="portfolio/" class="view-all-link">View All Projects <i class="fas fa-arrow-right"></i></a>
+  <a href="portfolio" class="view-all-link">View All Projects <i class="fas fa-arrow-right"></i></a>
 </div>
 
 ## Latest Blog Posts
 
 <div class="blog-grid">
   <div class="blog-card">
-    <a href="blog/2024/07/15/scaling-kubernetes-at-enterprise-level/" class="blog-card-link">
+    <a href="blog/2024/07/15/kubernetes-enterprise-scaling" class="blog-card-link">
       <div class="blog-card-image kubernetes">
         <div class="blog-card-date">Jul 15, 24</div>
       </div>
@@ -98,7 +98,7 @@
   </div>
   
   <div class="blog-card">
-    <a href="blog/2024/07/08/aws-cost-optimization-strategies/" class="blog-card-link">
+    <a href="blog/2024/07/08/aws-cost-optimization-strategies" class="blog-card-link">
       <div class="blog-card-image aws">
         <div class="blog-card-date">Jul 08, 24</div>
       </div>
@@ -108,7 +108,7 @@
   </div>
   
   <div class="blog-card">
-    <a href="blog/2024/07/01/gitops-with-argocd-best-practices/" class="blog-card-link">
+    <a href="blog/2024/07/01/gitops-argocd-best-practices" class="blog-card-link">
       <div class="blog-card-image gitops">
         <div class="blog-card-date">Jul 01, 24</div>
       </div>
