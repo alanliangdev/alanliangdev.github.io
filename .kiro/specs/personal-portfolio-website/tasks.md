@@ -72,7 +72,9 @@
   - Add responsive design for mobile resume viewing
   - _Requirements: 3.1, 5.1, 5.2_
 
-- [ ] 4. Enhance home page with portfolio integration
+- [-] 4. Enhance home page with portfolio integration
+
+
 - [ ] 4.1 Update home page hero section
   - Modify index.md to include enhanced hero section with professional tagline
   - Add call-to-action buttons linking to portfolio and resume sections

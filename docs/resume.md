@@ -120,19 +120,19 @@ certifications:
 <div class="contact-section">
   <div class="contact-item">
     <i class="fas fa-envelope"></i>
-    <a href="mailto:{{ page.meta.contact.email }}">{{ page.meta.contact.email }}</a>
+    <a href="mailto:alan@example.com">alan@example.com</a>
   </div>
   <div class="contact-item">
     <i class="fab fa-linkedin"></i>
-    <a href="{{ page.meta.contact.linkedin }}" target="_blank">LinkedIn Profile</a>
+    <a href="https://www.linkedin.com/in/alanliangdev/" target="_blank">LinkedIn Profile</a>
   </div>
   <div class="contact-item">
     <i class="fab fa-github"></i>
-    <a href="{{ page.meta.contact.github }}" target="_blank">GitHub Profile</a>
+    <a href="https://github.com/alanliangdev" target="_blank">GitHub Profile</a>
   </div>
   <div class="contact-item">
     <i class="fas fa-map-marker-alt"></i>
-    <span>{{ page.meta.contact.location }}</span>
+    <span>Australia</span>
   </div>
 </div>
 
@@ -143,99 +143,234 @@ Staff Platform Engineer with extensive experience in cloud infrastructure, DevOp
 ## Professional Experience
 
 <div class="experience-section">
-{% for job in page.meta.experience %}
   <div class="experience-item">
     <div class="experience-header">
-      <h3>{{ job.title }}</h3>
+      <h3>Staff Platform Engineer</h3>
       <div class="experience-meta">
-        <span class="company">{{ job.company }}</span>
-        <span class="duration">{{ job.duration }}</span>
-        <span class="location">{{ job.location }}</span>
+        <span class="company">Commonwealth Bank of Australia</span>
+        <span class="duration">2020 - Present</span>
+        <span class="location">Sydney, Australia</span>
       </div>
     </div>
     
-    <p class="experience-description">{{ job.description }}</p>
+    <p class="experience-description">Leading enterprise-scale platform engineering initiatives, focusing on AWS migration, Kubernetes platform development, and DevOps transformation.</p>
     
     <div class="achievements">
       <h4>Key Responsibilities & Achievements:</h4>
       <ul>
-        {% for achievement in job.achievements %}
-        <li>{{ achievement }}</li>
-        {% endfor %}
+        <li>Led enterprise-scale migration initiatives to AWS, improving system reliability and reducing operational costs</li>
+        <li>Built and maintained self-service Kubernetes platforms serving hundreds of development teams</li>
+        <li>Designed and implemented CI/CD pipelines and GitOps workflows using ArgoCD and GitHub Actions</li>
+        <li>Established monitoring and observability practices using Prometheus, Grafana, and DataDog</li>
+        <li>Mentored junior engineers and contributed to platform engineering best practices</li>
       </ul>
     </div>
     
-    {% if job.key_metrics %}
     <div class="key-metrics">
       <h4>Impact & Results:</h4>
       <ul class="metrics-list">
-        {% for metric in job.key_metrics %}
-        <li>{{ metric }}</li>
-        {% endfor %}
+        <li>Reduced deployment time by 75% through automated CI/CD pipeline implementation</li>
+        <li>Led cost optimization initiatives resulting in 40% reduction in cloud infrastructure spend</li>
+        <li>Built self-service Kubernetes platform adopted by 200+ development teams</li>
+        <li>Established enterprise-wide monitoring standards and practices</li>
       </ul>
     </div>
-    {% endif %}
   </div>
-{% endfor %}
+
+  <div class="experience-item">
+    <div class="experience-header">
+      <h3>Senior DevOps Engineer</h3>
+      <div class="experience-meta">
+        <span class="company">Previous Company</span>
+        <span class="duration">2018 - 2020</span>
+        <span class="location">Melbourne, Australia</span>
+      </div>
+    </div>
+    
+    <p class="experience-description">Focused on cloud infrastructure automation and CI/CD pipeline development.</p>
+    
+    <div class="achievements">
+      <h4>Key Responsibilities & Achievements:</h4>
+      <ul>
+        <li>Implemented Infrastructure as Code practices using Terraform and CloudFormation</li>
+        <li>Built automated deployment pipelines reducing manual deployment effort by 80%</li>
+        <li>Established monitoring and alerting systems for production applications</li>
+      </ul>
+    </div>
+    
+    <div class="key-metrics">
+      <h4>Impact & Results:</h4>
+      <ul class="metrics-list">
+        <li>Improved deployment frequency from monthly to daily releases</li>
+        <li>Reduced infrastructure provisioning time from days to hours</li>
+      </ul>
+    </div>
+  </div>
 </div>
 
 ## Technical Skills
 
 <div class="skills-section">
-{% for skill_category in page.meta.skills %}
   <div class="skill-category">
-    <h3>{{ skill_category.category }}</h3>
+    <h3>Cloud Platforms</h3>
     <div class="skills-grid">
-      {% for skill in skill_category.items %}
       <div class="skill-item">
-        <h4>{{ skill.name }}</h4>
-        <p>{{ skill.details }}</p>
+        <h4>AWS</h4>
+        <p>EC2, EKS, RDS, Lambda, CloudFormation, IAM, VPC, Route53</p>
       </div>
-      {% endfor %}
+      <div class="skill-item">
+        <h4>Azure</h4>
+        <p>AKS, Azure DevOps, ARM Templates</p>
+      </div>
+      <div class="skill-item">
+        <h4>Google Cloud</h4>
+        <p>GKE, Cloud Build, Cloud Functions</p>
+      </div>
     </div>
   </div>
-{% endfor %}
+
+  <div class="skill-category">
+    <h3>Container Orchestration</h3>
+    <div class="skills-grid">
+      <div class="skill-item">
+        <h4>Kubernetes</h4>
+        <p>Cluster management, RBAC, networking, storage, operators</p>
+      </div>
+      <div class="skill-item">
+        <h4>Docker</h4>
+        <p>Containerization, multi-stage builds, registry management</p>
+      </div>
+      <div class="skill-item">
+        <h4>Amazon ECS</h4>
+        <p>Task definitions, service management, auto-scaling</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="skill-category">
+    <h3>Infrastructure as Code</h3>
+    <div class="skills-grid">
+      <div class="skill-item">
+        <h4>Terraform</h4>
+        <p>Module development, state management, enterprise patterns</p>
+      </div>
+      <div class="skill-item">
+        <h4>CloudFormation</h4>
+        <p>Template development, stack management</p>
+      </div>
+      <div class="skill-item">
+        <h4>Pulumi</h4>
+        <p>Infrastructure automation with modern programming languages</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="skill-category">
+    <h3>CI/CD & GitOps</h3>
+    <div class="skills-grid">
+      <div class="skill-item">
+        <h4>GitHub Actions</h4>
+        <p>Workflow automation, custom actions, enterprise deployment</p>
+      </div>
+      <div class="skill-item">
+        <h4>ArgoCD</h4>
+        <p>GitOps deployment, application management, multi-cluster setup</p>
+      </div>
+      <div class="skill-item">
+        <h4>Jenkins</h4>
+        <p>Pipeline development, plugin management, enterprise integration</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="skill-category">
+    <h3>Monitoring & Observability</h3>
+    <div class="skills-grid">
+      <div class="skill-item">
+        <h4>Prometheus</h4>
+        <p>Metrics collection, alerting rules, service discovery</p>
+      </div>
+      <div class="skill-item">
+        <h4>Grafana</h4>
+        <p>Dashboard development, data source integration</p>
+      </div>
+      <div class="skill-item">
+        <h4>DataDog</h4>
+        <p>APM, infrastructure monitoring, log management</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="skill-category">
+    <h3>Programming Languages</h3>
+    <div class="skills-grid">
+      <div class="skill-item">
+        <h4>Python</h4>
+        <p>Automation scripts, API development, data processing</p>
+      </div>
+      <div class="skill-item">
+        <h4>Go</h4>
+        <p>CLI tools, microservices, Kubernetes operators</p>
+      </div>
+      <div class="skill-item">
+        <h4>TypeScript/JavaScript</h4>
+        <p>Web applications, automation tools</p>
+      </div>
+      <div class="skill-item">
+        <h4>Bash</h4>
+        <p>System administration, deployment scripts</p>
+      </div>
+    </div>
+  </div>
 </div>
 
 ## Education
 
 <div class="education-section">
-{% for edu in page.meta.education %}
   <div class="education-item">
     <div class="education-header">
-      <h3>{{ edu.degree }}</h3>
+      <h3>Bachelor of Computer Science</h3>
       <div class="education-meta">
-        <span class="institution">{{ edu.institution }}</span>
-        <span class="duration">{{ edu.duration }}</span>
-        <span class="location">{{ edu.location }}</span>
+        <span class="institution">University of Technology Sydney</span>
+        <span class="duration">2014 - 2018</span>
+        <span class="location">Sydney, Australia</span>
       </div>
     </div>
     
-    {% if edu.details %}
     <ul class="education-details">
-      {% for detail in edu.details %}
-      <li>{{ detail }}</li>
-      {% endfor %}
+      <li>Relevant coursework in distributed systems, software engineering, and computer networks</li>
+      <li>Focus on cloud computing and infrastructure automation</li>
+      <li>Final year project on container orchestration and microservices architecture</li>
     </ul>
-    {% endif %}
   </div>
-{% endfor %}
 </div>
 
 ## Certifications
 
 <div class="certifications-section">
-{% for cert in page.meta.certifications %}
   <div class="certification-item">
-    <h3>{{ cert.name }}</h3>
+    <h3>AWS Certified Solutions Architect - Professional</h3>
     <div class="certification-status">
-      <span class="status status-{{ cert.status | lower | replace(' ', '-') }}">{{ cert.status }}</span>
-      {% if cert.expected %}
-      <span class="expected">Expected: {{ cert.expected }}</span>
-      {% endif %}
+      <span class="status status-in-progress">In Progress</span>
+      <span class="expected">Expected: 2024</span>
     </div>
   </div>
-{% endfor %}
+  
+  <div class="certification-item">
+    <h3>Certified Kubernetes Administrator (CKA)</h3>
+    <div class="certification-status">
+      <span class="status status-in-progress">In Progress</span>
+      <span class="expected">Expected: 2024</span>
+    </div>
+  </div>
+  
+  <div class="certification-item">
+    <h3>AWS Certified DevOps Engineer - Professional</h3>
+    <div class="certification-status">
+      <span class="status status-planned">Planned</span>
+      <span class="expected">Expected: 2025</span>
+    </div>
+  </div>
 </div>
 
 ## Projects & Contributions
