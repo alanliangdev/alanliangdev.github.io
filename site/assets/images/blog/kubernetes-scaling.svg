@@ -1,0 +1,5 @@
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#326ce5"/>
+  <text x="150" y="100" text-anchor="middle" fill="white" font-size="24" font-family="Arial">Kubernetes</text>
+  <text x="150" y="130" text-anchor="middle" fill="white" font-size="16" font-family="Arial">Enterprise Scaling</text>
+</svg>

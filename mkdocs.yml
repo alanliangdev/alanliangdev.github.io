@@ -9,7 +9,6 @@ edit_uri: ""
 
 # 404 page
 use_directory_urls: true
-not_found_template: 404.md
 
 theme:
   name: material
@@ -90,6 +89,7 @@ extra_css:
 
 extra_javascript:
   - assets/js/theme-toggle.js
+  - assets/js/portfolio-filter.js
 
 nav:
   - Home: index.md

@@ -2,10 +2,24 @@
 
 Welcome to my portfolio showcasing the projects and solutions I've built throughout my career as a Staff Platform Engineer. Here you'll find a collection of work spanning cloud infrastructure, DevOps automation, Kubernetes platforms, and enterprise-scale solutions.
 
+## Filter Projects
+
+<div class="portfolio-filters">
+  <button class="filter-btn active" data-filter="all">All Projects</button>
+  <button class="filter-btn" data-filter="AWS">AWS</button>
+  <button class="filter-btn" data-filter="Kubernetes">Kubernetes</button>
+  <button class="filter-btn" data-filter="Terraform">Terraform</button>
+  <button class="filter-btn" data-filter="Python">Python</button>
+  <button class="filter-btn" data-filter="ArgoCD">ArgoCD</button>
+  <button class="filter-btn" data-filter="Prometheus">Prometheus</button>
+  <button class="filter-btn" data-filter="Security">Security</button>
+  <button class="filter-btn" data-filter="GitOps">GitOps</button>
+</div>
+
 ## Featured Projects
 
 <div class="portfolio-grid">
-  <div class="project-card">
+  <div class="project-card" data-technologies="Kubernetes,AWS,Terraform,ArgoCD">
     <div class="project-image kubernetes">
       <i class="fas fa-dharmachakra"></i>
     </div>
@@ -24,7 +38,7 @@ Welcome to my portfolio showcasing the projects and solutions I've built through
     </div>
   </div>
 
-  <div class="project-card">
+  <div class="project-card" data-technologies="AWS,CloudFormation,Python,Cost Optimization">
     <div class="project-image aws">
       <i class="fab fa-aws"></i>
     </div>
@@ -43,7 +57,7 @@ Welcome to my portfolio showcasing the projects and solutions I've built through
     </div>
   </div>
 
-  <div class="project-card">
+  <div class="project-card" data-technologies="ArgoCD,GitHub Actions,Helm,GitOps">
     <div class="project-image gitops">
       <i class="fas fa-code-branch"></i>
     </div>
@@ -62,7 +76,7 @@ Welcome to my portfolio showcasing the projects and solutions I've built through
     </div>
   </div>
 
-  <div class="project-card">
+  <div class="project-card" data-technologies="Prometheus,Grafana,DataDog,Go">
     <div class="project-image monitoring">
       <i class="fas fa-chart-line"></i>
     </div>
@@ -81,7 +95,7 @@ Welcome to my portfolio showcasing the projects and solutions I've built through
     </div>
   </div>
 
-  <div class="project-card">
+  <div class="project-card" data-technologies="Terraform,Pulumi,Python,AWS">
     <div class="project-image infrastructure">
       <i class="fas fa-server"></i>
     </div>
@@ -100,7 +114,7 @@ Welcome to my portfolio showcasing the projects and solutions I've built through
     </div>
   </div>
 
-  <div class="project-card">
+  <div class="project-card" data-technologies="Security,Compliance,Python,AWS Security">
     <div class="project-image security">
       <i class="fas fa-shield-alt"></i>
     </div>

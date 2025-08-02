@@ -1,0 +1,5 @@
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#ff9900"/>
+  <text x="150" y="90" text-anchor="middle" fill="white" font-size="24" font-family="Arial">AWS</text>
+  <text x="150" y="120" text-anchor="middle" fill="white" font-size="16" font-family="Arial">Cost Optimization</text>
+</svg>
