@@ -6,19 +6,17 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Taking enterprise Kubernetes from complex to manageable with proper governance and automation">
+        <meta name="description" content="5 Things I Wish I Knew Before Diving into Kubernetes">
       
       
         <meta name="author" content="Alan Liang">
       
       
-        <link rel="canonical" href="https://alanliangdev.github.io/blog/2024/07/15/scaling-kubernetes-at-enterprise-level.html">
+        <link rel="canonical" href="https://alanliangdev.github.io/blog/2025/07/24/kubernetes-lessons-learned.html">
       
       
-        <link rel="prev" href="../08/aws-cost-optimization-strategies.html">
+        <link rel="prev" href="../../../2024/07/15/kubernetes-enterprise-scaling.html">
       
-      
-        <link rel="next" href="../../../2025/07/24/5-things-i-wish-i-knew-before-diving-into-kubernetes.html">
       
       
       <link rel="icon" href="../../../../assets/favicon.svg">
@@ -26,7 +24,7 @@
     
     
       
-        <title>Scaling Kubernetes at Enterprise Level - Alan Liang</title>
+        <title>5 Things I Wish I Knew Before Diving into Kubernetes - Alan Liang</title>
       
     
     
@@ -82,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#scaling-kubernetes-at-enterprise-level" class="md-skip">
+        <a href="#5-things-i-wish-i-knew-before-diving-into-kubernetes" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Scaling Kubernetes at Enterprise Level
+              5 Things I Wish I Knew Before Diving into Kubernetes
             
           </span>
         </div>
@@ -789,46 +787,64 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-challenge" class="md-nav__link">
+  <a href="#1-just-use-a-managed-kubernetes-offering" class="md-nav__link">
     <span class="md-ellipsis">
-      The Challenge
+      1. Just Use a Managed Kubernetes Offering
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#key-architectural-decisions" class="md-nav__link">
+  <a href="#2-addons-are-essential-not-optional" class="md-nav__link">
     <span class="md-ellipsis">
-      Key Architectural Decisions
+      2. Addons Are Essential, Not Optional
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Key Architectural Decisions">
+    <nav class="md-nav" aria-label="2. Addons Are Essential, Not Optional">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-multi-tenancy-strategy" class="md-nav__link">
+  <a href="#observability-stack" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Multi-Tenancy Strategy
+      Observability Stack
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-resource-governance" class="md-nav__link">
+  <a href="#autoscaling" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Resource Governance
+      Autoscaling
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-gitops-everything" class="md-nav__link">
+  <a href="#secret-management" class="md-nav__link">
     <span class="md-ellipsis">
-      3. GitOps Everything
+      Secret Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security &amp; Policy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gitops" class="md-nav__link">
+    <span class="md-ellipsis">
+      GitOps
     </span>
   </a>
   
@@ -840,20 +856,137 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#monitoring-and-observability" class="md-nav__link">
+  <a href="#3-kubernetes-isnt-for-everyone" class="md-nav__link">
     <span class="md-ellipsis">
-      Monitoring and Observability
+      3. Kubernetes Isn't for Everyone
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Kubernetes Isn&#39;t for Everyone">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-hidden-costs" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Hidden Costs
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#results" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#operational-overhead" class="md-nav__link">
     <span class="md-ellipsis">
-      Results
+      Operational Overhead
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-networking-will-make-or-break-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Networking Will Make or Break You
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Networking Will Make or Break You">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pod-to-pod-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pod-to-Pod Communication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-discovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Service Discovery
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ingress-controllers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ingress Controllers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Policies
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-start-small-think-big" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Start Small, Think Big
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Start Small, Think Big">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phase-1-foundation-months-1-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phase 1: Foundation (Months 1-3)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-2-production-readiness-months-4-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phase 2: Production Readiness (Months 4-6)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-3-advanced-features-months-7-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phase 3: Advanced Features (Months 7-12)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-4-platform-engineering-year-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phase 4: Platform Engineering (Year 2+)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -922,7 +1055,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
-                        <time datetime="2024-07-15 00:00:00+00:00" class="md-ellipsis">July 15, 2024</time>
+                        <time datetime="2025-07-24 00:00:00+00:00" class="md-ellipsis">July 24, 2025</time>
                       </div>
                     </li>
                     
@@ -970,79 +1103,150 @@
 
 
 
-<h1 id="scaling-kubernetes-at-enterprise-level">Scaling Kubernetes at Enterprise Level</h1>
-<p>When you're managing Kubernetes infrastructure for 50+ development teams, you quickly learn that what works for a small startup doesn't scale to enterprise environments. Here are the key lessons I've learned from building and scaling our Kubernetes platform at Commonwealth Bank.</p>
+<h1 id="5-things-i-wish-i-knew-before-diving-into-kubernetes">5 Things I Wish I Knew Before Diving into Kubernetes</h1>
+<p>My journey with Kubernetes has been a love-hate relationship. I remember when it all started—me, as a graduate in an organization building a new Kubernetes-based product on-premises, as the organization's first attempt. It was only five years later that I can finally understand what NOT to do when using Kubernetes.</p>
+<p>Before I continue, I want to emphasize that I think Kubernetes is amazing when done right. I've seen it at scale, I've seen it prevent system downtime, and enable agile development and innovation. But I've also seen the bad: running the control plane, performing upgrades, losing entire master nodes, and losing all of your CI/CD scripts you loaded into the control plane to deploy your Helm charts—only to spend almost 24 hours non-stop on a call, rebuilding the cluster from scratch. I could literally see the sunrise.</p>
 <!-- more -->
 
-<h2 id="the-challenge">The Challenge</h2>
-<p>Our journey started with a simple question: How do we provide a self-service platform that allows development teams to deploy their applications without compromising security, reliability, or cost efficiency?</p>
-<p>The answer wasn't just about Kubernetes itself, but about building the right abstractions and tooling around it.</p>
-<h2 id="key-architectural-decisions">Key Architectural Decisions</h2>
-<h3 id="1-multi-tenancy-strategy">1. Multi-Tenancy Strategy</h3>
-<p>We implemented a <strong>namespace-per-team</strong> approach with strict RBAC policies:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Namespace</span>
+<h2 id="1-just-use-a-managed-kubernetes-offering">1. Just Use a Managed Kubernetes Offering</h2>
+<p>It's no shock that #1 is using a managed Kubernetes offering like Amazon Elastic Kubernetes Service (EKS), Google Kubernetes Engine (GKE), or Red Hat OpenShift for the on-premises enthusiasts.</p>
+<p>Control plane upgrades were daunting, and I may have PTSD from self-managing them back on Kubernetes v1.16. Breaking changes, unexpected downtime, etcd failing to recover—the sheer amount of time consumed planning, performing, and validating a control plane upgrade was a nightmare. The worst part is, upgrades were frequent (once every quarter) and frequently caused issues back when we were running them on-premises.</p>
+<p><strong>Why managed services are game-changers:</strong>
+- <strong>Automated upgrades</strong>: Cloud providers handle control plane upgrades with minimal downtime
+- <strong>High availability</strong>: Built-in redundancy and disaster recovery
+- <strong>Security patches</strong>: Automatic security updates without manual intervention
+- <strong>Cost efficiency</strong>: No need to maintain dedicated infrastructure teams for cluster management</p>
+<p>The $70/month for EKS might seem expensive, but when you factor in the operational overhead of self-managing clusters, it's a bargain.</p>
+<h2 id="2-addons-are-essential-not-optional">2. Addons Are Essential, Not Optional</h2>
+<p>To harness the true power of Kubernetes, you need to understand the ecosystem of addons. Here's my breakdown of the most critical ones:</p>
+<h3 id="observability-stack">Observability Stack</h3>
+<p><strong>Tools</strong>: Prometheus, Grafana, Alertmanager, Loki, Jaeger, Metrics Server</p>
+<p>Observability is a must, not optional. You need metrics, logs, and traces to understand what's happening in your cluster. The harsh reality? Your observability stack can end up costing more than your actual compute resources.</p>
+<p><strong>Pro tip</strong>: Start with Prometheus and Grafana, then add complexity as needed.</p>
+<h3 id="autoscaling">Autoscaling</h3>
+<p><strong>Tools</strong>: Cluster Autoscaler, Karpenter, Vertical Pod Autoscaler (VPA), KEDA</p>
+<p>If you're not autoscaling in Kubernetes, you're missing the point. Manual scaling defeats the purpose of container orchestration.</p>
+<ul>
+<li><strong>Horizontal Pod Autoscaler (HPA)</strong>: Scale pods based on CPU/memory</li>
+<li><strong>Vertical Pod Autoscaler (VPA)</strong>: Right-size your pod resource requests</li>
+<li><strong>Cluster Autoscaler/Karpenter</strong>: Scale nodes based on demand</li>
+</ul>
+<h3 id="secret-management">Secret Management</h3>
+<p><strong>Tools</strong>: External Secrets Operator, Secrets Store CSI Driver</p>
+<p>Kubernetes Secrets are just base64-encoded strings—not encrypted. For production workloads, integrate with proper secret management systems like AWS Secrets Manager, HashiCorp Vault, or Azure Key Vault.</p>
+<h3 id="security-policy">Security &amp; Policy</h3>
+<p><strong>Tools</strong>: Falco, OPA Gatekeeper, Pod Security Standards</p>
+<p>Security isn't an afterthought. With high-profile breaches making headlines, implementing proper security controls from day one is crucial.</p>
+<h3 id="gitops">GitOps</h3>
+<p><strong>Tools</strong>: ArgoCD, Flux</p>
+<p>GitOps transforms how you deploy applications. Your Git repository becomes the single source of truth, and tools like ArgoCD ensure your cluster state matches your desired configuration.</p>
+<h2 id="3-kubernetes-isnt-for-everyone">3. Kubernetes Isn't for Everyone</h2>
+<p>Kubernetes is powerful, but it comes with significant costs—both financial and operational.</p>
+<h3 id="the-hidden-costs">The Hidden Costs</h3>
+<p>People think, "I'll run EKS, pay $70/month, and that's all Kubernetes costs, right?" Wrong.</p>
+<p>A bare Kubernetes cluster, even a managed one, doesn't give you production-ready capabilities. On top of core components (CNI, DNS, kube-proxy), you'll need:</p>
+<ul>
+<li><strong>Observability stack</strong>: $200-500/month for small clusters</li>
+<li><strong>Ingress controllers</strong>: Load balancer costs</li>
+<li><strong>Security tools</strong>: Additional compute overhead</li>
+<li><strong>Backup solutions</strong>: Storage and compute costs</li>
+</ul>
+<p><strong>Reality check</strong>: For a simple web app, Kubernetes is overkill. You'll spend more on the platform than your actual application.</p>
+<h3 id="operational-overhead">Operational Overhead</h3>
+<p>The hidden cost everyone overlooks is operational complexity:</p>
+<ul>
+<li><strong>Quarterly upgrades</strong>: Kubernetes versions, node AMIs, addon updates</li>
+<li><strong>Security patching</strong>: Constant vigilance for CVEs</li>
+<li><strong>Troubleshooting</strong>: Distributed systems are complex to debug</li>
+<li><strong>Team training</strong>: Steep learning curve for developers</li>
+</ul>
+<p><strong>When to use Kubernetes:</strong>
+- Multiple microservices
+- Need for auto-scaling
+- Complex deployment patterns
+- Team size &gt; 10 developers</p>
+<p><strong>When NOT to use Kubernetes:</strong>
+- Simple monolithic applications
+- Small teams (&lt; 5 developers)
+- Tight budget constraints
+- Limited operational expertise</p>
+<h2 id="4-networking-will-make-or-break-you">4. Networking Will Make or Break You</h2>
+<p>Kubernetes networking is where most people get stuck. Understanding the four types of communication is crucial:</p>
+<h3 id="pod-to-pod-communication">Pod-to-Pod Communication</h3>
+<p>Every pod gets its own IP address. Pods can communicate directly without NAT, but this requires a Container Network Interface (CNI) plugin.</p>
+<p><strong>Popular CNI options:</strong>
+- <strong>AWS VPC CNI</strong>: Native AWS integration, uses ENIs
+- <strong>Calico</strong>: Network policies, cross-cloud compatibility
+- <strong>Cilium</strong>: eBPF-based, advanced security features</p>
+<h3 id="service-discovery">Service Discovery</h3>
+<p>Services provide stable endpoints for pods. Understanding the different service types is essential:</p>
+<ul>
+<li><strong>ClusterIP</strong>: Internal cluster communication</li>
+<li><strong>NodePort</strong>: Exposes service on each node's IP</li>
+<li><strong>LoadBalancer</strong>: Cloud provider load balancer</li>
+<li><strong>ExternalName</strong>: DNS CNAME record</li>
+</ul>
+<h3 id="ingress-controllers">Ingress Controllers</h3>
+<p>For HTTP/HTTPS traffic, you need an Ingress controller:</p>
+<ul>
+<li><strong>AWS Load Balancer Controller</strong>: Native AWS ALB/NLB integration</li>
+<li><strong>NGINX Ingress</strong>: Most popular, feature-rich</li>
+<li><strong>Traefik</strong>: Modern, cloud-native approach</li>
+</ul>
+<h3 id="network-policies">Network Policies</h3>
+<p>By default, all pods can communicate with each other. Network policies provide micro-segmentation:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">networking.k8s.io/v1</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NetworkPolicy</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nt">metadata</span><span class="p">:</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">team-payments</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="nt">labels</span><span class="p">:</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nt">team</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">payments</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nt">cost-center</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;12345&quot;</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="nn">---</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io/v1</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RoleBinding</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nt">metadata</span><span class="p">:</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">team-payments</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">team-payments-developers</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="nt">subjects</span><span class="p">:</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Group</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">team-payments</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">  </span><span class="nt">apiGroup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="nt">roleRef</span><span class="p">:</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">  </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ClusterRole</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">developer</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">  </span><span class="nt">apiGroup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deny-all</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nt">spec</span><span class="p">:</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="nt">podSelector</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="nt">policyTypes</span><span class="p">:</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Ingress</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Egress</span>
 </code></pre></div>
-<h3 id="2-resource-governance">2. Resource Governance</h3>
-<p>Every namespace gets default resource quotas and limit ranges:</p>
+<p><strong>Pro tip</strong>: Start with a "deny-all" policy and explicitly allow required traffic.</p>
+<h2 id="5-start-small-think-big">5. Start Small, Think Big</h2>
+<p>The biggest mistake I see is trying to implement everything at once. Kubernetes has a steep learning curve, and complexity compounds quickly.</p>
+<h3 id="phase-1-foundation-months-1-3">Phase 1: Foundation (Months 1-3)</h3>
 <ul>
-<li><strong>CPU</strong>: 4 cores per namespace</li>
-<li><strong>Memory</strong>: 8GB per namespace  </li>
-<li><strong>Storage</strong>: 50GB per namespace</li>
-<li><strong>Pod count</strong>: 20 pods maximum</li>
+<li>Set up managed Kubernetes (EKS/GKE)</li>
+<li>Deploy simple applications</li>
+<li>Implement basic monitoring (Prometheus/Grafana)</li>
+<li>Learn kubectl and basic troubleshooting</li>
 </ul>
-<h3 id="3-gitops-everything">3. GitOps Everything</h3>
-<p>We use ArgoCD for all deployments with a strict GitOps workflow:</p>
-<ol>
-<li>Developers push to their app repo</li>
-<li>CI pipeline builds and pushes images</li>
-<li>CI updates the GitOps repo</li>
-<li>ArgoCD syncs changes to the cluster</li>
-</ol>
-<h2 id="monitoring-and-observability">Monitoring and Observability</h2>
-<p>The key metrics we track:</p>
+<h3 id="phase-2-production-readiness-months-4-6">Phase 2: Production Readiness (Months 4-6)</h3>
 <ul>
-<li><strong>Resource utilization</strong> per team</li>
-<li><strong>Deployment frequency</strong> and success rates</li>
-<li><strong>MTTR</strong> for incidents</li>
-<li><strong>Cost allocation</strong> by team/project</li>
+<li>Implement proper secret management</li>
+<li>Set up ingress controllers</li>
+<li>Add autoscaling (HPA/VPA)</li>
+<li>Implement backup strategies</li>
 </ul>
-<h2 id="results">Results</h2>
-<p>After 18 months of operation:</p>
+<h3 id="phase-3-advanced-features-months-7-12">Phase 3: Advanced Features (Months 7-12)</h3>
 <ul>
-<li><strong>99.9%</strong> platform uptime</li>
-<li><strong>40%</strong> reduction in infrastructure costs</li>
-<li><strong>80%</strong> faster deployment times</li>
-<li><strong>Zero</strong> security incidents</li>
+<li>GitOps workflows (ArgoCD/Flux)</li>
+<li>Advanced networking (service mesh)</li>
+<li>Multi-cluster management</li>
+<li>Cost optimization strategies</li>
+</ul>
+<h3 id="phase-4-platform-engineering-year-2">Phase 4: Platform Engineering (Year 2+)</h3>
+<ul>
+<li>Self-service developer platforms</li>
+<li>Advanced security policies</li>
+<li>Custom operators and controllers</li>
+<li>Multi-cloud strategies</li>
 </ul>
 <h2 id="key-takeaways">Key Takeaways</h2>
 <ol>
-<li><strong>Start with governance</strong> - Set up RBAC, quotas, and policies from day one</li>
-<li><strong>Automate everything</strong> - Manual processes don't scale</li>
-<li><strong>Monitor costs</strong> - Kubernetes can get expensive fast without proper controls</li>
-<li><strong>Invest in developer experience</strong> - Self-service capabilities are crucial</li>
-<li><strong>Plan for failure</strong> - Chaos engineering and disaster recovery are essential</li>
+<li><strong>Use managed services</strong>: Don't self-manage control planes unless you absolutely have to</li>
+<li><strong>Invest in addons</strong>: Observability, autoscaling, and security aren't optional</li>
+<li><strong>Evaluate complexity</strong>: Kubernetes isn't always the right solution</li>
+<li><strong>Master networking</strong>: It's the foundation everything else builds on</li>
+<li><strong>Start simple</strong>: Build complexity gradually as your team's expertise grows</li>
 </ol>
-<p>The journey to enterprise-scale Kubernetes isn't just about the technology - it's about building the right processes, tooling, and culture around it.</p>
+<p>Kubernetes is incredibly powerful, but respect its complexity. Take time to understand the fundamentals before diving into advanced features. Your future self (and your team) will thank you.</p>
+<hr />
+<p><em>Have you had similar experiences with Kubernetes? What would you add to this list? Let me know in the comments below.</em> </p>
 
 
 
@@ -1085,7 +1289,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../08/aws-cost-optimization-strategies.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: AWS Cost Optimization Strategies">
+          <a href="../../../2024/07/15/kubernetes-enterprise-scaling.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Scaling Kubernetes at Enterprise Level">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1095,27 +1299,11 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                AWS Cost Optimization Strategies
+                Scaling Kubernetes at Enterprise Level
               </div>
             </div>
           </a>
         
-        
-          
-          <a href="../../../2025/07/24/5-things-i-wish-i-knew-before-diving-into-kubernetes.html" class="md-footer__link md-footer__link--next" aria-label="Next: 5 Things I Wish I Knew Before Diving into Kubernetes">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                5 Things I Wish I Knew Before Diving into Kubernetes
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
-            </div>
-          </a>
         
       </nav>
     
@@ -1182,6 +1370,10 @@
         <script src="../../../../assets/js/theme-toggle.js"></script>
       
         <script src="../../../../assets/js/portfolio-filter.js"></script>
+      
+        <script src="../../../../assets/js/blog-filter.js"></script>
+      
+        <script src="../../../../assets/js/blog-search.js"></script>
       
     
   </body>
