@@ -463,3 +463,665 @@ Ensure content aligns with navigation tabs */
     padding: 0.2rem 0.6rem;
   }
 }
+/* Resu
+me Page Styles */
+
+/* Resume header section */
+.resume-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 2rem 0;
+  border-bottom: 2px solid var(--md-default-fg-color--lightest);
+}
+
+.resume-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--md-default-fg-color);
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.resume-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--md-primary-fg-color);
+  margin-bottom: 0.5rem;
+}
+
+.resume-summary {
+  font-size: 1rem;
+  color: var(--md-default-fg-color--light);
+  font-style: italic;
+}
+
+/* Contact information section */
+.contact-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  background-color: var(--md-code-bg-color);
+  border-radius: 8px;
+  border-left: 4px solid var(--md-primary-fg-color);
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.contact-item i {
+  width: 20px;
+  color: var(--md-primary-fg-color);
+  font-size: 1.1rem;
+}
+
+.contact-item a {
+  color: var(--md-default-fg-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-item a:hover {
+  color: var(--md-primary-fg-color);
+}
+
+/* Experience section */
+.experience-section {
+  margin: 2rem 0;
+}
+
+.experience-item {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background-color: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 12px;
+  position: relative;
+}
+
+.experience-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(to bottom, var(--md-primary-fg-color), var(--md-primary-fg-color--light));
+  border-radius: 2px 0 0 2px;
+}
+
+.experience-header {
+  margin-bottom: 1.5rem;
+}
+
+.experience-header h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--md-default-fg-color);
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.experience-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.95rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.company {
+  font-weight: 600;
+  color: var(--md-primary-fg-color);
+}
+
+.duration {
+  font-weight: 500;
+}
+
+.location {
+  font-style: italic;
+}
+
+.experience-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--md-default-fg-color--light);
+  margin-bottom: 1.5rem;
+}
+
+.achievements h4,
+.key-metrics h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--md-default-fg-color);
+  margin-bottom: 0.75rem;
+  margin-top: 0;
+}
+
+.achievements ul,
+.key-metrics ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.achievements li,
+.key-metrics li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.metrics-list li {
+  color: var(--md-primary-fg-color);
+  font-weight: 500;
+}
+
+/* Skills section */
+.skills-section {
+  margin: 2rem 0;
+}
+
+.skill-category {
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  background-color: var(--md-code-bg-color);
+  border-radius: 8px;
+}
+
+.skill-category h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--md-primary-fg-color);
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+  text-align: center;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--md-primary-fg-color--light);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-item {
+  background-color: var(--md-default-bg-color);
+  padding: 1.25rem;
+  border-radius: 8px;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.skill-item h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--md-default-fg-color);
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.skill-item p {
+  font-size: 0.9rem;
+  color: var(--md-default-fg-color--light);
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Education section */
+.education-section {
+  margin: 2rem 0;
+}
+
+.education-item {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: var(--md-code-bg-color);
+  border-radius: 8px;
+  border-left: 4px solid var(--md-primary-fg-color);
+}
+
+.education-header {
+  margin-bottom: 1rem;
+}
+
+.education-header h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--md-default-fg-color);
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.education-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.95rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.institution {
+  font-weight: 600;
+  color: var(--md-primary-fg-color);
+}
+
+.education-details {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.education-details li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+/* Certifications section */
+.certifications-section {
+  margin: 2rem 0;
+}
+
+.certification-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  background-color: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.certification-item:hover {
+  transform: translateX(4px);
+}
+
+.certification-item h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--md-default-fg-color);
+  margin: 0;
+  flex-grow: 1;
+}
+
+.certification-status {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 16px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-in-progress {
+  background-color: var(--md-accent-fg-color--transparent);
+  color: var(--md-accent-fg-color);
+}
+
+.status-planned {
+  background-color: var(--md-default-fg-color--lightest);
+  color: var(--md-default-fg-color--light);
+}
+
+.status-completed {
+  background-color: var(--md-primary-fg-color--light);
+  color: var(--md-primary-bg-color);
+}
+
+.expected {
+  font-size: 0.9rem;
+  color: var(--md-default-fg-color--light);
+  font-style: italic;
+}
+
+/* Projects section */
+.projects-section {
+  margin: 2rem 0;
+}
+
+.project-item {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 8px;
+  border-left: 4px solid var(--md-primary-fg-color);
+}
+
+.project-item h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--md-default-fg-color);
+  margin-bottom: 0.75rem;
+  margin-top: 0;
+}
+
+.project-item p {
+  line-height: 1.6;
+  color: var(--md-default-fg-color--light);
+  margin: 0;
+}
+
+/* Resume footer */
+.resume-footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.resume-footer a {
+  color: var(--md-primary-fg-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.resume-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive design for resume */
+@media screen and (max-width: 768px) {
+  .resume-header h2 {
+    font-size: 2rem;
+  }
+  
+  .resume-title {
+    font-size: 1.1rem;
+  }
+  
+  .contact-section {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+  
+  .experience-item {
+    padding: 1.5rem;
+  }
+  
+  .experience-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .skill-item {
+    padding: 1rem;
+  }
+  
+  .certification-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .certification-status {
+    align-self: flex-end;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .resume-header {
+    padding: 1.5rem 0;
+  }
+  
+  .resume-header h2 {
+    font-size: 1.75rem;
+  }
+  
+  .experience-item {
+    padding: 1.25rem;
+  }
+  
+  .skill-category {
+    padding: 1rem;
+  }
+  
+  .education-item,
+  .project-item {
+    padding: 1.25rem;
+  }
+}
+
+/* Print styles for PDF generation */
+@media print {
+  /* Hide navigation and other UI elements */
+  .md-header,
+  .md-tabs,
+  .md-footer,
+  .md-sidebar,
+  .md-nav,
+  .md-search {
+    display: none !important;
+  }
+  
+  /* Optimize page layout for print */
+  .md-main,
+  .md-content,
+  .md-content__inner {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  
+  /* Resume-specific print styles */
+  .resume-header {
+    page-break-after: avoid;
+    margin-bottom: 1rem;
+    padding: 1rem 0;
+  }
+  
+  .resume-header h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .resume-title {
+    font-size: 1rem;
+  }
+  
+  .resume-summary {
+    font-size: 0.9rem;
+  }
+  
+  .contact-section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    margin: 1rem 0;
+    padding: 0.75rem;
+    background-color: #f8f9fa !important;
+    border: 1px solid #dee2e6 !important;
+    page-break-inside: avoid;
+  }
+  
+  .contact-item {
+    font-size: 0.85rem;
+    gap: 0.5rem;
+  }
+  
+  .contact-item i {
+    font-size: 0.9rem;
+  }
+  
+  /* Experience section print optimization */
+  .experience-item {
+    page-break-inside: avoid;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border: 1px solid #dee2e6 !important;
+    background-color: white !important;
+  }
+  
+  .experience-header h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .experience-meta {
+    font-size: 0.85rem;
+    gap: 0.75rem;
+  }
+  
+  .experience-description {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  
+  .achievements h4,
+  .key-metrics h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .achievements li,
+  .key-metrics li {
+    font-size: 0.85rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  /* Skills section print optimization */
+  .skill-category {
+    page-break-inside: avoid;
+    margin-bottom: 1.5rem;
+    padding: 0.75rem;
+    background-color: #f8f9fa !important;
+  }
+  
+  .skill-category h3 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+  
+  .skill-item {
+    padding: 0.75rem;
+    background-color: white !important;
+    border: 1px solid #dee2e6 !important;
+  }
+  
+  .skill-item h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .skill-item p {
+    font-size: 0.8rem;
+  }
+  
+  /* Education and certifications print styles */
+  .education-item,
+  .certification-item,
+  .project-item {
+    page-break-inside: avoid;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    background-color: #f8f9fa !important;
+    border: 1px solid #dee2e6 !important;
+  }
+  
+  .education-header h3,
+  .certification-item h3,
+  .project-item h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .education-meta {
+    font-size: 0.85rem;
+  }
+  
+  .education-details li {
+    font-size: 0.85rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .certification-item {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .status {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+  }
+  
+  .expected {
+    font-size: 0.8rem;
+  }
+  
+  .project-item p {
+    font-size: 0.85rem;
+  }
+  
+  /* Footer print styles */
+  .resume-footer {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    font-size: 0.8rem;
+  }
+  
+  /* Force page breaks where needed */
+  .skills-section {
+    page-break-before: auto;
+  }
+  
+  /* Ensure proper spacing and avoid orphans */
+  h2, h3 {
+    page-break-after: avoid;
+  }
+  
+  /* Color adjustments for print */
+  * {
+    color: black !important;
+    background-color: white !important;
+  }
+  
+  .company,
+  .institution,
+  .resume-title {
+    color: #333 !important;
+    font-weight: bold !important;
+  }
+  
+  .status-in-progress {
+    background-color: #e3f2fd !important;
+    color: #1976d2 !important;
+  }
+  
+  .status-planned {
+    background-color: #f5f5f5 !important;
+    color: #666 !important;
+  }
+  
+  .status-completed {
+    background-color: #e8f5e8 !important;
+    color: #2e7d32 !important;
+  }
+}
