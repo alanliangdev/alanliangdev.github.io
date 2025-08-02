@@ -19,7 +19,7 @@ Welcome to my portfolio showcasing the projects and solutions I've built through
 ## Featured Projects
 
 <div class="portfolio-grid">
-  <div class="project-card clickable-card" data-technologies="Kubernetes,AWS,Terraform,ArgoCD" data-href="/portfolio/kubernetes-platform.html">
+  <div class="project-card clickable-card" data-technologies="Kubernetes,AWS,Terraform,ArgoCD" data-href="/portfolio/kubernetes-platform">
     <div class="project-image kubernetes">
       <i class="fas fa-dharmachakra"></i>
     </div>
