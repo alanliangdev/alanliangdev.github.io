@@ -86,7 +86,7 @@ certifications:
 <div class="resume-header">
   <h2>Alan Liang</h2>
   <p class="resume-title">Staff Platform Engineer</p>
-  <p class="resume-summary">Specializing in AWS, DevOps, and Kubernetes solutions</p>
+  <p class="resume-summary">Specialising in AWS, DevOps, and Kubernetes solutions</p>
 </div>
 
 ## Contact Information
@@ -94,11 +94,11 @@ certifications:
 <div class="contact-section">
   <div class="contact-item">
     <i class="fas fa-envelope"></i>
-    <a href="mailto:alan@example.com">alan@example.com</a>
+    <a href="mailto:alanliangdev@gmail.com">alanliangdev@gmail.com</a>
   </div>
   <div class="contact-item">
     <i class="fab fa-linkedin"></i>
-    <a href="https://www.linkedin.com/in/alanliangdev/" target="_blank">LinkedIn Profile</a>
+    <a href="https://www.linkedin.com/in/alanliangdev" target="_blank">LinkedIn Profile</a>
   </div>
   <div class="contact-item">
     <i class="fab fa-github"></i>
@@ -106,28 +106,28 @@ certifications:
   </div>
   <div class="contact-item">
     <i class="fas fa-map-marker-alt"></i>
-    <span>Australia</span>
+    <span>Melbourne, Australia</span>
   </div>
 </div>
 
 ## Professional Summary
 
-Staff Platform Engineer with extensive experience in cloud infrastructure, DevOps practices, and enterprise-scale platform engineering. Specialized in AWS services, Kubernetes orchestration, and building developer-centric platforms that improve productivity and reduce operational overhead.
+Staff Platform Engineer with six years experience in cloud infrastructure, DevOps practices, and enterprise-scale platform engineering. Specialised in AWS services, Kubernetes orchestration, and building developer-centric platforms that improve productivity and reduce operational overhead.
 
 ## Professional Experience
 
 <div class="experience-section">
   <div class="experience-item">
     <div class="experience-header">
-      <h3>Staff Platform Engineer</h3>
+      <h3>Staff Platform Engineer, Network Monitoring Observability</h3>
       <div class="experience-meta">
         <span class="company">Commonwealth Bank of Australia</span>
-        <span class="duration">2020 - Present</span>
-        <span class="location">Sydney, Australia</span>
+        <span class="duration">February 2025 - Present (7 mos)</span>
+        <span class="location">Melbourne, Australia</span>
       </div>
     </div>
 
-    <p class="experience-description">Leading enterprise-scale platform engineering initiatives, focusing on AWS migration, Kubernetes platform development, and DevOps transformation.</p>
+    <p class="experience-description">Building the banks Network Monitoring Observability platform on-top of a cloud native, modern and scalable tech stack; Grafana Mimir, Telegraf and ClickHouse.</p>
 
     <div class="achievements">
       <h4>Key Responsibilities & Achievements:</h4>
@@ -153,10 +153,10 @@ Staff Platform Engineer with extensive experience in cloud infrastructure, DevOp
 
   <div class="experience-item">
     <div class="experience-header">
-      <h3>Senior Platform Engineer</h3>
+      <h3>Senior Platform Engineer, Public Cloud Container Services</h3>
       <div class="experience-meta">
         <span class="company">Commonwealth Bank of Australia</span>
-        <span class="duration">August 2023 - February 2025</span>
+        <span class="duration">August 2023 - February 2025 (1 yr 7 mos)</span>
         <span class="location">Melbourne, Australia</span>
       </div>
     </div>
@@ -187,10 +187,10 @@ Staff Platform Engineer with extensive experience in cloud infrastructure, DevOp
 
   <div class="experience-item">
     <div class="experience-header">
-      <h3>Systems Engineer</h3>
+      <h3>Systems Engineer, Public Cloud Container Services</h3>
       <div class="experience-meta">
         <span class="company">Commonwealth Bank of Australia</span>
-        <span class="duration">August 2022 - August 2023</span>
+        <span class="duration">August 2022 - August 2023 (1 yr 1 mo)</span>
         <span class="location">Melbourne, Australia</span>
       </div>
     </div>
@@ -217,10 +217,10 @@ Staff Platform Engineer with extensive experience in cloud infrastructure, DevOp
 
   <div class="experience-item">
     <div class="experience-header">
-      <h3>Cloud Support Engineer (II) - Containers</h3>
+      <h3>Cloud Support Engineer (II), Containers</h3>
       <div class="experience-meta">
         <span class="company">Amazon Web Services (AWS)</span>
-        <span class="duration">September 2021 - August 2022</span>
+        <span class="duration">September 2021 - August 2022 (1 yr)</span>
         <span class="location">Melbourne, Australia</span>
       </div>
     </div>
@@ -249,10 +249,10 @@ Staff Platform Engineer with extensive experience in cloud infrastructure, DevOp
 
   <div class="experience-item">
     <div class="experience-header">
-      <h3>Integration Engineer</h3>
+      <h3>Integration Engineer, Business Support Systems</h3>
       <div class="experience-meta">
         <span class="company">Ericsson</span>
-        <span class="duration">March 2020 - September 2021</span>
+        <span class="duration">March 2020 - September 2021 (1 yr 7 mos)</span>
         <span class="location">Melbourne, Australia</span>
       </div>
     </div>
@@ -421,44 +421,50 @@ Staff Platform Engineer with extensive experience in cloud infrastructure, DevOp
 ## Certifications
 
 <div class="certifications-section">
-  <div class="certification-item">
-    <h3>AWS Certified Solutions Architect - Associate</h3>
-    <div class="certification-status">
-      <span class="status status-in-progress">In Progress</span>
-      <span class="expected">Expected: 2025</span>
-    </div>
-  </div>
-  
-  <div class="certification-item">
-    <h3>Certified Kubernetes Application Developer (CKAD)</h3>
-    <div class="certification-status">
-      <span class="status status-in-progress">Completed</span>
-      <span class="expected">Issued: 2022</span>
-    </div>
-  </div>
-  
-  <div class="certification-item">
-    <h3>Certified Kubernetes Administrator (CKA)</h3>
-    <div class="certification-status">
-      <span class="status status-in-progress">Completed</span>
-      <span class="expected">Issued: 2022</span>
-    </div>
-  </div>
+  <div class="certification-item">
+    <h3>AWS Certified Solutions Architect - Associate</h3>
+    <div class="certification-status">
+      <span class="status status-in-progress">In Progress</span>
+      <span class="expected">Expected: 2025</span>
+    </div>
+  </div>
+  
+    <a href="https://www.credly.com/badges/dd6bb148-2e46-4bd3-a48c-af70aa6e2bb1" target="_blank" class="certification-panel-link">
+    <div class="certification-item">
+      <h3>Certified Kubernetes Application Developer (CKAD)</h3>
+      <div class="certification-status">
+        <span class="status status-completed">Completed</span>
+        <span class="expected">Issued: Nov 2022</span>
+      </div>
+    </div>
+  </a>
+  
+    <a href="https://www.credly.com/badges/f59f312b-20c1-493f-ac59-87dd1d5ca615" target="_blank" class="certification-panel-link">
+    <div class="certification-item">
+      <h3>Certified Kubernetes Administrator (CKA)</h3>
+      <div class="certification-status">
+        <span class="status status-completed">Completed</span>
+        <span class="expected">Issued: Aug 2022</span>
+      </div>
+    </div>
+  </a>
 
-  <div class="certification-item">
-    <h3>Certified Kubernetes and Cloud Native Associate (KCNA)</h3>
-    <div class="certification-status">
-      <span class="status status-in-progress">Completed</span>
-      <span class="expected">Issued: 2021</span>
-    </div>
-  </div>
+    <a href="https://www.credly.com/badges/dc1508ea-7763-4705-a06a-d4897e9aff34" target="_blank" class="certification-panel-link">
+    <div class="certification-item">
+      <h3>Certified Kubernetes and Cloud Native Associate (KCNA)</h3>
+      <div class="certification-status">
+        <span class="status status-completed">Completed</span>
+        <span class="expected">Issued: Nov 2021</span>
+      </div>
+    </div>
+  </a>
 </div>
 
 ## Projects & Contributions
 
 <div class="projects-section">
   <div class="project-item">
-    <h3>Open Source Contributions</h3>
+    <h3>bAIwatch: Real Time Car Park Occupancy System</h3>
     <p>Active contributor to Kubernetes ecosystem tools and Terraform modules, focusing on platform engineering solutions and developer productivity improvements.</p>
   </div>
   
