@@ -1,8 +1,26 @@
 // Blog filtering functionality
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize filtering system
+    console.log('DOM loaded, initializing blog filters');
     initializeBlogFilters();
 });
+
+// Additional initialization for GitHub Pages
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeBlogFilters);
+} else {
+    // DOM is already loaded
+    console.log('DOM already loaded, initializing blog filters immediately');
+    initializeBlogFilters();
+}
+
+// Fallback initialization
+setTimeout(function() {
+    if ((window.location.pathname.includes('/blog/') || window.location.pathname.endsWith('/blog/index.html')) && 
+        document.getElementById('blog-filters')) {
+        console.log('Blog filters fallback initialization');
+        initializeBlogFilters();
+    }
+}, 1000);
 
 function initializeBlogFilters() {
     const filterContainer = document.getElementById('blog-filters');

@@ -8,7 +8,7 @@ repo_name: alanliangdev/alanliangdev.github.io
 edit_uri: ""
 
 # 404 page
-use_directory_urls: true
+use_directory_urls: false
 
 theme:
   name: material
@@ -43,7 +43,6 @@ theme:
     - search.highlight
     - content.code.copy
     - header.autohide
-    - navigation.instant
     - navigation.footer
 
 plugins:

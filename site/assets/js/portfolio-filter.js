@@ -1,22 +1,25 @@
 // Portfolio filtering functionality
 function initializePortfolioFilters() {
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const projectCards = document.querySelectorAll('.project-card');
-    
-    // Check if we're on the portfolio page and elements exist
-    if (filterButtons.length === 0 || projectCards.length === 0) {
-        console.log('Portfolio filters not initialized - missing elements:', {
+    try {
+        console.log('Starting portfolio filter initialization...');
+        
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+        
+        console.log('Found elements:', {
             filterButtons: filterButtons.length,
             projectCards: projectCards.length,
-            pathname: window.location.pathname
+            pathname: window.location.pathname,
+            readyState: document.readyState
         });
-        return;
-    }
-    
-    console.log('Initializing portfolio filters:', {
-        filterButtons: filterButtons.length,
-        projectCards: projectCards.length
-    });
+        
+        // Check if we're on the portfolio page and elements exist
+        if (filterButtons.length === 0 || projectCards.length === 0) {
+            console.log('Portfolio filters not initialized - missing elements');
+            return false;
+        }
+        
+        console.log('Initializing portfolio filters with', filterButtons.length, 'buttons and', projectCards.length, 'cards');
     
     // Remove any existing event listeners to prevent duplicates
     filterButtons.forEach(button => {
@@ -71,11 +74,19 @@ function initializePortfolioFilters() {
         }
     }
     
-    // Initialize with all projects visible
-    filterProjects('all', freshProjectCards);
-    
-    // Add clickable card functionality
-    initializeClickableCards(freshProjectCards);
+        // Initialize with all projects visible
+        filterProjects('all', freshProjectCards);
+        
+        // Add clickable card functionality
+        initializeClickableCards(freshProjectCards);
+        
+        console.log('Portfolio filters initialized successfully');
+        return true;
+        
+    } catch (error) {
+        console.error('Error initializing portfolio filters:', error);
+        return false;
+    }
 }
 
 function initializeClickableCards(projectCards) {
@@ -145,17 +156,31 @@ function initializeClickableCards(projectCards) {
 }
 
 // Initialize on DOM content loaded
-document.addEventListener('DOMContentLoaded', initializePortfolioFilters);
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM loaded, initializing portfolio filters');
+    initializePortfolioFilters();
+});
 
 // Also initialize when page is fully loaded (for MkDocs Material navigation)
 window.addEventListener('load', function() {
+    console.log('Window loaded, initializing portfolio filters with delay');
     setTimeout(initializePortfolioFilters, 100);
 });
+
+// Additional initialization for GitHub Pages
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializePortfolioFilters);
+} else {
+    // DOM is already loaded
+    console.log('DOM already loaded, initializing immediately');
+    initializePortfolioFilters();
+}
 
 // Handle MkDocs Material instant navigation
 function handleInstantNavigation() {
     // Check if we're on the portfolio page
     if (window.location.pathname.includes('/portfolio') || 
+        window.location.pathname.endsWith('/portfolio.html') ||
         document.querySelector('.portfolio-filters')) {
         setTimeout(initializePortfolioFilters, 100);
     }
@@ -205,12 +230,41 @@ document.addEventListener('DOMContentLoaded', function() {
 window.addEventListener('popstate', handleInstantNavigation);
 window.addEventListener('hashchange', handleInstantNavigation);
 
-// Fallback initialization - run after a delay to catch any missed cases
+// Multiple fallback initializations for GitHub Pages
 setTimeout(function() {
-    if (window.location.pathname.includes('/portfolio') && 
+    if ((window.location.pathname.includes('/portfolio') || window.location.pathname.endsWith('/portfolio.html')) && 
         document.querySelector('.portfolio-filters') &&
         !document.querySelector('.filter-btn.active')) {
-        console.log('Portfolio filters fallback initialization');
+        console.log('Portfolio filters fallback initialization (1s)');
         initializePortfolioFilters();
     }
 }, 1000);
+
+setTimeout(function() {
+    if ((window.location.pathname.includes('/portfolio') || window.location.pathname.endsWith('/portfolio.html')) && 
+        document.querySelector('.portfolio-filters') &&
+        !document.querySelector('.filter-btn.active')) {
+        console.log('Portfolio filters fallback initialization (2s)');
+        initializePortfolioFilters();
+    }
+}, 2000);
+
+// Force initialization on any portfolio page visit
+if (typeof window !== 'undefined') {
+    const checkAndInit = function() {
+        if ((window.location.pathname.includes('/portfolio') || window.location.pathname.endsWith('/portfolio.html')) && 
+            document.querySelector('.portfolio-filters')) {
+            console.log('Force initializing portfolio filters');
+            initializePortfolioFilters();
+        }
+    };
+    
+    // Run immediately if possible
+    if (document.readyState === 'complete') {
+        checkAndInit();
+    }
+    
+    // Also run on various events
+    window.addEventListener('focus', checkAndInit);
+    window.addEventListener('pageshow', checkAndInit);
+}
