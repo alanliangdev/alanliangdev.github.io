@@ -5,10 +5,118 @@ Welcome to my portfolio showcasing the projects and solutions I've built through
 ## Featured Projects
 
 <div class="portfolio-grid">
-  <!-- Project cards will be populated here -->
   <div class="project-card">
-    <h3>Coming Soon</h3>
-    <p>Portfolio projects are being added. Check back soon to see detailed case studies of my work in AWS, Kubernetes, and platform engineering.</p>
+    <div class="project-image kubernetes">
+      <i class="fas fa-dharmachakra"></i>
+    </div>
+    <div class="project-content">
+      <h3 class="project-title">Enterprise Kubernetes Platform</h3>
+      <p class="project-description">Self-service Kubernetes platform serving 200+ development teams with automated provisioning, monitoring, and cost optimization.</p>
+      <div class="project-tech">
+        <span class="tech-tag">Kubernetes</span>
+        <span class="tech-tag">AWS</span>
+        <span class="tech-tag">Terraform</span>
+        <span class="tech-tag">ArgoCD</span>
+      </div>
+      <div class="project-links">
+        <a href="portfolio/kubernetes-platform/" class="project-link">View Details</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="project-image aws">
+      <i class="fab fa-aws"></i>
+    </div>
+    <div class="project-content">
+      <h3 class="project-title">Cloud Migration & Cost Optimization</h3>
+      <p class="project-description">Led enterprise-scale migration to AWS, achieving 40% cost reduction while improving performance and reliability.</p>
+      <div class="project-tech">
+        <span class="tech-tag">AWS</span>
+        <span class="tech-tag">CloudFormation</span>
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">Cost Optimization</span>
+      </div>
+      <div class="project-links">
+        <a href="portfolio/aws-migration/" class="project-link">View Details</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="project-image gitops">
+      <i class="fas fa-code-branch"></i>
+    </div>
+    <div class="project-content">
+      <h3 class="project-title">GitOps CI/CD Pipeline</h3>
+      <p class="project-description">Implemented GitOps-based deployment pipeline with automated testing, security scanning, and progressive delivery.</p>
+      <div class="project-tech">
+        <span class="tech-tag">ArgoCD</span>
+        <span class="tech-tag">GitHub Actions</span>
+        <span class="tech-tag">Helm</span>
+        <span class="tech-tag">GitOps</span>
+      </div>
+      <div class="project-links">
+        <a href="portfolio/gitops-pipeline/" class="project-link">View Details</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="project-image monitoring">
+      <i class="fas fa-chart-line"></i>
+    </div>
+    <div class="project-content">
+      <h3 class="project-title">Observability Platform</h3>
+      <p class="project-description">Built comprehensive monitoring and alerting platform with custom dashboards and automated incident response.</p>
+      <div class="project-tech">
+        <span class="tech-tag">Prometheus</span>
+        <span class="tech-tag">Grafana</span>
+        <span class="tech-tag">DataDog</span>
+        <span class="tech-tag">Go</span>
+      </div>
+      <div class="project-links">
+        <a href="portfolio/observability-platform/" class="project-link">View Details</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="project-image infrastructure">
+      <i class="fas fa-server"></i>
+    </div>
+    <div class="project-content">
+      <h3 class="project-title">Infrastructure as Code Framework</h3>
+      <p class="project-description">Developed reusable Terraform modules and automation tools for consistent infrastructure provisioning across environments.</p>
+      <div class="project-tech">
+        <span class="tech-tag">Terraform</span>
+        <span class="tech-tag">Pulumi</span>
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">AWS</span>
+      </div>
+      <div class="project-links">
+        <a href="portfolio/iac-framework/" class="project-link">View Details</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="project-image security">
+      <i class="fas fa-shield-alt"></i>
+    </div>
+    <div class="project-content">
+      <h3 class="project-title">Security & Compliance Automation</h3>
+      <p class="project-description">Automated security scanning, compliance reporting, and vulnerability management across cloud infrastructure.</p>
+      <div class="project-tech">
+        <span class="tech-tag">Security</span>
+        <span class="tech-tag">Compliance</span>
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">AWS Security</span>
+      </div>
+      <div class="project-links">
+        <a href="portfolio/security-automation/" class="project-link">View Details</a>
+      </div>
+    </div>
   </div>
 </div>
 
