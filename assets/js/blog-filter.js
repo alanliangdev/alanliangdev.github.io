@@ -6,29 +6,32 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function initializeBlogFilters() {
     const filterContainer = document.getElementById('blog-filters');
-    const blogPosts = document.querySelectorAll('.blog-post');
     
-    if (!filterContainer || blogPosts.length === 0) {
+    // Check if we're on the blog index page
+    if (!filterContainer || !window.location.pathname.includes('/blog/')) {
         return;
     }
 
-    // Extract all categories and tags from blog posts
-    const categories = new Set();
-    const tags = new Set();
+    // For MkDocs Material blog, we need to extract categories and tags from the page content
+    const blogPosts = document.querySelectorAll('.md-blog-post, article.md-content__inner, .md-typeset article');
     
-    blogPosts.forEach(post => {
-        const postCategories = post.dataset.categories ? post.dataset.categories.split(',') : [];
-        const postTags = post.dataset.tags ? post.dataset.tags.split(',') : [];
-        
-        postCategories.forEach(cat => categories.add(cat.trim()));
-        postTags.forEach(tag => tags.add(tag.trim()));
-    });
+    if (blogPosts.length === 0) {
+        // If no blog posts found, try to get them from blog post links
+        const blogLinks = document.querySelectorAll('a[href*="/blog/"]');
+        if (blogLinks.length === 0) {
+            return;
+        }
+    }
+
+    // Extract categories and tags from the current page or predefined lists
+    const categories = new Set(['AWS', 'Kubernetes', 'DevOps', 'Cloud', 'Platform Engineering', 'Cost Optimization', 'GitOps', 'CI/CD', 'ArgoCD']);
+    const tags = new Set(['kubernetes', 'aws', 'cost', 'optimization', 'finops', 'cloud-economics', 'gitops', 'argocd', 'deployment', 'automation', 'scaling', 'enterprise', 'platform', 'multi-tenancy', 'governance', 'lessons-learned', 'best-practices', 'managed-services']);
 
     // Create filter controls
     createFilterControls(filterContainer, categories, tags);
     
     // Add event listeners for filtering
-    addFilterEventListeners(blogPosts);
+    addFilterEventListeners();
 }
 
 function createFilterControls(container, categories, tags) {
@@ -65,7 +68,7 @@ function createFilterControls(container, categories, tags) {
     container.innerHTML = filterHTML;
 }
 
-function addFilterEventListeners(blogPosts) {
+function addFilterEventListeners() {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const clearButton = document.getElementById('clear-filters');
     
@@ -86,10 +89,10 @@ function addFilterEventListeners(blogPosts) {
             updateButtonStates(filterType, filterValue);
             
             // Apply filters
-            applyFilters(blogPosts, activeFilters);
+            applyFilters(activeFilters);
             
             // Update post count
-            updatePostCount(blogPosts);
+            updatePostCount();
         });
     });
     
@@ -105,12 +108,13 @@ function addFilterEventListeners(blogPosts) {
         });
         
         // Show all posts
+        const blogPosts = getBlogPosts();
         blogPosts.forEach(post => {
             post.style.display = 'block';
             post.classList.remove('filtered-out');
         });
         
-        updatePostCount(blogPosts);
+        updatePostCount();
     });
 }
 
@@ -125,21 +129,33 @@ function updateButtonStates(filterType, filterValue) {
     });
 }
 
-function applyFilters(blogPosts, activeFilters) {
+function getBlogPosts() {
+    // Get blog post elements from MkDocs Material blog structure
+    return document.querySelectorAll('.md-blog-post, .md-typeset article, a[href*="/blog/20"]');
+}
+
+function applyFilters(activeFilters) {
+    const blogPosts = getBlogPosts();
+    
     blogPosts.forEach(post => {
-        const postCategories = post.dataset.categories ? post.dataset.categories.split(',').map(c => c.trim()) : [];
-        const postTags = post.dataset.tags ? post.dataset.tags.split(',').map(t => t.trim()) : [];
-        
         let showPost = true;
+        
+        // Get post content for filtering
+        const postText = post.textContent.toLowerCase();
+        const postHref = post.href || '';
         
         // Check category filter
         if (activeFilters.category !== 'all') {
-            showPost = showPost && postCategories.includes(activeFilters.category);
+            const categoryMatch = postText.includes(activeFilters.category.toLowerCase()) ||
+                                postHref.includes(activeFilters.category.toLowerCase().replace(/\s+/g, '-'));
+            showPost = showPost && categoryMatch;
         }
         
         // Check tag filter
         if (activeFilters.tag !== 'all') {
-            showPost = showPost && postTags.includes(activeFilters.tag);
+            const tagMatch = postText.includes(activeFilters.tag.toLowerCase()) ||
+                           postHref.includes(activeFilters.tag.toLowerCase());
+            showPost = showPost && tagMatch;
         }
         
         // Show/hide post with animation
@@ -158,7 +174,8 @@ function applyFilters(blogPosts, activeFilters) {
     });
 }
 
-function updatePostCount(blogPosts) {
+function updatePostCount() {
+    const blogPosts = getBlogPosts();
     const visiblePosts = Array.from(blogPosts).filter(post => 
         post.style.display !== 'none' && !post.classList.contains('filtered-out')
     );

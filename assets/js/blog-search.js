@@ -45,7 +45,7 @@ function createBlogSearchBox() {
     
     // Add search functionality
     const searchInput = document.getElementById('blog-search-input');
-    const blogPosts = document.querySelectorAll('.md-content article, .blog-post, [data-categories], [data-tags]');
+    const blogPosts = document.querySelectorAll('.md-blog-post, .md-typeset article, a[href*="/blog/20"]');
     
     if (searchInput && blogPosts.length > 0) {
         let searchTimeout;
@@ -250,7 +250,7 @@ function enhanceGlobalSearch() {
                 const blogSearchInput = document.getElementById('blog-search-input');
                 if (blogSearchInput && blogSearchInput.value !== this.value) {
                     blogSearchInput.value = this.value;
-                    const blogPosts = document.querySelectorAll('.md-content article, .blog-post, [data-categories], [data-tags]');
+                    const blogPosts = document.querySelectorAll('.md-blog-post, .md-typeset article, a[href*="/blog/20"]');
                     performBlogSearch(this.value, blogPosts);
                 }
             }
