@@ -1017,76 +1017,107 @@ html {
   box-shadow: 0 8px 25px 0 rgba(59, 130, 246, 0.4);
 }
 
-/* Portfolio filter controls */
+/* Portfolio filter container */
+.portfolio-filter-container {
+  margin: var(--space-lg) 0;
+  padding: var(--space-lg);
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.03), rgba(6, 182, 212, 0.03));
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* Filter search box */
+.filter-search-box {
+  position: relative;
+  margin-bottom: var(--space-md);
+  max-width: 300px;
+}
+
+.filter-search-input {
+  width: 100%;
+  padding: var(--space-sm) var(--space-lg) var(--space-sm) var(--space-xl);
+  border: 2px solid var(--md-default-fg-color--lightest);
+  border-radius: var(--radius-lg);
+  background-color: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  font-size: var(--font-size-sm);
+  transition: all var(--transition-base);
+}
+
+.filter-search-input:focus {
+  outline: none;
+  border-color: var(--portfolio-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.filter-search-icon {
+  position: absolute;
+  left: var(--space-md);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--md-default-fg-color--light);
+  font-size: var(--font-size-sm);
+}
+
+/* Compact filter buttons */
 .portfolio-filters {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-md);
-  margin: var(--space-xl) 0;
-  justify-content: center;
-  padding: var(--space-md);
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(6, 182, 212, 0.05));
-  border-radius: var(--radius-xl);
-  border: 1px solid var(--md-default-fg-color--lightest);
+  gap: var(--space-xs);
+  margin-bottom: var(--space-md);
 }
 
 .filter-btn {
   background-color: var(--md-default-bg-color);
   color: var(--md-default-fg-color--light);
-  border: 2px solid var(--md-default-fg-color--lightest);
-  padding: var(--space-sm) var(--space-lg);
-  border-radius: var(--radius-2xl);
-  font-size: var(--font-size-sm);
-  font-weight: 600;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
   cursor: pointer;
-  transition: all var(--transition-base);
+  transition: all var(--transition-fast);
   white-space: nowrap;
   position: relative;
   overflow: hidden;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  box-shadow: var(--shadow-sm);
-}
-
-.filter-btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, var(--portfolio-primary), var(--portfolio-accent));
-  transition: left var(--transition-base);
-  z-index: -1;
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .filter-btn:hover {
+  background-color: var(--portfolio-primary-light);
   color: white;
   border-color: var(--portfolio-primary);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-}
-
-.filter-btn:hover::before {
-  left: 0;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
 }
 
 .filter-btn.active {
-  background: linear-gradient(135deg, var(--portfolio-primary), var(--portfolio-accent));
+  background-color: var(--portfolio-primary);
   color: white;
   border-color: var(--portfolio-primary);
-  box-shadow: var(--shadow-lg);
-  transform: translateY(-1px);
-}
-
-.filter-btn.active::before {
-  left: 0;
+  box-shadow: var(--shadow-sm);
 }
 
 .filter-btn.active:hover {
-  background: linear-gradient(135deg, var(--portfolio-primary-dark), var(--portfolio-primary));
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-xl);
+  background-color: var(--portfolio-primary-dark);
+  transform: translateY(-1px);
+}
+
+/* Results count */
+.filter-results-count {
+  text-align: right;
+  font-size: var(--font-size-xs);
+  color: var(--md-default-fg-color--light);
+  font-weight: 500;
+}
+
+#results-count {
+  padding: var(--space-xs) var(--space-sm);
+  background-color: var(--md-code-bg-color);
+  border-radius: var(--radius-sm);
 }
 
 /* Portfolio grid styles */
@@ -1273,24 +1304,30 @@ html {
 
 /* Tablet responsive adjustments for portfolio */
 @media screen and (max-width: 768px) {
-  .portfolio-filters {
-    justify-content: flex-start;
-    margin: 1.5rem 0;
-    padding: 0 0.5rem;
-    overflow-x: auto;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+  .portfolio-filter-container {
+    margin: var(--space-md) 0;
+    padding: var(--space-md);
   }
-
-  .portfolio-filters::-webkit-scrollbar {
-    display: none;
+  
+  .filter-search-box {
+    max-width: 100%;
+    margin-bottom: var(--space-sm);
+  }
+  
+  .portfolio-filters {
+    gap: var(--space-xs);
+    margin-bottom: var(--space-sm);
   }
   
   .filter-btn {
-    font-size: 0.9rem;
-    padding: 0.5rem 1rem;
-    flex-shrink: 0;
-    min-height: 44px;
+    font-size: var(--font-size-xs);
+    padding: var(--space-xs) var(--space-sm);
+    min-height: 36px;
+  }
+  
+  .filter-results-count {
+    text-align: center;
+    margin-top: var(--space-sm);
   }
   
   .portfolio-grid {
@@ -1325,17 +1362,30 @@ html {
 
 /* Mobile phone portfolio optimizations */
 @media screen and (max-width: 480px) {
+  .portfolio-filter-container {
+    padding: var(--space-sm);
+  }
+  
+  .filter-search-input {
+    font-size: var(--font-size-sm);
+    padding: var(--space-sm) var(--space-md) var(--space-sm) var(--space-lg);
+  }
+  
+  .filter-search-icon {
+    left: var(--space-sm);
+    font-size: var(--font-size-xs);
+  }
+  
   .portfolio-filters {
-    gap: 0.75rem;
-    margin: 1.25rem 0;
-    padding: 0 0.75rem;
+    gap: var(--space-xs);
+    justify-content: center;
   }
   
   .filter-btn {
-    font-size: 0.85rem;
-    padding: 0.5rem 0.875rem;
-    min-height: 44px;
-    border-radius: 22px;
+    font-size: var(--font-size-xs);
+    padding: var(--space-xs) var(--space-sm);
+    min-height: 32px;
+    border-radius: var(--radius-md);
   }
   
   .portfolio-grid {

@@ -4,10 +4,14 @@ function initializePortfolioFilters() {
     
     const filterButtons = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card');
+    const searchInput = document.getElementById('filter-search');
+    const resultsCount = document.getElementById('results-count');
     
     console.log('📊 Found elements:', {
         filterButtons: filterButtons.length,
         projectCards: projectCards.length,
+        searchInput: !!searchInput,
+        resultsCount: !!resultsCount,
         pathname: window.location.pathname
     });
     
@@ -17,24 +21,45 @@ function initializePortfolioFilters() {
         return false;
     }
     
-    // Simple filter function
-    function filterProjects(filterValue) {
-        console.log('🎯 Filtering projects with value:', filterValue);
+    let currentFilter = 'all';
+    let currentSearch = '';
+    
+    // Update results count
+    function updateResultsCount(count) {
+        if (resultsCount) {
+            const text = count === 1 ? '1 project' : `${count} projects`;
+            resultsCount.textContent = text;
+        }
+    }
+    
+    // Filter function that handles both button filters and search
+    function filterProjects(filterValue = currentFilter, searchTerm = currentSearch) {
+        console.log('🎯 Filtering projects with:', { filterValue, searchTerm });
         let visibleCount = 0;
         
         projectCards.forEach((card, index) => {
             const technologies = card.getAttribute('data-technologies') || '';
-            console.log(`📋 Card ${index + 1} technologies:`, technologies);
+            const title = card.querySelector('.project-title')?.textContent || '';
+            const description = card.querySelector('.project-description')?.textContent || '';
             
             let shouldShow = false;
             
+            // Check filter match
             if (filterValue === 'all') {
                 shouldShow = true;
             } else {
-                // Split technologies and check for exact match
                 const techArray = technologies.split(',').map(tech => tech.trim());
                 shouldShow = techArray.includes(filterValue);
-                console.log(`🔍 Looking for "${filterValue}" in [${techArray.join(', ')}]: ${shouldShow}`);
+            }
+            
+            // Check search match if there's a search term
+            if (shouldShow && searchTerm) {
+                const searchLower = searchTerm.toLowerCase();
+                const titleMatch = title.toLowerCase().includes(searchLower);
+                const descMatch = description.toLowerCase().includes(searchLower);
+                const techMatch = technologies.toLowerCase().includes(searchLower);
+                
+                shouldShow = titleMatch || descMatch || techMatch;
             }
             
             if (shouldShow) {
@@ -42,22 +67,19 @@ function initializePortfolioFilters() {
                 card.style.opacity = '1';
                 card.classList.remove('filtered-out');
                 visibleCount++;
-                console.log(`✅ Showing card ${index + 1}`);
             } else {
                 card.style.display = 'none';
                 card.style.opacity = '0';
                 card.classList.add('filtered-out');
-                console.log(`❌ Hiding card ${index + 1}`);
             }
         });
         
+        updateResultsCount(visibleCount);
         console.log(`📈 Filter complete. Visible cards: ${visibleCount}/${projectCards.length}`);
     }
     
     // Add click event listeners to filter buttons
     filterButtons.forEach((button, index) => {
-        console.log(`🔘 Setting up button ${index + 1}:`, button.getAttribute('data-filter'));
-        
         button.addEventListener('click', function(e) {
             e.preventDefault();
             const filterValue = this.getAttribute('data-filter');
@@ -67,14 +89,33 @@ function initializePortfolioFilters() {
             filterButtons.forEach(btn => btn.classList.remove('active'));
             this.classList.add('active');
             
-            // Filter projects
-            filterProjects(filterValue);
+            // Update current filter and apply
+            currentFilter = filterValue;
+            filterProjects(currentFilter, currentSearch);
         });
     });
     
+    // Add search functionality
+    if (searchInput) {
+        searchInput.addEventListener('input', function(e) {
+            currentSearch = e.target.value.trim();
+            console.log('🔍 Search input:', currentSearch);
+            filterProjects(currentFilter, currentSearch);
+        });
+        
+        // Clear search on escape
+        searchInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                this.value = '';
+                currentSearch = '';
+                filterProjects(currentFilter, currentSearch);
+            }
+        });
+    }
+    
     // Initialize with all projects visible
     console.log('🚀 Initializing with all projects visible');
-    filterProjects('all');
+    filterProjects('all', '');
     
     console.log('✅ Portfolio filters initialized successfully');
     return true;

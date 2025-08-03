@@ -4,16 +4,27 @@ Welcome to my portfolio showcasing the projects and solutions I've built through
 
 ## Filter Projects
 
-<div class="portfolio-filters">
-  <button class="filter-btn active" data-filter="all">All Projects</button>
-  <button class="filter-btn" data-filter="AWS">AWS</button>
-  <button class="filter-btn" data-filter="Kubernetes">Kubernetes</button>
-  <button class="filter-btn" data-filter="Terraform">Terraform</button>
-  <button class="filter-btn" data-filter="Python">Python</button>
-  <button class="filter-btn" data-filter="ArgoCD">ArgoCD</button>
-  <button class="filter-btn" data-filter="Prometheus">Prometheus</button>
-  <button class="filter-btn" data-filter="Security">Security</button>
-  <button class="filter-btn" data-filter="GitOps">GitOps</button>
+<div class="portfolio-filter-container">
+  <div class="filter-search-box">
+    <input type="text" id="filter-search" placeholder="Search technologies..." class="filter-search-input">
+    <i class="fas fa-search filter-search-icon"></i>
+  </div>
+  
+  <div class="portfolio-filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="AWS">AWS</button>
+    <button class="filter-btn" data-filter="Kubernetes">K8s</button>
+    <button class="filter-btn" data-filter="Terraform">Terraform</button>
+    <button class="filter-btn" data-filter="Python">Python</button>
+    <button class="filter-btn" data-filter="ArgoCD">ArgoCD</button>
+    <button class="filter-btn" data-filter="Prometheus">Prometheus</button>
+    <button class="filter-btn" data-filter="Security">Security</button>
+    <button class="filter-btn" data-filter="GitOps">GitOps</button>
+  </div>
+  
+  <div class="filter-results-count">
+    <span id="results-count">6 projects</span>
+  </div>
 </div>
 
 ## Featured Projects
