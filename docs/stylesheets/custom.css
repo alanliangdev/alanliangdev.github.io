@@ -1170,6 +1170,28 @@ html {
   transform: scaleX(1);
 }
 
+/* Enhanced clickable card styles */
+.project-card.clickable-card {
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.project-card.clickable-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--portfolio-primary-light);
+}
+
+.project-card.clickable-card:active {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.project-card.clickable-card:focus {
+  outline: 3px solid var(--portfolio-primary);
+  outline-offset: 2px;
+}
+
 .project-card.clickable-card {
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;

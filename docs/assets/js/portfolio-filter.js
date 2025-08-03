@@ -113,12 +113,76 @@ function initializePortfolioFilters() {
         });
     }
     
+    // Initialize clickable cards
+    initializeClickableCards();
+    
     // Initialize with all projects visible
     console.log('🚀 Initializing with all projects visible');
     filterProjects('all', '');
     
     console.log('✅ Portfolio filters initialized successfully');
     return true;
+}
+
+// Initialize clickable card functionality
+function initializeClickableCards() {
+    const clickableCards = document.querySelectorAll('.project-card.clickable-card[data-href]');
+    console.log('🖱️ Initializing clickable cards:', clickableCards.length);
+    
+    clickableCards.forEach((card, index) => {
+        const href = card.dataset.href;
+        const title = card.querySelector('.project-title')?.textContent || 'project';
+        
+        console.log(`🔗 Setting up card ${index + 1}: ${title} -> ${href}`);
+        
+        // Add cursor pointer and accessibility attributes
+        card.style.cursor = 'pointer';
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('role', 'button');
+        card.setAttribute('aria-label', `View details for ${title}`);
+        
+        // Add click event listener
+        card.addEventListener('click', function(e) {
+            e.preventDefault();
+            console.log('🖱️ Card clicked, navigating to:', href);
+            if (href) {
+                window.location.href = href;
+            }
+        });
+        
+        // Add keyboard navigation support
+        card.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                console.log('⌨️ Keyboard navigation to:', href);
+                if (href) {
+                    window.location.href = href;
+                }
+            }
+        });
+        
+        // Enhanced hover effects
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-8px)';
+            this.style.transition = 'all 0.3s ease';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+        
+        // Focus styles for keyboard navigation
+        card.addEventListener('focus', function() {
+            this.style.outline = '3px solid var(--portfolio-primary)';
+            this.style.outlineOffset = '2px';
+        });
+        
+        card.addEventListener('blur', function() {
+            this.style.outline = 'none';
+        });
+    });
+    
+    console.log('✅ Clickable cards initialized successfully');
 }
 
 function initializeClickableCards(projectCards) {
