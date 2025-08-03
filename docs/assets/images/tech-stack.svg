@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="500" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font: bold 18px sans-serif; fill: #333; }
+      .category { font: bold 14px sans-serif; fill: #555; }
+      .tech { font: 12px sans-serif; fill: #666; }
+      .cloud { fill: #ff9900; }
+      .container { fill: #326ce5; }
+      .devops { fill: #00d4aa; }
+      .monitoring { fill: #e6522c; }
+      .security { fill: #7b68ee; }
+    </style>
+  </defs>
+  
+  <!-- Title -->
+  <text x="250" y="25" text-anchor="middle" class="title">Technology Stack</text>
+  
+  <!-- Cloud Platforms -->
+  <rect x="20" y="50" width="90" height="80" class="cloud" rx="5" opacity="0.1"/>
+  <text x="65" y="70" text-anchor="middle" class="category">Cloud</text>
+  <text x="65" y="90" text-anchor="middle" class="tech">AWS</text>
+  <text x="65" y="105" text-anchor="middle" class="tech">Azure</text>
+  <text x="65" y="120" text-anchor="middle" class="tech">GCP</text>
+  
+  <!-- Container Orchestration -->
+  <rect x="130" y="50" width="90" height="80" class="container" rx="5" opacity="0.1"/>
+  <text x="175" y="70" text-anchor="middle" class="category">Containers</text>
+  <text x="175" y="90" text-anchor="middle" class="tech">Kubernetes</text>
+  <text x="175" y="105" text-anchor="middle" class="tech">Docker</text>
+  <text x="175" y="120" text-anchor="middle" class="tech">Helm</text>
+  
+  <!-- DevOps Tools -->
+  <rect x="240" y="50" width="90" height="80" class="devops" rx="5" opacity="0.1"/>
+  <text x="285" y="70" text-anchor="middle" class="category">DevOps</text>
+  <text x="285" y="90" text-anchor="middle" class="tech">Terraform</text>
+  <text x="285" y="105" text-anchor="middle" class="tech">ArgoCD</text>
+  <text x="285" y="120" text-anchor="middle" class="tech">GitOps</text>
+  
+  <!-- Monitoring -->
+  <rect x="350" y="50" width="90" height="80" class="monitoring" rx="5" opacity="0.1"/>
+  <text x="395" y="70" text-anchor="middle" class="category">Monitoring</text>
+  <text x="395" y="90" text-anchor="middle" class="tech">Prometheus</text>
+  <text x="395" y="105" text-anchor="middle" class="tech">Grafana</text>
+  <text x="395" y="120" text-anchor="middle" class="tech">DataDog</text>
+  
+  <!-- Programming Languages -->
+  <rect x="75" y="150" width="90" height="80" class="security" rx="5" opacity="0.1"/>
+  <text x="120" y="170" text-anchor="middle" class="category">Languages</text>
+  <text x="120" y="190" text-anchor="middle" class="tech">Python</text>
+  <text x="120" y="205" text-anchor="middle" class="tech">Go</text>
+  <text x="120" y="220" text-anchor="middle" class="tech">JavaScript</text>
+  
+  <!-- Security -->
+  <rect x="185" y="150" width="90" height="80" class="security" rx="5" opacity="0.1"/>
+  <text x="230" y="170" text-anchor="middle" class="category">Security</text>
+  <text x="230" y="190" text-anchor="middle" class="tech">Snyk</text>
+  <text x="230" y="205" text-anchor="middle" class="tech">Falco</text>
+  <text x="230" y="220" text-anchor="middle" class="tech">OPA</text>
+  
+  <!-- Databases -->
+  <rect x="295" y="150" width="90" height="80" class="cloud" rx="5" opacity="0.1"/>
+  <text x="340" y="170" text-anchor="middle" class="category">Databases</text>
+  <text x="340" y="190" text-anchor="middle" class="tech">PostgreSQL</text>
+  <text x="340" y="205" text-anchor="middle" class="tech">Redis</text>
+  <text x="340" y="220" text-anchor="middle" class="tech">MongoDB</text>
+</svg>

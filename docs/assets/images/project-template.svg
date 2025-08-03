@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font: bold 20px sans-serif; fill: #2c3e50; }
+      .subtitle { font: 16px sans-serif; fill: #34495e; }
+      .label { font: 12px sans-serif; fill: #7f8c8d; }
+      .metric { font: bold 24px sans-serif; fill: #27ae60; }
+      .card { fill: #ffffff; stroke: #bdc3c7; stroke-width: 1; }
+      .header { fill: #3498db; }
+      .accent { fill: #e74c3c; }
+    </style>
+    <linearGradient id="headerGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Main Container -->
+  <rect x="0" y="0" width="600" height="400" class="card" rx="8"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="600" height="60" fill="url(#headerGradient)" rx="8"/>
+  <rect x="0" y="52" width="600" height="8" fill="url(#headerGradient)"/>
+  
+  <!-- Project Title -->
+  <text x="30" y="35" class="title" fill="white">Project Name</text>
+  <text x="450" y="35" class="subtitle" fill="white">Status: Completed</text>
+  
+  <!-- Key Metrics Section -->
+  <text x="30" y="90" class="subtitle">Key Achievements</text>
+  
+  <!-- Metric Cards -->
+  <rect x="30" y="100" width="130" height="80" class="card" rx="4"/>
+  <text x="95" y="125" text-anchor="middle" class="label">Performance</text>
+  <text x="95" y="150" text-anchor="middle" class="metric">+60%</text>
+  <text x="95" y="170" text-anchor="middle" class="label">Improvement</text>
+  
+  <rect x="180" y="100" width="130" height="80" class="card" rx="4"/>
+  <text x="245" y="125" text-anchor="middle" class="label">Cost Savings</text>
+  <text x="245" y="150" text-anchor="middle" class="metric">$2.4M</text>
+  <text x="245" y="170" text-anchor="middle" class="label">Annual</text>
+  
+  <rect x="330" y="100" width="130" height="80" class="card" rx="4"/>
+  <text x="395" y="125" text-anchor="middle" class="label">Deployment</text>
+  <text x="395" y="150" text-anchor="middle" class="metric">10x</text>
+  <text x="395" y="170" text-anchor="middle" class="label">Faster</text>
+  
+  <rect x="480" y="100" width="100" height="80" class="card" rx="4"/>
+  <text x="530" y="125" text-anchor="middle" class="label">Uptime</text>
+  <text x="530" y="150" text-anchor="middle" class="metric">99.9%</text>
+  <text x="530" y="170" text-anchor="middle" class="label">SLA</text>
+  
+  <!-- Architecture Section -->
+  <text x="30" y="220" class="subtitle">Architecture Overview</text>
+  
+  <!-- Simple Architecture Diagram -->
+  <rect x="30" y="230" width="540" height="140" class="card" rx="4"/>
+  
+  <!-- Components -->
+  <rect x="60" y="260" width="80" height="40" fill="#ecf0f1" stroke="#95a5a6" rx="4"/>
+  <text x="100" y="285" text-anchor="middle" class="label">Frontend</text>
+  
+  <rect x="180" y="260" width="80" height="40" fill="#ecf0f1" stroke="#95a5a6" rx="4"/>
+  <text x="220" y="285" text-anchor="middle" class="label">API</text>
+  
+  <rect x="300" y="260" width="80" height="40" fill="#ecf0f1" stroke="#95a5a6" rx="4"/>
+  <text x="340" y="285" text-anchor="middle" class="label">Services</text>
+  
+  <rect x="420" y="260" width="80" height="40" fill="#ecf0f1" stroke="#95a5a6" rx="4"/>
+  <text x="460" y="285" text-anchor="middle" class="label">Database</text>
+  
+  <!-- Arrows -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" 
+            refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#7f8c8d" />
+    </marker>
+  </defs>
+  
+  <line x1="140" y1="280" x2="180" y2="280" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="260" y1="280" x2="300" y2="280" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="380" y1="280" x2="420" y2="280" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Technology Tags -->
+  <rect x="60" y="320" width="60" height="25" fill="#3498db" rx="12"/>
+  <text x="90" y="337" text-anchor="middle" class="label" fill="white">AWS</text>
+  
+  <rect x="130" y="320" width="80" height="25" fill="#2ecc71" rx="12"/>
+  <text x="170" y="337" text-anchor="middle" class="label" fill="white">Kubernetes</text>
+  
+  <rect x="220" y="320" width="70" height="25" fill="#e74c3c" rx="12"/>
+  <text x="255" y="337" text-anchor="middle" class="label" fill="white">Python</text>
+  
+  <rect x="300" y="320" width="80" height="25" fill="#f39c12" rx="12"/>
+  <text x="340" y="337" text-anchor="middle" class="label" fill="white">Terraform</text>
+  
+  <rect x="390" y="320" width="70" height="25" fill="#9b59b6" rx="12"/>
+  <text x="425" y="337" text-anchor="middle" class="label" fill="white">Docker</text>
+</svg>
