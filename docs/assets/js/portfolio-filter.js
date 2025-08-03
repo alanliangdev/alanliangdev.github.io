@@ -180,7 +180,6 @@ if (document.readyState === 'loading') {
 function handleInstantNavigation() {
     // Check if we're on the portfolio page
     if (window.location.pathname.includes('/portfolio') || 
-        window.location.pathname.endsWith('/portfolio.html') ||
         document.querySelector('.portfolio-filters')) {
         setTimeout(initializePortfolioFilters, 100);
     }
@@ -232,7 +231,7 @@ window.addEventListener('hashchange', handleInstantNavigation);
 
 // Multiple fallback initializations for GitHub Pages
 setTimeout(function() {
-    if ((window.location.pathname.includes('/portfolio') || window.location.pathname.endsWith('/portfolio.html')) && 
+    if (window.location.pathname.includes('/portfolio') && 
         document.querySelector('.portfolio-filters') &&
         !document.querySelector('.filter-btn.active')) {
         console.log('Portfolio filters fallback initialization (1s)');
@@ -241,7 +240,7 @@ setTimeout(function() {
 }, 1000);
 
 setTimeout(function() {
-    if ((window.location.pathname.includes('/portfolio') || window.location.pathname.endsWith('/portfolio.html')) && 
+    if (window.location.pathname.includes('/portfolio') && 
         document.querySelector('.portfolio-filters') &&
         !document.querySelector('.filter-btn.active')) {
         console.log('Portfolio filters fallback initialization (2s)');
@@ -252,7 +251,7 @@ setTimeout(function() {
 // Force initialization on any portfolio page visit
 if (typeof window !== 'undefined') {
     const checkAndInit = function() {
-        if ((window.location.pathname.includes('/portfolio') || window.location.pathname.endsWith('/portfolio.html')) && 
+        if (window.location.pathname.includes('/portfolio') && 
             document.querySelector('.portfolio-filters')) {
             console.log('Force initializing portfolio filters');
             initializePortfolioFilters();
