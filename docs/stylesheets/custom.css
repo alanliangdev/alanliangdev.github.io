@@ -1104,10 +1104,10 @@ html {
   border-radius: var(--radius-sm);
 }
 
-/* Portfolio grid styles - YouTube thumbnail layout */
+/* Portfolio grid styles - Blog card layout */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: var(--space-lg);
   margin: var(--space-xl) 0;
   width: 100%;
@@ -1128,7 +1128,7 @@ html {
   flex-direction: column;
   position: relative;
   box-shadow: var(--shadow-sm);
-  height: 200px; /* Fixed height like YouTube thumbnails */
+  height: 240px; /* Taller to fit content properly */
 }
 
 .project-card::before {
@@ -1206,12 +1206,12 @@ html {
 }
 
 .project-image {
-  height: 100px; /* Smaller thumbnail height */
+  height: 140px; /* Larger thumbnail like blog cards */
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 1.8rem; /* Smaller icon */
+  font-size: 2.2rem;
   position: relative;
   flex-shrink: 0;
 }
@@ -1241,35 +1241,29 @@ html {
 }
 
 .project-content {
-  padding: var(--space-md);
+  padding: var(--space-lg);
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  min-height: 100px; /* Ensure enough space for content */
 }
 
 .project-title {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-xl);
   font-weight: 600;
-  margin-bottom: var(--space-xs);
+  margin-bottom: var(--space-sm);
   color: var(--md-default-fg-color);
-  line-height: 1.2;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  line-height: 1.3;
+  /* Remove line clamp to prevent cutting off */
 }
 
 .project-description {
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-base);
   color: var(--md-default-fg-color--light);
-  line-height: 1.4;
+  line-height: 1.5;
   margin: 0;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  flex-grow: 1;
+  /* Remove line clamp to prevent cutting off */
 }
 
 /* Tech tags removed for compact design */
@@ -1307,31 +1301,32 @@ html {
   }
   
   .portfolio-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: var(--space-md);
     margin: var(--space-lg) 0;
   }
   
   .project-card {
-    height: 180px; /* Slightly smaller on tablet */
+    height: 220px;
   }
   
   .project-content {
-    padding: var(--space-sm);
+    padding: var(--space-md);
+    min-height: 80px;
   }
   
   .project-image {
-    height: 80px;
-    font-size: 1.6rem;
+    height: 120px;
+    font-size: 2rem;
   }
 
   .project-title {
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-lg);
   }
 
   .project-description {
-    font-size: var(--font-size-xs);
-    line-height: 1.3;
+    font-size: var(--font-size-sm);
+    line-height: 1.4;
   }
 }
 
@@ -1364,31 +1359,32 @@ html {
   }
   
   .portfolio-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: var(--space-sm);
   }
   
   .project-card {
-    height: 160px; /* Even more compact on mobile */
+    height: 200px;
   }
   
   .project-content {
     padding: var(--space-sm);
+    min-height: 70px;
   }
 
   .project-image {
-    height: 70px;
-    font-size: 1.4rem;
+    height: 100px;
+    font-size: 1.8rem;
   }
 
   .project-title {
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-base);
     margin-bottom: var(--space-xs);
   }
 
   .project-description {
-    font-size: var(--font-size-xs);
-    line-height: 1.3;
+    font-size: var(--font-size-sm);
+    line-height: 1.4;
   }
   
   /* Enhanced mobile touch interactions */

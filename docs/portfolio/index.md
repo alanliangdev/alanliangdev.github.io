@@ -36,7 +36,7 @@ Welcome to my portfolio showcasing the projects and solutions I've built through
     </div>
     <div class="project-content">
       <h3 class="project-title">Enterprise Kubernetes Platform</h3>
-      <p class="project-description">Self-service platform serving 200+ development teams.</p>
+      <p class="project-description">Self-service Kubernetes platform serving 200+ development teams with automated provisioning and monitoring.</p>
     </div>
   </div>
 
@@ -46,7 +46,7 @@ Welcome to my portfolio showcasing the projects and solutions I've built through
     </div>
     <div class="project-content">
       <h3 class="project-title">Cloud Migration & Cost Optimization</h3>
-      <p class="project-description">Enterprise AWS migration achieving 40% cost reduction.</p>
+      <p class="project-description">Led enterprise-scale migration to AWS, achieving 40% cost reduction while improving performance.</p>
     </div>
   </div>
 
@@ -56,7 +56,7 @@ Welcome to my portfolio showcasing the projects and solutions I've built through
     </div>
     <div class="project-content">
       <h3 class="project-title">GitOps CI/CD Pipeline</h3>
-      <p class="project-description">Automated deployment pipeline with testing and security scanning.</p>
+      <p class="project-description">GitOps-based deployment pipeline with automated testing, security scanning, and progressive delivery.</p>
     </div>
   </div>
 
@@ -66,7 +66,7 @@ Welcome to my portfolio showcasing the projects and solutions I've built through
     </div>
     <div class="project-content">
       <h3 class="project-title">Observability Platform</h3>
-      <p class="project-description">Comprehensive monitoring with custom dashboards and automated alerts.</p>
+      <p class="project-description">Built comprehensive monitoring and alerting platform with custom dashboards and automated incident response.</p>
     </div>
   </div>
 
@@ -76,7 +76,7 @@ Welcome to my portfolio showcasing the projects and solutions I've built through
     </div>
     <div class="project-content">
       <h3 class="project-title">Infrastructure as Code Framework</h3>
-      <p class="project-description">Reusable Terraform modules for consistent infrastructure provisioning.</p>
+      <p class="project-description">Developed reusable Terraform modules and automation tools for consistent infrastructure provisioning.</p>
     </div>
   </div>
 
@@ -86,7 +86,7 @@ Welcome to my portfolio showcasing the projects and solutions I've built through
     </div>
     <div class="project-content">
       <h3 class="project-title">Security & Compliance Automation</h3>
-      <p class="project-description">Automated security scanning and compliance reporting platform.</p>
+      <p class="project-description">Automated security scanning, compliance reporting, and vulnerability management across cloud infrastructure.</p>
     </div>
   </div>
 </div>
