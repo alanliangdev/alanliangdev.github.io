@@ -1137,8 +1137,7 @@ html {
   flex-direction: column;
   position: relative;
   box-shadow: var(--shadow-sm);
-  height: 240px;
-  /* Original height with tighter spacing */
+  /* Dynamic height based on content */
 }
 
 .project-card::before {
@@ -1257,8 +1256,7 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  min-height: 100px;
-  /* Tighter padding for more content space */
+  /* Dynamic content height - no min-height */
 }
 
 .project-title {
@@ -1320,12 +1318,12 @@ html {
   }
 
   .project-card {
-    height: 200px;
+    /* Dynamic height on tablet */
   }
 
   .project-content {
     padding: var(--space-xs) var(--space-sm) var(--space-sm) var(--space-sm);
-    min-height: 80px;
+    /* Dynamic content height on tablet */
   }
 
   .project-image {
@@ -1378,12 +1376,12 @@ html {
   }
 
   .project-card {
-    height: 180px;
+    /* Dynamic height on mobile */
   }
 
   .project-content {
     padding: var(--space-xs) var(--space-xs) var(--space-sm) var(--space-xs);
-    min-height: 70px;
+    /* Dynamic content height on mobile */
   }
 
   .project-image {
