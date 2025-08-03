@@ -131,8 +131,9 @@ echo • ✅ GitHub Actions workflow configured
 echo • ✅ Essential files present
 echo.
 echo Next steps:
-echo 1. Start development: scripts\dev-server.bat
-echo 2. Build for production: scripts\build.bat
-echo 3. Commit changes: git commit -m "Setup automated CI/CD and cleanup repository"
+echo 1. Test dependencies: scripts\test-dependencies.bat
+echo 2. Start development: scripts\dev-server.bat
+echo 3. Build for production: scripts\build.bat
+echo 4. Commit changes: git commit -m "Setup automated CI/CD and cleanup repository"
 
 pause

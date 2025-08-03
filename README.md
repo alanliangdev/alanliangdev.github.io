@@ -203,6 +203,10 @@ mkdocs gh-deploy --force
 
 **Build fails with missing dependencies:**
 ```bash
+# Test dependencies first
+./scripts/test-dependencies.sh  # or test-dependencies.bat on Windows
+
+# Then install
 pip install -r requirements.txt
 ```
 
