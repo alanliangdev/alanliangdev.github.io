@@ -35,6 +35,7 @@ function initializePortfolioFilters() {
     freshFilterButtons.forEach(button => {
         button.addEventListener('click', function() {
             const filterValue = this.getAttribute('data-filter');
+            console.log('Filter button clicked:', filterValue);
             
             // Update active button
             freshFilterButtons.forEach(btn => btn.classList.remove('active'));
@@ -46,23 +47,44 @@ function initializePortfolioFilters() {
     });
     
     function filterProjects(filterValue, cards) {
+        console.log('Filtering projects with value:', filterValue);
+        let visibleCount = 0;
+        
         cards.forEach(card => {
             if (filterValue === 'all') {
                 // Show all projects
                 card.style.display = 'flex';
                 card.classList.remove('filtered-out');
+                visibleCount++;
             } else {
                 // Check if project has the selected technology
                 const technologies = card.getAttribute('data-technologies');
-                if (technologies && technologies.includes(filterValue)) {
-                    card.style.display = 'flex';
-                    card.classList.remove('filtered-out');
+                console.log('Card technologies:', technologies);
+                
+                if (technologies) {
+                    // Split technologies by comma and check for exact match
+                    const techArray = technologies.split(',').map(tech => tech.trim());
+                    console.log('Tech array:', techArray, 'Looking for:', filterValue);
+                    
+                    if (techArray.includes(filterValue)) {
+                        card.style.display = 'flex';
+                        card.classList.remove('filtered-out');
+                        visibleCount++;
+                        console.log('Showing card with technologies:', technologies);
+                    } else {
+                        card.style.display = 'none';
+                        card.classList.add('filtered-out');
+                        console.log('Hiding card with technologies:', technologies);
+                    }
                 } else {
                     card.style.display = 'none';
                     card.classList.add('filtered-out');
+                    console.log('Hiding card - no technologies attribute');
                 }
             }
         });
+        
+        console.log('Filter complete. Visible cards:', visibleCount);
         
         // Add animation class for smooth transitions
         const portfolioGrid = document.querySelector('.portfolio-grid');

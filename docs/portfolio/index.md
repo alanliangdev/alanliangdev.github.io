@@ -36,7 +36,7 @@ Welcome to my portfolio showcasing the projects and solutions I've built through
     </div>
   </div>
 
-  <div class="project-card clickable-card" data-technologies="AWS,CloudFormation,Python,Cost Optimization" data-href="/portfolio/aws-migration">
+  <div class="project-card clickable-card" data-technologies="AWS,Python" data-href="/portfolio/aws-migration">
     <div class="project-image aws">
       <i class="fab fa-aws"></i>
     </div>
@@ -53,7 +53,7 @@ Welcome to my portfolio showcasing the projects and solutions I've built through
     </div>
   </div>
 
-  <div class="project-card clickable-card" data-technologies="ArgoCD,GitHub Actions,Helm,GitOps" data-href="/portfolio/gitops-pipeline">
+  <div class="project-card clickable-card" data-technologies="ArgoCD,GitOps" data-href="/portfolio/gitops-pipeline">
     <div class="project-image gitops">
       <i class="fas fa-code-branch"></i>
     </div>
@@ -70,7 +70,7 @@ Welcome to my portfolio showcasing the projects and solutions I've built through
     </div>
   </div>
 
-  <div class="project-card clickable-card" data-technologies="Prometheus,Grafana,DataDog,Go" data-href="/portfolio/observability-platform">
+  <div class="project-card clickable-card" data-technologies="Prometheus" data-href="/portfolio/observability-platform">
     <div class="project-image monitoring">
       <i class="fas fa-chart-line"></i>
     </div>
@@ -87,7 +87,7 @@ Welcome to my portfolio showcasing the projects and solutions I've built through
     </div>
   </div>
 
-  <div class="project-card clickable-card" data-technologies="Terraform,Pulumi,Python,AWS" data-href="/portfolio/iac-framework">
+  <div class="project-card clickable-card" data-technologies="Terraform,Python,AWS" data-href="/portfolio/iac-framework">
     <div class="project-image infrastructure">
       <i class="fas fa-server"></i>
     </div>
@@ -104,7 +104,7 @@ Welcome to my portfolio showcasing the projects and solutions I've built through
     </div>
   </div>
 
-  <div class="project-card clickable-card" data-technologies="Security,Compliance,Python,AWS Security" data-href="/portfolio/security-automation">
+  <div class="project-card clickable-card" data-technologies="Security,Python,AWS" data-href="/portfolio/security-automation">
     <div class="project-image security">
       <i class="fas fa-shield-alt"></i>
     </div>
