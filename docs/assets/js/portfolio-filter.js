@@ -129,21 +129,33 @@ function initializeClickableCards() {
     const clickableCards = document.querySelectorAll('.project-card.clickable-card[data-href]');
     console.log('🖱️ Initializing clickable cards:', clickableCards.length);
     
+    if (clickableCards.length === 0) {
+        console.log('❌ No clickable cards found');
+        return;
+    }
+    
     clickableCards.forEach((card, index) => {
         const href = card.dataset.href;
         const title = card.querySelector('.project-title')?.textContent || 'project';
         
-        console.log(`🔗 Setting up card ${index + 1}: ${title} -> ${href}`);
+        console.log(`🔗 Setting up card ${index + 1}: "${title}" -> ${href}`);
+        
+        // Remove any existing event listeners by cloning the element
+        const newCard = card.cloneNode(true);
+        card.parentNode.replaceChild(newCard, card);
+        
+        // Work with the new card
+        const freshCard = newCard;
         
         // Add cursor pointer and accessibility attributes
-        card.style.cursor = 'pointer';
-        card.setAttribute('tabindex', '0');
-        card.setAttribute('role', 'button');
-        card.setAttribute('aria-label', `View details for ${title}`);
+        freshCard.style.cursor = 'pointer';
+        freshCard.setAttribute('tabindex', '0');
+        freshCard.setAttribute('role', 'button');
+        freshCard.setAttribute('aria-label', `View details for ${title}`);
         
         // Add click event listener
-        card.addEventListener('click', function(e) {
-            e.preventDefault();
+        freshCard.addEventListener('click', function(e) {
+            e.stopPropagation();
             console.log('🖱️ Card clicked, navigating to:', href);
             if (href) {
                 window.location.href = href;
@@ -151,9 +163,10 @@ function initializeClickableCards() {
         });
         
         // Add keyboard navigation support
-        card.addEventListener('keydown', function(e) {
+        freshCard.addEventListener('keydown', function(e) {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
+                e.stopPropagation();
                 console.log('⌨️ Keyboard navigation to:', href);
                 if (href) {
                     window.location.href = href;
@@ -162,93 +175,27 @@ function initializeClickableCards() {
         });
         
         // Enhanced hover effects
-        card.addEventListener('mouseenter', function() {
+        freshCard.addEventListener('mouseenter', function() {
             this.style.transform = 'translateY(-8px)';
             this.style.transition = 'all 0.3s ease';
         });
         
-        card.addEventListener('mouseleave', function() {
+        freshCard.addEventListener('mouseleave', function() {
             this.style.transform = 'translateY(0)';
         });
         
         // Focus styles for keyboard navigation
-        card.addEventListener('focus', function() {
+        freshCard.addEventListener('focus', function() {
             this.style.outline = '3px solid var(--portfolio-primary)';
             this.style.outlineOffset = '2px';
         });
         
-        card.addEventListener('blur', function() {
+        freshCard.addEventListener('blur', function() {
             this.style.outline = 'none';
         });
     });
     
     console.log('✅ Clickable cards initialized successfully');
-}
-
-function initializeClickableCards(projectCards) {
-    projectCards.forEach(card => {
-        // Only add click functionality if the card has the clickable-card class and data-href
-        if (card.classList.contains('clickable-card') && card.dataset.href) {
-            // Remove any existing click listeners
-            const newCard = card.cloneNode(true);
-            card.parentNode.replaceChild(newCard, card);
-        }
-    });
-    
-    // Get fresh references after cloning
-    const clickableCards = document.querySelectorAll('.clickable-card[data-href]');
-    
-    clickableCards.forEach(card => {
-        // Add cursor pointer style and accessibility attributes
-        card.style.cursor = 'pointer';
-        card.setAttribute('tabindex', '0');
-        card.setAttribute('role', 'button');
-        card.setAttribute('aria-label', `View details for ${card.querySelector('.project-title')?.textContent || 'project'}`);
-        
-        // Add click event listener
-        card.addEventListener('click', function(e) {
-            // Get the href from data attribute
-            const href = this.dataset.href;
-            console.log('Card clicked, navigating to:', href);
-            if (href) {
-                // Navigate to the project page
-                window.location.href = href;
-            }
-        });
-        
-        // Add keyboard navigation support
-        card.addEventListener('keydown', function(e) {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                const href = this.dataset.href;
-                console.log('Keyboard navigation to:', href);
-                if (href) {
-                    window.location.href = href;
-                }
-            }
-        });
-        
-        // Add hover effects
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-8px)';
-            this.style.boxShadow = '0 12px 30px rgba(0, 0, 0, 0.2)';
-        });
-        
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(-4px)';
-            this.style.boxShadow = '0 8px 25px rgba(0, 0, 0, 0.15)';
-        });
-        
-        // Add focus styles for keyboard navigation
-        card.addEventListener('focus', function() {
-            this.style.outline = '2px solid var(--md-primary-fg-color)';
-            this.style.outlineOffset = '2px';
-        });
-        
-        card.addEventListener('blur', function() {
-            this.style.outline = 'none';
-        });
-    });
 }
 
 // Simple initialization approach
@@ -289,3 +236,23 @@ setTimeout(function() {
         tryInitialize();
     }
 }, 1000);
+
+// Debug function to test card clicks manually
+window.testCardClicks = function() {
+    console.log('🧪 Testing card clicks...');
+    const cards = document.querySelectorAll('.project-card.clickable-card[data-href]');
+    console.log('Found cards:', cards.length);
+    
+    cards.forEach((card, index) => {
+        const href = card.dataset.href;
+        const title = card.querySelector('.project-title')?.textContent;
+        console.log(`Card ${index + 1}: "${title}" -> ${href}`);
+        console.log('Has click listener:', card.onclick !== null);
+        console.log('Cursor style:', getComputedStyle(card).cursor);
+    });
+    
+    if (cards.length > 0) {
+        console.log('🖱️ Try clicking the first card...');
+        cards[0].click();
+    }
+};
