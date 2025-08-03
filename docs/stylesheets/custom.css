@@ -1138,7 +1138,7 @@ html {
   position: relative;
   box-shadow: var(--shadow-sm);
   height: 240px;
-  /* Taller to fit content properly */
+  /* Original height with tighter spacing */
 }
 
 .project-card::before {
@@ -1216,13 +1216,13 @@ html {
 }
 
 .project-image {
-  height: 140px;
-  /* Larger thumbnail like blog cards */
+  height: 120px;
+  /* Smaller image to give more room for text */
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 2.2rem;
+  font-size: 2rem;
   position: relative;
   flex-shrink: 0;
 }
@@ -1252,27 +1252,31 @@ html {
 }
 
 .project-content {
-  padding: var(--space-sm) var(--space-md) var(--space-md) var(--space-md);
+  padding: var(--space-xs) var(--space-sm) var(--space-sm) var(--space-sm);
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   min-height: 100px;
+  /* Tighter padding for more content space */
 }
 
 .project-title {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-sm);
   font-weight: 600;
   margin-bottom: var(--space-xs);
   color: var(--md-default-fg-color);
-  line-height: 1.2;
+  line-height: 1.1;
+  /* Smaller font and tighter spacing */
 }
 
 .project-description {
-  font-size: var(--font-size-sm);
+  font-size: 0.7rem;
   color: var(--md-default-fg-color--light);
-  line-height: 1.4;
+  line-height: 1.2;
   margin: 0;
+  opacity: 0.9;
+  /* Much smaller font with tighter line height */
 }
 
 /* Tech tags removed for compact design */
@@ -1316,27 +1320,27 @@ html {
   }
 
   .project-card {
-    height: 220px;
+    height: 200px;
   }
 
   .project-content {
-    padding: var(--space-sm) var(--space-sm) var(--space-md) var(--space-sm);
+    padding: var(--space-xs) var(--space-sm) var(--space-sm) var(--space-sm);
     min-height: 80px;
   }
 
   .project-image {
-    height: 120px;
-    font-size: 2rem;
+    height: 100px;
+    font-size: 1.8rem;
   }
 
   .project-title {
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-sm);
     margin-bottom: var(--space-xs);
   }
 
   .project-description {
-    font-size: var(--font-size-xs);
-    line-height: 1.3;
+    font-size: 0.7rem;
+    line-height: 1.2;
   }
 }
 
@@ -1374,27 +1378,27 @@ html {
   }
 
   .project-card {
-    height: 200px;
+    height: 180px;
   }
 
   .project-content {
-    padding: var(--space-xs) var(--space-sm) var(--space-sm) var(--space-sm);
+    padding: var(--space-xs) var(--space-xs) var(--space-sm) var(--space-xs);
     min-height: 70px;
   }
 
   .project-image {
-    height: 100px;
-    font-size: 1.8rem;
+    height: 80px;
+    font-size: 1.5rem;
   }
 
   .project-title {
-    font-size: var(--font-size-sm);
+    font-size: 0.8rem;
     margin-bottom: var(--space-xs);
   }
 
   .project-description {
-    font-size: var(--font-size-xs);
-    line-height: 1.3;
+    font-size: 0.65rem;
+    line-height: 1.1;
   }
 
   /* Enhanced mobile touch interactions */
