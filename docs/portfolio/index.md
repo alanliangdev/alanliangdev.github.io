@@ -36,14 +36,7 @@ Welcome to my portfolio showcasing the projects and solutions I've built through
     </div>
     <div class="project-content">
       <h3 class="project-title">Enterprise Kubernetes Platform</h3>
-      <p class="project-description">Self-service Kubernetes platform serving 200+ development teams with automated provisioning, monitoring, and cost optimization.</p>
-      <div class="project-tech">
-        <span class="tech-tag">Kubernetes</span>
-        <span class="tech-tag">AWS</span>
-        <span class="tech-tag">Terraform</span>
-        <span class="tech-tag">ArgoCD</span>
-      </div>
-
+      <p class="project-description">Self-service platform serving 200+ development teams.</p>
     </div>
   </div>
 
@@ -53,14 +46,7 @@ Welcome to my portfolio showcasing the projects and solutions I've built through
     </div>
     <div class="project-content">
       <h3 class="project-title">Cloud Migration & Cost Optimization</h3>
-      <p class="project-description">Led enterprise-scale migration to AWS, achieving 40% cost reduction while improving performance and reliability.</p>
-      <div class="project-tech">
-        <span class="tech-tag">AWS</span>
-        <span class="tech-tag">CloudFormation</span>
-        <span class="tech-tag">Python</span>
-        <span class="tech-tag">Cost Optimization</span>
-      </div>
-
+      <p class="project-description">Enterprise AWS migration achieving 40% cost reduction.</p>
     </div>
   </div>
 
@@ -70,14 +56,7 @@ Welcome to my portfolio showcasing the projects and solutions I've built through
     </div>
     <div class="project-content">
       <h3 class="project-title">GitOps CI/CD Pipeline</h3>
-      <p class="project-description">Implemented GitOps-based deployment pipeline with automated testing, security scanning, and progressive delivery.</p>
-      <div class="project-tech">
-        <span class="tech-tag">ArgoCD</span>
-        <span class="tech-tag">GitHub Actions</span>
-        <span class="tech-tag">Helm</span>
-        <span class="tech-tag">GitOps</span>
-      </div>
-
+      <p class="project-description">Automated deployment pipeline with testing and security scanning.</p>
     </div>
   </div>
 
@@ -87,14 +66,7 @@ Welcome to my portfolio showcasing the projects and solutions I've built through
     </div>
     <div class="project-content">
       <h3 class="project-title">Observability Platform</h3>
-      <p class="project-description">Built comprehensive monitoring and alerting platform with custom dashboards and automated incident response.</p>
-      <div class="project-tech">
-        <span class="tech-tag">Prometheus</span>
-        <span class="tech-tag">Grafana</span>
-        <span class="tech-tag">DataDog</span>
-        <span class="tech-tag">Go</span>
-      </div>
-
+      <p class="project-description">Comprehensive monitoring with custom dashboards and automated alerts.</p>
     </div>
   </div>
 
@@ -104,14 +76,7 @@ Welcome to my portfolio showcasing the projects and solutions I've built through
     </div>
     <div class="project-content">
       <h3 class="project-title">Infrastructure as Code Framework</h3>
-      <p class="project-description">Developed reusable Terraform modules and automation tools for consistent infrastructure provisioning across environments.</p>
-      <div class="project-tech">
-        <span class="tech-tag">Terraform</span>
-        <span class="tech-tag">Pulumi</span>
-        <span class="tech-tag">Python</span>
-        <span class="tech-tag">AWS</span>
-      </div>
-
+      <p class="project-description">Reusable Terraform modules for consistent infrastructure provisioning.</p>
     </div>
   </div>
 
@@ -121,14 +86,7 @@ Welcome to my portfolio showcasing the projects and solutions I've built through
     </div>
     <div class="project-content">
       <h3 class="project-title">Security & Compliance Automation</h3>
-      <p class="project-description">Automated security scanning, compliance reporting, and vulnerability management across cloud infrastructure.</p>
-      <div class="project-tech">
-        <span class="tech-tag">Security</span>
-        <span class="tech-tag">Compliance</span>
-        <span class="tech-tag">Python</span>
-        <span class="tech-tag">AWS Security</span>
-      </div>
-
+      <p class="project-description">Automated security scanning and compliance reporting platform.</p>
     </div>
   </div>
 </div>
