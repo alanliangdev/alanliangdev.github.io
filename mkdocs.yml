@@ -37,13 +37,21 @@ theme:
     code: Roboto Mono
   features:
     - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
     - navigation.top
     - navigation.tracking
+    - navigation.indexes
     - search.suggest
     - search.highlight
+    - search.share
     - content.code.copy
+    - content.code.annotate
     - header.autohide
     - navigation.footer
+    - toc.follow
+    - toc.integrate
 
 plugins:
   - blog:
@@ -114,7 +122,7 @@ nav:
   - About: about.md
   - Resume: resume.md
   - Portfolio: 
-    - Overview: portfolio.md
+    - portfolio/index.md
     - Projects:
       - Enterprise Kubernetes Platform: portfolio/kubernetes-platform.md
       - Cloud Migration & Cost Optimization: portfolio/aws-migration.md
