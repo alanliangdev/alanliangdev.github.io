@@ -11,7 +11,7 @@
   --portfolio-success: #10b981;
   --portfolio-warning: #f59e0b;
   --portfolio-error: #ef4444;
-  
+
   /* Enhanced typography scale */
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
@@ -21,7 +21,7 @@
   --font-size-2xl: 1.5rem;
   --font-size-3xl: 1.875rem;
   --font-size-4xl: 2.25rem;
-  
+
   /* Spacing scale */
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
@@ -29,20 +29,20 @@
   --space-lg: 1.5rem;
   --space-xl: 2rem;
   --space-2xl: 3rem;
-  
+
   /* Border radius scale */
   --radius-sm: 0.25rem;
   --radius-md: 0.5rem;
   --radius-lg: 0.75rem;
   --radius-xl: 1rem;
   --radius-2xl: 1.5rem;
-  
+
   /* Shadow scale */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  
+
   /* Transition timing */
   --transition-fast: 0.15s ease-out;
   --transition-base: 0.3s ease-out;
@@ -606,9 +606,11 @@
 .cta-button,
 .filter-btn,
 .clear-btn {
-  min-height: 44px; /* iOS/Android recommended touch target size */
+  min-height: 44px;
+  /* iOS/Android recommended touch target size */
   min-width: 44px;
-  touch-action: manipulation; /* Prevents double-tap zoom */
+  touch-action: manipulation;
+  /* Prevents double-tap zoom */
 }
 
 /* Improved mobile navigation */
@@ -682,6 +684,7 @@
 
 /* Mobile phone optimizations */
 @media screen and (max-width: 480px) {
+
   /* Hero section mobile optimization */
   .hero-section {
     padding: 1.5rem 0.75rem;
@@ -783,20 +786,20 @@
     gap: 1.5rem;
     margin: 1.5rem 0;
   }
-  
+
   .featured-project-content {
     padding: 1.25rem;
   }
-  
+
   .featured-project-image {
     height: 100px;
     font-size: 2rem;
   }
-  
+
   .featured-project-title {
     font-size: 1.1rem;
   }
-  
+
   .featured-project-description {
     font-size: 0.9rem;
   }
@@ -806,16 +809,16 @@
   .featured-projects {
     gap: 1rem;
   }
-  
+
   .featured-project-content {
     padding: 1rem;
   }
-  
+
   .featured-project-tech .tech-tag {
     font-size: 0.75rem;
     padding: 0.2rem 0.6rem;
   }
-  
+
   .view-all-link {
     font-size: 0.95rem;
   }
@@ -839,13 +842,13 @@ Ensure content aligns with navigation tabs */
 }
 
 /* Enhanced content spacing */
-.md-content__inner > * + * {
+.md-content__inner>*+* {
   margin-top: var(--space-lg);
 }
 
-.md-content__inner > h1 + *,
-.md-content__inner > h2 + *,
-.md-content__inner > h3 + * {
+.md-content__inner>h1+*,
+.md-content__inner>h2+*,
+.md-content__inner>h3+* {
   margin-top: var(--space-md);
 }
 
@@ -882,6 +885,7 @@ Ensure content aligns with navigation tabs */
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -893,6 +897,7 @@ Ensure content aligns with navigation tabs */
     opacity: 0;
     transform: translateX(30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -900,9 +905,12 @@ Ensure content aligns with navigation tabs */
 }
 
 @keyframes pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.05);
   }
@@ -912,6 +920,7 @@ Ensure content aligns with navigation tabs */
   0% {
     background-position: -200px 0;
   }
+
   100% {
     background-position: calc(200px + 100%) 0;
   }
@@ -1128,7 +1137,8 @@ html {
   flex-direction: column;
   position: relative;
   box-shadow: var(--shadow-sm);
-  height: 240px; /* Taller to fit content properly */
+  height: 240px;
+  /* Taller to fit content properly */
 }
 
 .project-card::before {
@@ -1206,7 +1216,8 @@ html {
 }
 
 .project-image {
-  height: 140px; /* Larger thumbnail like blog cards */
+  height: 140px;
+  /* Larger thumbnail like blog cards */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1241,29 +1252,27 @@ html {
 }
 
 .project-content {
-  padding: var(--space-lg);
+  padding: var(--space-sm) var(--space-md) var(--space-md) var(--space-md);
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  min-height: 100px; /* Ensure enough space for content */
+  min-height: 100px;
 }
 
 .project-title {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-lg);
   font-weight: 600;
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-xs);
   color: var(--md-default-fg-color);
-  line-height: 1.3;
-  /* Remove line clamp to prevent cutting off */
+  line-height: 1.2;
 }
 
 .project-description {
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-sm);
   color: var(--md-default-fg-color--light);
-  line-height: 1.5;
+  line-height: 1.4;
   margin: 0;
-  /* Remove line clamp to prevent cutting off */
 }
 
 /* Tech tags removed for compact design */
@@ -1278,55 +1287,56 @@ html {
     margin: var(--space-md) 0;
     padding: var(--space-md);
   }
-  
+
   .filter-search-box {
     max-width: 100%;
     margin-bottom: var(--space-sm);
   }
-  
+
   .portfolio-filters {
     gap: var(--space-xs);
     margin-bottom: var(--space-sm);
   }
-  
+
   .filter-btn {
     font-size: var(--font-size-xs);
     padding: var(--space-xs) var(--space-sm);
     min-height: 36px;
   }
-  
+
   .filter-results-count {
     text-align: center;
     margin-top: var(--space-sm);
   }
-  
+
   .portfolio-grid {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: var(--space-md);
     margin: var(--space-lg) 0;
   }
-  
+
   .project-card {
     height: 220px;
   }
-  
+
   .project-content {
-    padding: var(--space-md);
+    padding: var(--space-sm) var(--space-sm) var(--space-md) var(--space-sm);
     min-height: 80px;
   }
-  
+
   .project-image {
     height: 120px;
     font-size: 2rem;
   }
 
   .project-title {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-base);
+    margin-bottom: var(--space-xs);
   }
 
   .project-description {
-    font-size: var(--font-size-sm);
-    line-height: 1.4;
+    font-size: var(--font-size-xs);
+    line-height: 1.3;
   }
 }
 
@@ -1335,40 +1345,40 @@ html {
   .portfolio-filter-container {
     padding: var(--space-sm);
   }
-  
+
   .filter-search-input {
     font-size: var(--font-size-sm);
     padding: var(--space-sm) var(--space-md) var(--space-sm) var(--space-lg);
   }
-  
+
   .filter-search-icon {
     left: var(--space-sm);
     font-size: var(--font-size-xs);
   }
-  
+
   .portfolio-filters {
     gap: var(--space-xs);
     justify-content: center;
   }
-  
+
   .filter-btn {
     font-size: var(--font-size-xs);
     padding: var(--space-xs) var(--space-sm);
     min-height: 32px;
     border-radius: var(--radius-md);
   }
-  
+
   .portfolio-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: var(--space-sm);
   }
-  
+
   .project-card {
     height: 200px;
   }
-  
+
   .project-content {
-    padding: var(--space-sm);
+    padding: var(--space-xs) var(--space-sm) var(--space-sm) var(--space-sm);
     min-height: 70px;
   }
 
@@ -1378,15 +1388,15 @@ html {
   }
 
   .project-title {
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-sm);
     margin-bottom: var(--space-xs);
   }
 
   .project-description {
-    font-size: var(--font-size-sm);
-    line-height: 1.4;
+    font-size: var(--font-size-xs);
+    line-height: 1.3;
   }
-  
+
   /* Enhanced mobile touch interactions */
   .project-card.clickable-card {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -1404,6 +1414,7 @@ html {
     transition: transform 0.1s ease, box-shadow 0.1s ease;
   }
 }
+
 /* Resu
 me Page Styles */
 
@@ -1782,41 +1793,41 @@ me Page Styles */
   .resume-header h2 {
     font-size: 2rem;
   }
-  
+
   .resume-title {
     font-size: 1.1rem;
   }
-  
+
   .contact-section {
     grid-template-columns: 1fr;
     gap: 0.75rem;
     padding: 1rem;
   }
-  
+
   .experience-item {
     padding: 1.5rem;
   }
-  
+
   .experience-meta {
     flex-direction: column;
     gap: 0.5rem;
   }
-  
+
   .skills-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-  
+
   .skill-item {
     padding: 1rem;
   }
-  
+
   .certification-item {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.75rem;
   }
-  
+
   .certification-status {
     align-self: flex-end;
   }
@@ -1826,19 +1837,19 @@ me Page Styles */
   .resume-header {
     padding: 1.5rem 0;
   }
-  
+
   .resume-header h2 {
     font-size: 1.75rem;
   }
-  
+
   .experience-item {
     padding: 1.25rem;
   }
-  
+
   .skill-category {
     padding: 1rem;
   }
-  
+
   .education-item,
   .project-item {
     padding: 1.25rem;
@@ -1847,6 +1858,7 @@ me Page Styles */
 
 /* Print styles for PDF generation */
 @media print {
+
   /* Hide navigation and other UI elements */
   .md-header,
   .md-tabs,
@@ -1856,7 +1868,7 @@ me Page Styles */
   .md-search {
     display: none !important;
   }
-  
+
   /* Optimize page layout for print */
   .md-main,
   .md-content,
@@ -1866,27 +1878,27 @@ me Page Styles */
     max-width: 100% !important;
     width: 100% !important;
   }
-  
+
   /* Resume-specific print styles */
   .resume-header {
     page-break-after: avoid;
     margin-bottom: 1rem;
     padding: 1rem 0;
   }
-  
+
   .resume-header h2 {
     font-size: 1.8rem;
     margin-bottom: 0.25rem;
   }
-  
+
   .resume-title {
     font-size: 1rem;
   }
-  
+
   .resume-summary {
     font-size: 0.9rem;
   }
-  
+
   .contact-section {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
@@ -1896,16 +1908,16 @@ me Page Styles */
     border: 1px solid #dee2e6 !important;
     page-break-inside: avoid;
   }
-  
+
   .contact-item {
     font-size: 0.85rem;
     gap: 0.5rem;
   }
-  
+
   .contact-item i {
     font-size: 0.9rem;
   }
-  
+
   /* Experience section print optimization */
   .experience-item {
     page-break-inside: avoid;
@@ -1914,34 +1926,34 @@ me Page Styles */
     border: 1px solid #dee2e6 !important;
     background-color: white !important;
   }
-  
+
   .experience-header h3 {
     font-size: 1.1rem;
     margin-bottom: 0.25rem;
   }
-  
+
   .experience-meta {
     font-size: 0.85rem;
     gap: 0.75rem;
   }
-  
+
   .experience-description {
     font-size: 0.9rem;
     margin-bottom: 1rem;
   }
-  
+
   .achievements h4,
   .key-metrics h4 {
     font-size: 0.95rem;
     margin-bottom: 0.5rem;
   }
-  
+
   .achievements li,
   .key-metrics li {
     font-size: 0.85rem;
     margin-bottom: 0.25rem;
   }
-  
+
   /* Skills section print optimization */
   .skill-category {
     page-break-inside: avoid;
@@ -1949,32 +1961,32 @@ me Page Styles */
     padding: 0.75rem;
     background-color: #f8f9fa !important;
   }
-  
+
   .skill-category h3 {
     font-size: 1rem;
     margin-bottom: 0.75rem;
   }
-  
+
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.75rem;
   }
-  
+
   .skill-item {
     padding: 0.75rem;
     background-color: white !important;
     border: 1px solid #dee2e6 !important;
   }
-  
+
   .skill-item h4 {
     font-size: 0.95rem;
     margin-bottom: 0.25rem;
   }
-  
+
   .skill-item p {
     font-size: 0.8rem;
   }
-  
+
   /* Education and certifications print styles */
   .education-item,
   .certification-item,
@@ -1985,87 +1997,89 @@ me Page Styles */
     background-color: #f8f9fa !important;
     border: 1px solid #dee2e6 !important;
   }
-  
+
   .education-header h3,
   .certification-item h3,
   .project-item h3 {
     font-size: 1rem;
     margin-bottom: 0.5rem;
   }
-  
+
   .education-meta {
     font-size: 0.85rem;
   }
-  
+
   .education-details li {
     font-size: 0.85rem;
     margin-bottom: 0.25rem;
   }
-  
+
   .certification-item {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
-  
+
   .status {
     font-size: 0.7rem;
     padding: 0.2rem 0.5rem;
   }
-  
+
   .expected {
     font-size: 0.8rem;
   }
-  
+
   .project-item p {
     font-size: 0.85rem;
   }
-  
+
   /* Footer print styles */
   .resume-footer {
     margin-top: 1.5rem;
     padding-top: 1rem;
     font-size: 0.8rem;
   }
-  
+
   /* Force page breaks where needed */
   .skills-section {
     page-break-before: auto;
   }
-  
+
   /* Ensure proper spacing and avoid orphans */
-  h2, h3 {
+  h2,
+  h3 {
     page-break-after: avoid;
   }
-  
+
   /* Color adjustments for print */
   * {
     color: black !important;
     background-color: white !important;
   }
-  
+
   .company,
   .institution,
   .resume-title {
     color: #333 !important;
     font-weight: bold !important;
   }
-  
+
   .status-in-progress {
     background-color: #e3f2fd !important;
     color: #1976d2 !important;
   }
-  
+
   .status-planned {
     background-color: #f5f5f5 !important;
     color: #666 !important;
   }
-  
+
   .status-completed {
     background-color: #e8f5e8 !important;
     color: #2e7d32 !important;
   }
 }
+
 /* Blog F
 ilter Styles */
 .blog-filters {
@@ -2296,50 +2310,50 @@ ilter Styles */
     padding: 1.5rem;
     margin: 1.5rem 0;
   }
-  
+
   .blog-filter-section h3 {
     font-size: 1.3rem;
     margin-bottom: 1rem;
   }
-  
+
   .filter-group {
     margin-bottom: 1.5rem;
   }
-  
+
   .filter-group h4 {
     font-size: 1rem;
     margin-bottom: 0.75rem;
   }
-  
+
   .filter-buttons {
     gap: 0.5rem;
   }
-  
+
   .filter-btn {
     font-size: 0.85rem;
     padding: 0.4rem 0.8rem;
   }
-  
+
   .clear-btn {
     padding: 0.6rem 1.2rem;
     font-size: 0.85rem;
   }
-  
+
   .blog-post-meta {
     flex-direction: column;
     gap: 0.75rem;
     padding: 0.75rem;
   }
-  
+
   .blog-meta-item {
     font-size: 0.85rem;
   }
-  
+
   .blog-search-box {
     padding: 0.75rem 1.25rem;
     font-size: 0.95rem;
   }
-  
+
   .search-icon {
     right: 1.25rem;
     font-size: 1.1rem;
@@ -2351,36 +2365,36 @@ ilter Styles */
     padding: 1rem;
     margin: 1rem 0;
   }
-  
+
   .blog-filter-section h3 {
     font-size: 1.2rem;
   }
-  
+
   .filter-buttons {
     gap: 0.4rem;
   }
-  
+
   .filter-btn {
     font-size: 0.8rem;
     padding: 0.35rem 0.7rem;
   }
-  
+
   .clear-btn {
     padding: 0.5rem 1rem;
     font-size: 0.8rem;
   }
-  
+
   .blog-category,
   .blog-tag {
     font-size: 0.75rem;
     padding: 0.2rem 0.6rem;
   }
-  
+
   .blog-search-box {
     padding: 0.6rem 1rem;
     font-size: 0.9rem;
   }
-  
+
   .search-icon {
     right: 1rem;
     font-size: 1rem;
@@ -2393,6 +2407,7 @@ ilter Styles */
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -2424,12 +2439,16 @@ ilter Styles */
 }
 
 @keyframes spin {
-  0% { transform: translate(-50%, -50%) rotate(0deg); }
-  100% { transform: translate(-50%, -50%) rotate(360deg); }
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
-/
-* Mobile-first blog filter optimizations */
-@media screen and (max-width: 768px) {
+
+/ * Mobile-first blog filter optimizations */ @media screen and (max-width: 768px) {
   .blog-filters {
     margin: 1.5rem 0.5rem;
     padding: 1.5rem;
@@ -2521,6 +2540,7 @@ ilter Styles */
 
 /* Enhanced mobile touch interactions for all interactive elements */
 @media screen and (max-width: 768px) {
+
   /* Improve touch targets */
   .md-nav__link,
   .md-footer__link,
@@ -2536,7 +2556,8 @@ ilter Styles */
   }
 
   .md-search__input {
-    font-size: 16px; /* Prevents zoom on iOS */
+    font-size: 16px;
+    /* Prevents zoom on iOS */
     padding: 0.75rem 1rem;
   }
 
@@ -2624,8 +2645,9 @@ ilter Styles */
 }
 
 /* High DPI display optimizations */
-@media screen and (-webkit-min-device-pixel-ratio: 2), 
-       screen and (min-resolution: 192dpi) {
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+screen and (min-resolution: 192dpi) {
+
   .project-image,
   .featured-project-image,
   .blog-card-image {
@@ -2636,6 +2658,7 @@ ilter Styles */
 
 /* Reduced motion preferences */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
