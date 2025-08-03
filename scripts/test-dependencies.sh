@@ -36,7 +36,7 @@ if pip install -r requirements.txt; then
     fi
     
     # Test if configuration is valid
-    if mkdocs config > /dev/null 2>&1; then
+    if python -c "import mkdocs.config; mkdocs.config.load_config()" > /dev/null 2>&1; then
         echo "✅ MkDocs configuration is valid!"
     else
         echo "❌ MkDocs configuration is invalid"

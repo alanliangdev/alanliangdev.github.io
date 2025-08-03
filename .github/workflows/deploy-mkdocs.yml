@@ -41,7 +41,7 @@ jobs:
           pip install -r requirements.txt
           
       - name: Validate MkDocs configuration
-        run: mkdocs config
+        run: python -c "import mkdocs.config; mkdocs.config.load_config()"
         
       - name: Build MkDocs site
         run: mkdocs build --verbose --clean

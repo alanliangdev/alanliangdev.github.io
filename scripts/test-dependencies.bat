@@ -39,7 +39,7 @@ if errorlevel 1 (
 echo ✅ MkDocs is working correctly!
 
 REM Test if configuration is valid
-mkdocs config >nul 2>&1
+python -c "import mkdocs.config; mkdocs.config.load_config()" >nul 2>&1
 if errorlevel 1 (
     echo ❌ MkDocs configuration is invalid
     goto cleanup

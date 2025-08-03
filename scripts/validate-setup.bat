@@ -69,7 +69,7 @@ if exist "venv" (
         echo ✅ MkDocs is installed in virtual environment
         
         REM Validate MkDocs configuration
-        mkdocs config >nul 2>&1
+        python -c "import mkdocs.config; mkdocs.config.load_config()" >nul 2>&1
         if not errorlevel 1 (
             echo ✅ MkDocs configuration is valid
         ) else (
