@@ -9,9 +9,7 @@ technologies:
   - Kubernetes
   - Docker
 status: "Completed"
-demo_url: ""
-repo_url: ""
-featured_image: "assets/images/gitops-pipeline.png"
+featured_image: "assets/images/gitops-pipeline.svg"
 date_completed: 2023-12-15
 project_type: "DevOps Platform"
 team_size: "6 engineers"

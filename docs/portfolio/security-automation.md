@@ -9,9 +9,7 @@ technologies:
   - Terraform
   - Docker
 status: "Completed"
-demo_url: ""
-repo_url: ""
-featured_image: "assets/images/security-automation.png"
+featured_image: "assets/images/security-automation.svg"
 date_completed: 2023-11-30
 project_type: "Security Platform"
 team_size: "6 engineers"

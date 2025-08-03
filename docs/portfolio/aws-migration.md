@@ -10,9 +10,7 @@ technologies:
   - RDS
   - S3
 status: "Completed"
-demo_url: ""
-repo_url: ""
-featured_image: "assets/images/aws-migration.png"
+featured_image: "assets/images/aws-migration.svg"
 date_completed: 2023-08-30
 project_type: "Cloud Migration"
 team_size: "12 engineers"

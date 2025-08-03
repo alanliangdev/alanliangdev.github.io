@@ -13,7 +13,6 @@ tags:
 authors:
   - alan
 readtime: 8
-comments: true
 image: assets/images/blog/aws-cost-optimization.svg
 description: How we reduced our AWS bill by 40% without compromising performance or reliability
 slug: aws-cost-optimization-strategies

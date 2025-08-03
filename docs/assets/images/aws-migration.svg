@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="awsGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff9900;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffb84d;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="200" fill="url(#awsGradient)"/>
+  <text x="200" y="90" text-anchor="middle" fill="white" font-size="24" font-family="Arial, sans-serif" font-weight="bold">AWS Migration</text>
+  <text x="200" y="120" text-anchor="middle" fill="white" font-size="16" font-family="Arial, sans-serif">Cost Optimization</text>
+  <text x="200" y="145" text-anchor="middle" fill="white" font-size="14" font-family="Arial, sans-serif">40% Cost Reduction</text>
+</svg>

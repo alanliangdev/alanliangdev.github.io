@@ -9,9 +9,7 @@ technologies:
   - Azure
   - GCP
 status: "Completed"
-demo_url: ""
-repo_url: ""
-featured_image: "assets/images/iac-framework.png"
+featured_image: "assets/images/iac-framework.svg"
 date_completed: 2023-09-10
 project_type: "Infrastructure Platform"
 team_size: "4 engineers"

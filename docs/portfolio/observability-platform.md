@@ -9,9 +9,7 @@ technologies:
   - Kubernetes
   - Elasticsearch
 status: "Completed"
-demo_url: ""
-repo_url: ""
-featured_image: "assets/images/observability-platform.png"
+featured_image: "assets/images/observability-platform.svg"
 date_completed: 2023-10-20
 project_type: "Platform Engineering"
 team_size: "5 engineers"

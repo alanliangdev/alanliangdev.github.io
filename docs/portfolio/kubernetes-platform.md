@@ -10,9 +10,7 @@ technologies:
   - Grafana
   - Helm
 status: "Completed"
-demo_url: ""
-repo_url: ""
-featured_image: "assets/images/kubernetes-platform.png"
+featured_image: "assets/images/kubernetes-platform.svg"
 date_completed: 2024-01-15
 project_type: "Enterprise Platform"
 team_size: "8 engineers"
