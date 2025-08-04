@@ -11,7 +11,6 @@ keywords: Portfolio, AWS Migration, Kubernetes Platform, GitOps, CI/CD, Infrastr
 ## Featured Projects
 
 <section class="portfolio-grid" role="region" aria-labelledby="portfolio-projects-heading">
-  <h2 id="portfolio-projects-heading" class="sr-only">Professional Portfolio Projects</h2>
   
   <article class="portfolio-item">
     <a href="portfolio/aws-migration/" aria-describedby="aws-migration-desc">

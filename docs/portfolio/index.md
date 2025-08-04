@@ -44,7 +44,6 @@ Welcome to my portfolio showcasing the projects and solutions I've built through
 ## Featured Projects
 
 <section class="portfolio-grid" role="region" aria-labelledby="projects-heading">
-  <h3 id="projects-heading" class="sr-only">Portfolio Projects Grid</h3>
   
   <article class="project-card clickable-card" data-technologies="Kubernetes,AWS,Terraform,ArgoCD" data-href="/portfolio/kubernetes-platform" 
            role="button" tabindex="0" aria-describedby="k8s-platform-desc">

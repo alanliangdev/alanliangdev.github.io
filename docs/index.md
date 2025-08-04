@@ -8,7 +8,7 @@ keywords: Alan Liang, Staff Platform Engineer, AWS, Kubernetes, DevOps, Cloud Ar
 
 <div class="hero-section" role="banner" aria-labelledby="hero-heading">
   <div class="hero-content">
-    <h2 id="hero-heading" class="hero-tagline">Staff Platform Engineer • Cloud Architect • DevOps Leader</h2>
+    <p id="hero-heading" class="hero-tagline">Staff Platform Engineer • Cloud Architect • DevOps Leader</p>
     <p class="hero-bio">I architect and scale cloud infrastructure at Commonwealth Bank of Australia, specializing in AWS, DevOps, and Kubernetes solutions. I love solving complex distributed systems challenges and mentoring teams on cloud-native best practices.</p>
     
     <nav class="hero-actions" role="navigation" aria-label="Primary actions">
@@ -36,7 +36,6 @@ keywords: Alan Liang, Staff Platform Engineer, AWS, Kubernetes, DevOps, Cloud Ar
 ## Featured Projects
 
 <section class="featured-projects" role="region" aria-labelledby="featured-projects-heading">
-  <h2 id="featured-projects-heading" class="sr-only">Featured Professional Projects</h2>
   
   <article class="featured-project">
     <a href="portfolio/kubernetes-platform" class="featured-project-link" aria-describedby="k8s-project-desc">
@@ -97,7 +96,6 @@ keywords: Alan Liang, Staff Platform Engineer, AWS, Kubernetes, DevOps, Cloud Ar
 ## Latest Blog Posts
 
 <section class="blog-grid" role="region" aria-labelledby="latest-blog-heading">
-  <h2 id="latest-blog-heading" class="sr-only">Latest Blog Posts</h2>
   
   <article class="blog-card">
     <a href="blog/2024/07/15/kubernetes-enterprise-scaling" class="blog-card-link" aria-describedby="k8s-blog-desc">
