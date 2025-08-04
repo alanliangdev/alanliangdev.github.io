@@ -1,0 +1,94 @@
+{
+  "site": {
+    "name": "Alan Liang - Staff Platform Engineer",
+    "description": "Staff Platform Engineer specializing in AWS, DevOps, and Kubernetes solutions",
+    "url": "https://alanliangdev.github.io/",
+    "author": "Alan Liang",
+    "keywords": [
+      "Alan Liang",
+      "Staff Platform Engineer", 
+      "AWS",
+      "Kubernetes",
+      "DevOps",
+      "Cloud Architecture",
+      "Platform Engineering",
+      "Commonwealth Bank",
+      "Infrastructure as Code",
+      "CI/CD",
+      "GitOps"
+    ],
+    "social": {
+      "github": "https://github.com/alanliangdev",
+      "linkedin": "https://www.linkedin.com/in/alanliangdev/"
+    }
+  },
+  "pages": {
+    "home": {
+      "title": "Alan Liang - Staff Platform Engineer",
+      "description": "Staff Platform Engineer specializing in AWS cloud architecture, DevOps automation, and Kubernetes solutions. Explore my portfolio of enterprise-scale projects.",
+      "keywords": ["Staff Platform Engineer", "AWS Expert", "Kubernetes", "DevOps", "Cloud Architecture"]
+    },
+    "about": {
+      "title": "About Alan Liang - Staff Platform Engineer",
+      "description": "Learn about Alan Liang's background as a Staff Platform Engineer at Commonwealth Bank of Australia, with expertise in AWS, Kubernetes, and enterprise-scale cloud infrastructure.",
+      "keywords": ["About Alan Liang", "Commonwealth Bank", "Platform Engineer", "AWS", "Kubernetes"]
+    },
+    "portfolio": {
+      "title": "Portfolio - Professional Projects by Alan Liang",
+      "description": "Explore Alan Liang's professional portfolio featuring enterprise-scale projects in AWS migration, Kubernetes platforms, GitOps pipelines, and cloud infrastructure automation.",
+      "keywords": ["Portfolio", "AWS Migration", "Kubernetes Platform", "GitOps", "Infrastructure Automation"]
+    },
+    "resume": {
+      "title": "Resume - Alan Liang, Staff Platform Engineer",
+      "description": "Alan Liang's professional resume - Staff Platform Engineer with 6+ years experience in AWS, Kubernetes, DevOps, and enterprise-scale cloud infrastructure.",
+      "keywords": ["Resume", "Staff Platform Engineer", "AWS Certified", "Kubernetes Administrator", "DevOps Experience"]
+    },
+    "blog": {
+      "title": "Blog - Technical Insights by Alan Liang",
+      "description": "Technical blog posts about AWS, Kubernetes, DevOps, and platform engineering by Alan Liang, Staff Platform Engineer at Commonwealth Bank of Australia.",
+      "keywords": ["Technical Blog", "AWS Tutorials", "Kubernetes Best Practices", "DevOps Insights", "Platform Engineering"]
+    }
+  },
+  "openGraph": {
+    "type": "website",
+    "locale": "en_US",
+    "siteName": "Alan Liang - Staff Platform Engineer",
+    "image": {
+      "url": "https://alanliangdev.github.io/assets/images/profile-photo.jpeg",
+      "width": 400,
+      "height": 400,
+      "alt": "Alan Liang - Staff Platform Engineer"
+    }
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "site": "@alanliangdev"
+  },
+  "structuredData": {
+    "organization": {
+      "name": "Commonwealth Bank of Australia",
+      "url": "https://www.commbank.com.au/"
+    },
+    "education": {
+      "name": "James Cook University",
+      "url": "https://www.jcu.edu.au/"
+    },
+    "certifications": [
+      {
+        "name": "Certified Kubernetes Application Developer (CKAD)",
+        "issuer": "Cloud Native Computing Foundation",
+        "date": "2022-11"
+      },
+      {
+        "name": "Certified Kubernetes Administrator (CKA)", 
+        "issuer": "Cloud Native Computing Foundation",
+        "date": "2022-08"
+      },
+      {
+        "name": "Kubernetes and Cloud Native Associate (KCNA)",
+        "issuer": "Cloud Native Computing Foundation", 
+        "date": "2021-11"
+      }
+    ]
+  }
+}

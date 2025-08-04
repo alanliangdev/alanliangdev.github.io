@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="{% if page and page.title == 'Home' %}website{% else %}article{% endif %}">
+  <meta property="og:url" content="{% if page and page.canonical_url %}{{ page.canonical_url }}{% else %}{{ config.site_url }}{% endif %}">
+  <meta property="og:title" content="{% if page and page.title %}{{ page.title }} - {{ config.site_name }}{% else %}{{ config.site_name }}{% endif %}">
+  <meta property="og:description" content="{% if page and page.meta and page.meta.description %}{{ page.meta.description }}{% else %}{{ config.site_description }}{% endif %}">
+  <meta property="og:image" content="{{ config.site_url }}assets/images/profile-photo.jpeg">
+  <meta property="og:site_name" content="{{ config.site_name }}">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="{% if page and page.canonical_url %}{{ page.canonical_url }}{% else %}{{ config.site_url }}{% endif %}">
+  <meta property="twitter:title" content="{% if page and page.title %}{{ page.title }} - {{ config.site_name }}{% else %}{{ config.site_name }}{% endif %}">
+  <meta property="twitter:description" content="{% if page and page.meta and page.meta.description %}{{ page.meta.description }}{% else %}{{ config.site_description }}{% endif %}">
+  <meta property="twitter:image" content="{{ config.site_url }}assets/images/profile-photo.jpeg">
+
+  <!-- Additional SEO meta tags -->
+  <meta name="author" content="{{ config.site_author }}">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="bingbot" content="index, follow">
+  <meta name="theme-color" content="#2563eb">
+  <meta name="msapplication-TileColor" content="#2563eb">
+  
+  <!-- Keywords meta tag for specific pages -->
+  {% if page and page.meta and page.meta.keywords %}
+  <meta name="keywords" content="{{ page.meta.keywords }}">
+  {% endif %}
+  
+  <!-- Language and geo targeting -->
+  <meta name="language" content="English">
+  <meta name="geo.region" content="AU">
+  <meta name="geo.placename" content="Melbourne, Australia">
+  
+  <!-- Verification tags (add when available) -->
+  <!-- <meta name="google-site-verification" content="your-verification-code"> -->
+  <!-- <meta name="msvalidate.01" content="your-bing-verification-code"> -->
+  
+  {% if page and page.title == 'Home' %}
+  <!-- Structured Data for Person/Professional -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Alan Liang",
+    "jobTitle": "Staff Platform Engineer",
+    "description": "Staff Platform Engineer specializing in AWS, DevOps, and Kubernetes solutions",
+    "url": "{{ config.site_url }}",
+    "image": "{{ config.site_url }}assets/images/profile-photo.jpeg",
+    "sameAs": [
+      "https://github.com/alanliangdev",
+      "https://www.linkedin.com/in/alanliangdev/"
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Commonwealth Bank of Australia"
+    },
+    "knowsAbout": [
+      "AWS",
+      "Kubernetes",
+      "DevOps",
+      "Cloud Architecture",
+      "Platform Engineering",
+      "Infrastructure as Code",
+      "CI/CD",
+      "GitOps"
+    ],
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "James Cook University"
+    }
+  }
+  </script>
+  {% endif %}
+
+  {% if page and (page.title == 'Portfolio' or 'portfolio' in page.url) %}
+  <!-- Structured Data for Portfolio -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Alan Liang - Professional Portfolio",
+    "description": "Portfolio showcasing professional projects and technical achievements in cloud architecture, DevOps, and platform engineering",
+    "author": {
+      "@type": "Person",
+      "name": "Alan Liang",
+      "jobTitle": "Staff Platform Engineer"
+    },
+    "url": "{{ page.canonical_url }}",
+    "dateModified": "{{ build_date_utc.strftime('%Y-%m-%d') }}",
+    "inLanguage": "en-US"
+  }
+  </script>
+  {% endif %}
+
+  {% if page and 'blog' in page.url and page.title != 'Blog' %}
+  <!-- Structured Data for Blog Posts -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "{% if page and page.title %}{{ page.title }}{% else %}{{ config.site_name }}{% endif %}",
+    "description": "{% if page and page.meta and page.meta.description %}{{ page.meta.description }}{% else %}{{ config.site_description }}{% endif %}",
+    "author": {
+      "@type": "Person",
+      "name": "Alan Liang",
+      "jobTitle": "Staff Platform Engineer"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Alan Liang"
+    },
+    "url": "{% if page and page.canonical_url %}{{ page.canonical_url }}{% else %}{{ config.site_url }}{% endif %}",
+    "datePublished": "{% if page and page.meta and page.meta.date %}{{ page.meta.date.strftime('%Y-%m-%d') }}{% endif %}",
+    "dateModified": "{% if page and page.meta and page.meta.date %}{{ page.meta.date.strftime('%Y-%m-%d') }}{% endif %}",
+    "image": "{{ config.site_url }}assets/images/profile-photo.jpeg",
+    "inLanguage": "en-US"
+  }
+  </script>
+  {% endif %}
+
+  <!-- Canonical URL -->
+  {% if page and page.canonical_url %}
+  <link rel="canonical" href="{{ page.canonical_url }}">
+  {% endif %}
+  
+  <!-- Preconnect to external domains for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+{% endblock %}

@@ -1,6 +1,7 @@
 ---
 title: "Resume"
-description: "Staff Platform Engineer specializing in AWS, DevOps, and Kubernetes solutions"
+description: "Alan Liang's professional resume - Staff Platform Engineer with 6+ years experience in AWS, Kubernetes, DevOps, and enterprise-scale cloud infrastructure at Commonwealth Bank of Australia."
+keywords: "Resume, Alan Liang, Staff Platform Engineer, AWS Certified, Kubernetes Administrator, DevOps, Cloud Architecture, Commonwealth Bank"
 contact:
   email: "alan@example.com"
   linkedin: "https://www.linkedin.com/in/alanliangdev/"
@@ -83,32 +84,33 @@ certifications:
 
 # Resume
 
-<div class="resume-header">
+<header class="resume-header" role="banner">
   <h2>Alan Liang</h2>
   <p class="resume-title">Staff Platform Engineer</p>
   <p class="resume-summary">Specialising in AWS, DevOps, and Kubernetes solutions</p>
-</div>
+</header>
 
 ## Contact Information
 
-<div class="contact-section">
+<section class="contact-section" role="region" aria-labelledby="contact-heading">
+  <h3 id="contact-heading" class="sr-only">Contact Information</h3>
   <div class="contact-item">
-    <i class="fas fa-envelope"></i>
-    <a href="mailto:alanliangdev@gmail.com">alanliangdev@gmail.com</a>
+    <i class="fas fa-envelope" aria-hidden="true"></i>
+    <a href="mailto:alanliangdev@gmail.com" aria-label="Send email to alanliangdev@gmail.com">alanliangdev@gmail.com</a>
   </div>
   <div class="contact-item">
-    <i class="fab fa-linkedin"></i>
-    <a href="https://www.linkedin.com/in/alanliangdev" target="_blank">LinkedIn Profile</a>
+    <i class="fab fa-linkedin" aria-hidden="true"></i>
+    <a href="https://www.linkedin.com/in/alanliangdev" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn profile (opens in new tab)">LinkedIn Profile</a>
   </div>
   <div class="contact-item">
-    <i class="fab fa-github"></i>
-    <a href="https://github.com/alanliangdev" target="_blank">GitHub Profile</a>
+    <i class="fab fa-github" aria-hidden="true"></i>
+    <a href="https://github.com/alanliangdev" target="_blank" rel="noopener noreferrer" aria-label="Visit GitHub profile (opens in new tab)">GitHub Profile</a>
   </div>
   <div class="contact-item">
-    <i class="fas fa-map-marker-alt"></i>
+    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
     <span>Melbourne, Australia</span>
   </div>
-</div>
+</section>
 
 ## Professional Summary
 

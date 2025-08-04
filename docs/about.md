@@ -1,6 +1,7 @@
 ---
 title: About Me
-description: Learn more about my background and experience as a Staff Platform Engineer
+description: Learn about Alan Liang's background as a Staff Platform Engineer at Commonwealth Bank of Australia, with expertise in AWS, Kubernetes, and enterprise-scale cloud infrastructure.
+keywords: Alan Liang, Staff Platform Engineer, Commonwealth Bank, AWS Expert, Kubernetes, DevOps, Cloud Infrastructure, Platform Engineering
 ---
 
 # About Me

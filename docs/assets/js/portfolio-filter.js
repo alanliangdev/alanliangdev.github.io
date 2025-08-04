@@ -80,27 +80,89 @@ function initializePortfolioFilters() {
     
     // Add click event listeners to filter buttons
     filterButtons.forEach((button, index) => {
+        // Ensure buttons are keyboard accessible
+        if (!button.hasAttribute('tabindex')) {
+            button.setAttribute('tabindex', '0');
+        }
+        if (!button.hasAttribute('role')) {
+            button.setAttribute('role', 'button');
+        }
+        
         button.addEventListener('click', function(e) {
             e.preventDefault();
             const filterValue = this.getAttribute('data-filter');
             console.log('🖱️ Filter button clicked:', filterValue);
             
             // Update active button
-            filterButtons.forEach(btn => btn.classList.remove('active'));
+            filterButtons.forEach(btn => {
+                btn.classList.remove('active');
+                btn.setAttribute('aria-pressed', 'false');
+            });
             this.classList.add('active');
+            this.setAttribute('aria-pressed', 'true');
             
             // Update current filter and apply
             currentFilter = filterValue;
             filterProjects(currentFilter, currentSearch);
         });
+        
+        // Add keyboard support for filter buttons
+        button.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                this.click();
+            }
+            // Arrow key navigation between filter buttons
+            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+                e.preventDefault();
+                const nextButton = filterButtons[index + 1] || filterButtons[0];
+                nextButton.focus();
+            }
+            if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                e.preventDefault();
+                const prevButton = filterButtons[index - 1] || filterButtons[filterButtons.length - 1];
+                prevButton.focus();
+            }
+        });
+        
+        // Initialize ARIA attributes
+        button.setAttribute('aria-pressed', button.classList.contains('active') ? 'true' : 'false');
     });
     
     // Add search functionality
     if (searchInput) {
+        // Ensure search input has proper accessibility attributes
+        if (!searchInput.hasAttribute('aria-label')) {
+            searchInput.setAttribute('aria-label', 'Search portfolio projects');
+        }
+        if (!searchInput.hasAttribute('aria-describedby')) {
+            searchInput.setAttribute('aria-describedby', 'search-help');
+        }
+        
+        // Add search help text if it doesn't exist
+        if (!document.getElementById('search-help')) {
+            const helpText = document.createElement('div');
+            helpText.id = 'search-help';
+            helpText.className = 'sr-only';
+            helpText.textContent = 'Type to search projects by title, description, or technology. Press Escape to clear.';
+            searchInput.parentNode.appendChild(helpText);
+        }
+        
         searchInput.addEventListener('input', function(e) {
             currentSearch = e.target.value.trim();
             console.log('🔍 Search input:', currentSearch);
             filterProjects(currentFilter, currentSearch);
+            
+            // Announce search results to screen readers
+            if (resultsCount) {
+                const announcement = document.createElement('div');
+                announcement.setAttribute('aria-live', 'polite');
+                announcement.setAttribute('aria-atomic', 'true');
+                announcement.className = 'sr-only';
+                announcement.textContent = `Search updated. ${resultsCount.textContent} found.`;
+                document.body.appendChild(announcement);
+                setTimeout(() => document.body.removeChild(announcement), 1000);
+            }
         });
         
         // Clear search on escape
@@ -109,6 +171,14 @@ function initializePortfolioFilters() {
                 this.value = '';
                 currentSearch = '';
                 filterProjects(currentFilter, currentSearch);
+                
+                // Announce clearing to screen readers
+                const announcement = document.createElement('div');
+                announcement.setAttribute('aria-live', 'polite');
+                announcement.className = 'sr-only';
+                announcement.textContent = 'Search cleared. All projects shown.';
+                document.body.appendChild(announcement);
+                setTimeout(() => document.body.removeChild(announcement), 1000);
             }
         });
     }
@@ -170,6 +240,21 @@ function initializeClickableCards() {
                 console.log('⌨️ Keyboard navigation to:', href);
                 if (href) {
                     window.location.href = href;
+                }
+            }
+            // Add arrow key navigation support
+            if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+                e.preventDefault();
+                const nextCard = this.parentElement.nextElementSibling?.querySelector('.project-card.clickable-card');
+                if (nextCard) {
+                    nextCard.focus();
+                }
+            }
+            if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+                e.preventDefault();
+                const prevCard = this.parentElement.previousElementSibling?.querySelector('.project-card.clickable-card');
+                if (prevCard) {
+                    prevCard.focus();
                 }
             }
         });

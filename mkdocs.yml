@@ -13,6 +13,7 @@ use_directory_urls: false
 theme:
   name: material
   favicon: assets/favicon.svg
+  custom_dir: docs/overrides
   icon:
     logo: material/cloud
   palette:
@@ -89,6 +90,8 @@ plugins:
       separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
       lang: en
 
+
+
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
@@ -100,13 +103,6 @@ markdown_extensions:
   - attr_list
   - md_in_html
 
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/alanliangdev
-    - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/in/alanliangdev/
-  
 extra_css:
   - stylesheets/custom.css
   - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css
@@ -116,6 +112,20 @@ extra_javascript:
   - assets/js/portfolio-filter.js
   - assets/js/blog-filter.js
   - assets/js/blog-search.js
+
+# Additional files to include in the build
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/alanliangdev
+      name: GitHub Profile
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/alanliangdev/
+      name: LinkedIn Profile
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY
+  generator: false
 
 nav:
   - Home: index.md

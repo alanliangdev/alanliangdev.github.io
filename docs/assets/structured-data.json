@@ -1,0 +1,146 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://alanliangdev.github.io/#website",
+      "url": "https://alanliangdev.github.io/",
+      "name": "Alan Liang - Staff Platform Engineer",
+      "description": "Staff Platform Engineer specializing in AWS, DevOps, and Kubernetes solutions",
+      "publisher": {
+        "@id": "https://alanliangdev.github.io/#person"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": [
+        {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://alanliangdev.github.io/search/?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://alanliangdev.github.io/#person",
+      "name": "Alan Liang",
+      "givenName": "Alan",
+      "familyName": "Liang",
+      "jobTitle": "Staff Platform Engineer",
+      "description": "Staff Platform Engineer specializing in AWS, DevOps, and Kubernetes solutions",
+      "url": "https://alanliangdev.github.io/",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://alanliangdev.github.io/assets/images/profile-photo.jpeg",
+        "width": 400,
+        "height": 400
+      },
+      "sameAs": [
+        "https://github.com/alanliangdev",
+        "https://www.linkedin.com/in/alanliangdev/"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Commonwealth Bank of Australia",
+        "url": "https://www.commbank.com.au/"
+      },
+      "knowsAbout": [
+        {
+          "@type": "Thing",
+          "name": "Amazon Web Services (AWS)"
+        },
+        {
+          "@type": "Thing", 
+          "name": "Kubernetes"
+        },
+        {
+          "@type": "Thing",
+          "name": "DevOps"
+        },
+        {
+          "@type": "Thing",
+          "name": "Cloud Architecture"
+        },
+        {
+          "@type": "Thing",
+          "name": "Platform Engineering"
+        },
+        {
+          "@type": "Thing",
+          "name": "Infrastructure as Code"
+        },
+        {
+          "@type": "Thing",
+          "name": "CI/CD"
+        },
+        {
+          "@type": "Thing",
+          "name": "GitOps"
+        }
+      ],
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "James Cook University",
+        "url": "https://www.jcu.edu.au/"
+      },
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Certified Kubernetes Application Developer (CKAD)",
+          "credentialCategory": "Professional Certification",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Cloud Native Computing Foundation"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential", 
+          "name": "Certified Kubernetes Administrator (CKA)",
+          "credentialCategory": "Professional Certification",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Cloud Native Computing Foundation"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://alanliangdev.github.io/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://alanliangdev.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About",
+          "item": "https://alanliangdev.github.io/about/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Portfolio",
+          "item": "https://alanliangdev.github.io/portfolio/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Resume",
+          "item": "https://alanliangdev.github.io/resume/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Blog",
+          "item": "https://alanliangdev.github.io/blog/"
+        }
+      ]
+    }
+  ]
+}
