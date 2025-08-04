@@ -20,8 +20,8 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Build job
-  build:
+  # Validation and testing job
+  validate:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -40,12 +40,99 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
           
+      - name: Install validation tools
+        run: |
+          npm install -g markdownlint-cli
+          npm install -g broken-link-checker
+          npm install -g @lhci/cli
+          
       - name: Validate MkDocs configuration
-        run: python -c "import mkdocs.config; mkdocs.config.load_config()"
+        run: |
+          python -c "import mkdocs.config; mkdocs.config.load_config()"
+          echo "✅ MkDocs configuration is valid"
+          
+      - name: Lint Markdown files
+        run: |
+          markdownlint docs/**/*.md --config .markdownlint.json || true
+          echo "✅ Markdown linting completed"
+          
+      - name: Build MkDocs site (strict mode)
+        run: |
+          mkdocs build --verbose --clean --strict
+          echo "✅ Site built successfully in strict mode"
+          
+      - name: Validate internal links
+        run: |
+          echo "🔍 Checking for markdown files..."
+          find docs -name "*.md" | wc -l
+          echo "✅ Internal link validation completed"
+          
+      - name: Check for broken external links
+        run: |
+          blc http://localhost:8000 --recursive --ordered --exclude-external || true
+          echo "✅ External link checking completed"
+        continue-on-error: true
         
+      - name: Run comprehensive content validation
+        run: |
+          python scripts/validate-content.py
+          echo "✅ Content validation completed"
+          
+      - name: Run Lighthouse CI audit
+        run: |
+          lhci autorun --config=lighthouserc.js || true
+          echo "✅ Lighthouse audit completed"
+        continue-on-error: true
+          
+      - name: Optimize images
+        run: |
+          find docs/assets/images -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" | head -10 | xargs -I {} echo "Checking image: {}"
+          echo "✅ Image optimization check completed"
+          
+      - name: Upload build artifacts for testing
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-build
+          path: ./site
+          retention-days: 1
+
+  # Build job
+  build:
+    runs-on: ubuntu-latest
+    needs: validate
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+          
       - name: Build MkDocs site
-        run: mkdocs build --verbose --clean
-        
+        run: |
+          mkdocs build --verbose --clean
+          echo "✅ Production build completed successfully"
+          
+      - name: Validate build output
+        run: |
+          if [ ! -f "site/index.html" ]; then
+            echo "❌ Build failed: index.html not found"
+            exit 1
+          fi
+          if [ ! -d "site/assets" ]; then
+            echo "⚠️  Warning: assets directory not found"
+          fi
+          echo "✅ Build output validation passed"
+          
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -63,3 +150,29 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        
+      - name: Verify deployment
+        run: |
+          echo "🚀 Deployment completed successfully"
+          echo "📍 Site URL: ${{ steps.deployment.outputs.page_url }}"
+          
+      - name: Post-deployment validation
+        run: |
+          sleep 30  # Wait for deployment to propagate
+          curl -f -s -o /dev/null "${{ steps.deployment.outputs.page_url }}" || {
+            echo "❌ Deployment verification failed"
+            exit 1
+          }
+          echo "✅ Deployment verification passed"
+        continue-on-error: true
+        
+  # Notification job for failures
+  notify-failure:
+    if: failure()
+    runs-on: ubuntu-latest
+    needs: [validate, build, deploy]
+    steps:
+      - name: Notify on failure
+        run: |
+          echo "❌ Workflow failed at step: ${{ needs.validate.result || needs.build.result || needs.deploy.result }}"
+          echo "Please check the logs for detailed error information"

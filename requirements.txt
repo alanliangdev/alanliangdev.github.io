@@ -11,3 +11,6 @@ cairosvg>=2.7.0,<3.0.0
 
 # YAML processing
 pyyaml>=6.0,<7.0.0
+
+# Validation and testing tools
+# Note: Using npm-based tools for link checking instead of Python packages

@@ -1,0 +1,18 @@
+{
+  "name": "portfolio-website-testing",
+  "version": "1.0.0",
+  "description": "Testing dependencies for portfolio website",
+  "private": true,
+  "scripts": {
+    "test": "python scripts/run-tests.py",
+    "test:content": "python scripts/validate-content.py",
+    "test:build": "mkdocs build --clean --strict",
+    "test:lighthouse": "lhci autorun",
+    "lint:markdown": "markdownlint docs/**/*.md --config .markdownlint.json"
+  },
+  "devDependencies": {
+    "@lhci/cli": "^0.12.0",
+    "markdownlint-cli": "^0.37.0",
+    "broken-link-checker": "^0.7.8"
+  }
+}
