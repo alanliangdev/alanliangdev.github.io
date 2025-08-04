@@ -1,3 +1,8 @@
+---
+title: Portfolio
+description: Explore my professional projects and technical achievements as a Staff Platform Engineer
+---
+
 # Portfolio
 
 Welcome to my portfolio showcasing the projects and solutions I've built throughout my career as a Staff Platform Engineer. Here you'll find a collection of work spanning cloud infrastructure, DevOps automation, Kubernetes platforms, and enterprise-scale solutions.

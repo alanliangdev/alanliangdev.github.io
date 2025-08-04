@@ -1,4 +1,5 @@
 ---
+title: "GitOps with ArgoCD: Streamlining Kubernetes Deployments"
 date: 2024-07-01
 categories:
   - GitOps

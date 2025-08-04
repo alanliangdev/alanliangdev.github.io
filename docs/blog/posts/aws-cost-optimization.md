@@ -1,4 +1,5 @@
 ---
+title: "AWS Cost Optimization: Strategies That Saved Us 40%"
 date: 2024-07-08
 categories:
   - AWS

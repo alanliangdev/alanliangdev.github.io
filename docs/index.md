@@ -1,3 +1,8 @@
+---
+title: Home
+description: Staff Platform Engineer • Cloud Architect • DevOps Leader
+---
+
 # Hi, I'm Alan Liang.
 
 <div class="hero-section">

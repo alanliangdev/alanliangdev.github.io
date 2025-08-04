@@ -1,4 +1,5 @@
 ---
+title: "Scaling Kubernetes in the Enterprise: Lessons from the Trenches"
 date: 2024-07-15
 categories:
   - Kubernetes

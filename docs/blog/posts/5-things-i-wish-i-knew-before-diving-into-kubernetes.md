@@ -1,4 +1,5 @@
 ---
+title: "5 Things I Wish I Knew Before Diving Into Kubernetes"
 date: 2025-07-24
 categories:
   - Kubernetes
