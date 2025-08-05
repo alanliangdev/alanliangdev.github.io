@@ -210,14 +210,20 @@
   width: 100%;
 }
 
-/* Hero section */
+/* Main heading spacing */
+.md-content h1:first-of-type {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Hero section - more centered than featured projects */
 .hero-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0;
+  padding: 0 2rem;
   width: 100%;
-  max-width: 100%;
+  max-width: calc(100% - 4rem);
   margin: 0 auto 3rem;
 }
 
@@ -689,8 +695,9 @@
   .hero-section {
     flex-direction: column;
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 2rem 1.5rem;
     gap: 1.5rem;
+    max-width: calc(100% - 3rem);
   }
 
   .hero-content {
@@ -734,7 +741,12 @@
 
   /* Hero section mobile optimization */
   .hero-section {
-    padding: 1.5rem 0.75rem;
+    padding: 1.5rem 1rem;
+    max-width: calc(100% - 2rem);
+  }
+  
+  .md-content h1:first-of-type {
+    margin-top: 1.5rem;
   }
 
   .hero-actions {
@@ -2730,7 +2742,8 @@ ilter Styles */
   }
 
   .hero-section {
-    padding: 1rem 0.5rem;
+    padding: 1rem 0.75rem;
+    max-width: calc(100% - 1.5rem);
   }
 
   .cta-button {
