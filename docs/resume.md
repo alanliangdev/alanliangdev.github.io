@@ -431,7 +431,7 @@ Staff Platform Engineer with six years experience in cloud infrastructure, DevOp
     </div>
   </div>
   
-    <a href="https://www.credly.com/badges/dd6bb148-2e46-4bd3-a48c-af70aa6e2bb1" target="_blank" class="certification-panel-link">
+    <a href="https://www.credly.com/badges/dd6bb148-2e46-4bd3-a48c-af70aa6e2bb1" target="_blank" class="certification-panel-link" rel="noopener noreferrer">
     <div class="certification-item">
       <h3>Certified Kubernetes Application Developer (CKAD)</h3>
       <div class="certification-status">
@@ -441,7 +441,7 @@ Staff Platform Engineer with six years experience in cloud infrastructure, DevOp
     </div>
   </a>
   
-    <a href="https://www.credly.com/badges/f59f312b-20c1-493f-ac59-87dd1d5ca615" target="_blank" class="certification-panel-link">
+    <a href="https://www.credly.com/badges/f59f312b-20c1-493f-ac59-87dd1d5ca615" target="_blank" class="certification-panel-link" rel="noopener noreferrer">
     <div class="certification-item">
       <h3>Certified Kubernetes Administrator (CKA)</h3>
       <div class="certification-status">
@@ -451,7 +451,7 @@ Staff Platform Engineer with six years experience in cloud infrastructure, DevOp
     </div>
   </a>
 
-    <a href="https://www.credly.com/badges/dc1508ea-7763-4705-a06a-d4897e9aff34" target="_blank" class="certification-panel-link">
+    <a href="https://www.credly.com/badges/dc1508ea-7763-4705-a06a-d4897e9aff34" target="_blank" class="certification-panel-link" rel="noopener noreferrer">
     <div class="certification-item">
       <h3>Certified Kubernetes and Cloud Native Associate (KCNA)</h3>
       <div class="certification-status">

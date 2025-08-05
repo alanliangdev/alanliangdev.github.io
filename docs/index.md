@@ -98,7 +98,7 @@ keywords: Alan Liang, Staff Platform Engineer, AWS, Kubernetes, DevOps, Cloud Ar
 <section class="blog-grid" role="region" aria-labelledby="latest-blog-heading">
   
   <article class="blog-card">
-    <a href="blog/2024/07/15/kubernetes-enterprise-scaling" class="blog-card-link" aria-describedby="k8s-blog-desc">
+    <a href="blog/2024/07/15/kubernetes-enterprise-scaling.html" class="blog-card-link" aria-describedby="k8s-blog-desc">
       <div class="blog-card-image kubernetes" role="img" aria-label="Kubernetes blog post thumbnail">
         <div class="blog-card-date" aria-label="Published July 15, 2024">Jul 15, 24</div>
       </div>
@@ -108,7 +108,7 @@ keywords: Alan Liang, Staff Platform Engineer, AWS, Kubernetes, DevOps, Cloud Ar
   </article>
   
   <article class="blog-card">
-    <a href="blog/2024/07/08/aws-cost-optimization-strategies" class="blog-card-link" aria-describedby="aws-blog-desc">
+    <a href="blog/2024/07/08/aws-cost-optimization-strategies.html" class="blog-card-link" aria-describedby="aws-blog-desc">
       <div class="blog-card-image aws" role="img" aria-label="AWS cost optimization blog post thumbnail">
         <div class="blog-card-date" aria-label="Published July 8, 2024">Jul 08, 24</div>
       </div>
@@ -118,7 +118,7 @@ keywords: Alan Liang, Staff Platform Engineer, AWS, Kubernetes, DevOps, Cloud Ar
   </article>
   
   <article class="blog-card">
-    <a href="blog/2024/07/01/gitops-argocd-best-practices" class="blog-card-link" aria-describedby="gitops-blog-desc">
+    <a href="blog/2024/07/01/gitops-argocd-best-practices.html" class="blog-card-link" aria-describedby="gitops-blog-desc">
       <div class="blog-card-image gitops" role="img" aria-label="GitOps with ArgoCD blog post thumbnail">
         <div class="blog-card-date" aria-label="Published July 1, 2024">Jul 01, 24</div>
       </div>
