@@ -210,10 +210,14 @@
   width: 100%;
 }
 
-/* Main heading spacing */
+/* Main heading spacing and alignment with hero section */
 .md-content h1:first-of-type {
   margin-top: 2rem;
   margin-bottom: 2rem;
+  padding: 0 2rem;
+  max-width: calc(100% - 4rem);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Hero section - more centered than featured projects */
@@ -692,6 +696,11 @@
 
 /* Responsive adjustments for tablets and larger phones */
 @media screen and (max-width: 900px) {
+  .md-content h1:first-of-type {
+    padding: 0 1.5rem;
+    max-width: calc(100% - 3rem);
+  }
+
   .hero-section {
     flex-direction: column;
     text-align: center;
@@ -747,6 +756,8 @@
   
   .md-content h1:first-of-type {
     margin-top: 1.5rem;
+    padding: 0 1rem;
+    max-width: calc(100% - 2rem);
   }
 
   .hero-actions {
@@ -2743,6 +2754,11 @@ ilter Styles */
 
   .hero-section {
     padding: 1rem 0.75rem;
+    max-width: calc(100% - 1.5rem);
+  }
+  
+  .md-content h1:first-of-type {
+    padding: 0 0.75rem;
     max-width: calc(100% - 1.5rem);
   }
 
