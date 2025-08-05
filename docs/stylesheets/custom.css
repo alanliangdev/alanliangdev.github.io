@@ -217,18 +217,39 @@
 }
 
 /* Home page specific - narrow alignment to match hero section */
-body[data-md-url="/"] .md-content h1:first-of-type,
-body[data-md-url=""] .md-content h1:first-of-type {
+.md-content h1 {
   padding: 0 2rem !important;
   max-width: calc(100% - 4rem) !important;
   margin-left: auto !important;
   margin-right: auto !important;
+  box-sizing: border-box !important;
 }
 
-/* Resume page - center the main title */
-body[data-md-url="/resume/"] .md-content h2:first-of-type {
-  text-align: center;
-  margin-bottom: 1.5rem;
+/* Override for all other pages */
+.md-content:not(:has(.hero-section)) h1 {
+  padding: 0 !important;
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Resume page - center the Alan Liang title and its blue line */
+.resume-header h2 {
+  text-align: center !important;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.resume-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 60px;
+  height: 3px;
+  background: var(--md-primary-fg-color);
+  border-radius: 2px;
 }
 
 /* Hero section - more centered than featured projects */
@@ -709,10 +730,14 @@ body[data-md-url="/resume/"] .md-content h2:first-of-type {
 /* Responsive adjustments for tablets and larger phones */
 @media screen and (max-width: 900px) {
 
-  body[data-md-url="/"] .md-content h1:first-of-type,
-  body[data-md-url=""] .md-content h1:first-of-type {
+  .md-content h1 {
     padding: 0 1.5rem !important;
     max-width: calc(100% - 3rem) !important;
+  }
+  
+  .md-content:not(:has(.hero-section)) h1 {
+    padding: 0 !important;
+    max-width: none !important;
   }
 
   .hero-section {
@@ -768,8 +793,7 @@ body[data-md-url="/resume/"] .md-content h2:first-of-type {
     max-width: calc(100% - 2rem);
   }
 
-  body[data-md-url="/"] .md-content h1:first-of-type,
-  body[data-md-url=""] .md-content h1:first-of-type {
+  .home-page-title {
     margin-top: 1.5rem;
     padding: 0 1rem !important;
     max-width: calc(100% - 2rem) !important;
@@ -2772,8 +2796,7 @@ ilter Styles */
     max-width: calc(100% - 1.5rem);
   }
 
-  body[data-md-url="/"] .md-content h1:first-of-type,
-  body[data-md-url=""] .md-content h1:first-of-type {
+  .home-page-title {
     padding: 0 0.75rem !important;
     max-width: calc(100% - 1.5rem) !important;
   }
