@@ -210,10 +210,15 @@
   width: 100%;
 }
 
-/* Main heading spacing and alignment with hero section */
+/* Main heading spacing - default for all pages */
 .md-content h1:first-of-type {
   margin-top: 2rem;
   margin-bottom: 1rem;
+}
+
+/* Home page specific - narrow alignment to match hero section */
+body[data-md-url="/"] .md-content h1:first-of-type,
+body[data-md-url=""] .md-content h1:first-of-type {
   padding: 0 2rem;
   max-width: calc(100% - 4rem);
   margin-left: auto;
@@ -697,7 +702,8 @@
 
 /* Responsive adjustments for tablets and larger phones */
 @media screen and (max-width: 900px) {
-  .md-content h1:first-of-type {
+  body[data-md-url="/"] .md-content h1:first-of-type,
+  body[data-md-url=""] .md-content h1:first-of-type {
     padding: 0 1.5rem;
     max-width: calc(100% - 3rem);
   }
@@ -755,7 +761,8 @@
     max-width: calc(100% - 2rem);
   }
   
-  .md-content h1:first-of-type {
+  body[data-md-url="/"] .md-content h1:first-of-type,
+  body[data-md-url=""] .md-content h1:first-of-type {
     margin-top: 1.5rem;
     padding: 0 1rem;
     max-width: calc(100% - 2rem);
@@ -2758,7 +2765,8 @@ ilter Styles */
     max-width: calc(100% - 1.5rem);
   }
   
-  .md-content h1:first-of-type {
+  body[data-md-url="/"] .md-content h1:first-of-type,
+  body[data-md-url=""] .md-content h1:first-of-type {
     padding: 0 0.75rem;
     max-width: calc(100% - 1.5rem);
   }
