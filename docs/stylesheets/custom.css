@@ -213,7 +213,7 @@
 /* Main heading spacing and alignment with hero section */
 .md-content h1:first-of-type {
   margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   padding: 0 2rem;
   max-width: calc(100% - 4rem);
   margin-left: auto;
@@ -248,7 +248,8 @@
   font-size: 0.95rem;
   line-height: 1.5;
   color: var(--md-default-fg-color--light);
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+  margin-top: 0;
 }
 
 .hero-actions {
