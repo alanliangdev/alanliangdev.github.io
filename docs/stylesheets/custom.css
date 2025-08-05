@@ -219,10 +219,16 @@
 /* Home page specific - narrow alignment to match hero section */
 body[data-md-url="/"] .md-content h1:first-of-type,
 body[data-md-url=""] .md-content h1:first-of-type {
-  padding: 0 2rem;
-  max-width: calc(100% - 4rem);
-  margin-left: auto;
-  margin-right: auto;
+  padding: 0 2rem !important;
+  max-width: calc(100% - 4rem) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Resume page - center the main title */
+body[data-md-url="/resume/"] .md-content h2:first-of-type {
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 /* Hero section - more centered than featured projects */
@@ -702,10 +708,11 @@ body[data-md-url=""] .md-content h1:first-of-type {
 
 /* Responsive adjustments for tablets and larger phones */
 @media screen and (max-width: 900px) {
+
   body[data-md-url="/"] .md-content h1:first-of-type,
   body[data-md-url=""] .md-content h1:first-of-type {
-    padding: 0 1.5rem;
-    max-width: calc(100% - 3rem);
+    padding: 0 1.5rem !important;
+    max-width: calc(100% - 3rem) !important;
   }
 
   .hero-section {
@@ -760,12 +767,12 @@ body[data-md-url=""] .md-content h1:first-of-type {
     padding: 1.5rem 1rem;
     max-width: calc(100% - 2rem);
   }
-  
+
   body[data-md-url="/"] .md-content h1:first-of-type,
   body[data-md-url=""] .md-content h1:first-of-type {
     margin-top: 1.5rem;
-    padding: 0 1rem;
-    max-width: calc(100% - 2rem);
+    padding: 0 1rem !important;
+    max-width: calc(100% - 2rem) !important;
   }
 
   .hero-actions {
@@ -2764,11 +2771,11 @@ ilter Styles */
     padding: 1rem 0.75rem;
     max-width: calc(100% - 1.5rem);
   }
-  
+
   body[data-md-url="/"] .md-content h1:first-of-type,
   body[data-md-url=""] .md-content h1:first-of-type {
-    padding: 0 0.75rem;
-    max-width: calc(100% - 1.5rem);
+    padding: 0 0.75rem !important;
+    max-width: calc(100% - 1.5rem) !important;
   }
 
   .cta-button {
