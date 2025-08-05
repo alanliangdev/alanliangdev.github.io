@@ -8,8 +8,8 @@ keywords: Alan Liang, Staff Platform Engineer, AWS, Kubernetes, DevOps, Cloud Ar
 
 <div class="hero-section" role="banner" aria-labelledby="hero-heading">
   <div class="hero-content">
-    <p id="hero-heading" class="hero-tagline">Staff Platform Engineer • Cloud Architect • DevOps Leader</p>
-    <p class="hero-bio">I architect and scale cloud infrastructure at Commonwealth Bank of Australia, specializing in AWS, DevOps, and Kubernetes solutions. I love solving complex distributed systems challenges and mentoring teams on cloud-native best practices.</p>
+    <p id="hero-heading" class="hero-tagline">Staff Platform Engineer | Cloud Architect | Kubernetes Guru</p>
+    <p class="hero-bio">I'm a staff platform engineer who's helped scale cloud-native Kubernetes platforms at Commonwealth Bank of Australia, built scalable telemetry systems from the ground up at Commonwealth Bank of Australia, and supported a diverse range of EKS and ECS customers at AWS.</p>
     
     <nav class="hero-actions" role="navigation" aria-label="Primary actions">
       <a href="portfolio/" class="cta-button primary" aria-describedby="portfolio-desc">View My Work</a>
