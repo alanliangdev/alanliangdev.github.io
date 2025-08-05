@@ -13,7 +13,7 @@ keywords: Alan Liang, Staff Platform Engineer, AWS, Kubernetes, DevOps, Cloud Ar
     <nav class="hero-actions" role="navigation" aria-label="Primary actions">
       <a href="portfolio/" class="cta-button primary" aria-describedby="portfolio-desc">View My Work</a>
       <span id="portfolio-desc" class="sr-only">Navigate to portfolio showcasing professional projects and achievements</span>
-      <a href="resume.html" class="cta-button secondary" aria-describedby="resume-desc">Download Resume</a>
+      <a href="resume/" class="cta-button secondary" aria-describedby="resume-desc">Download Resume</a>
       <span id="resume-desc" class="sr-only">Download professional resume in PDF format</span>
     </nav>
     
