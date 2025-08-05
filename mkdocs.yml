@@ -8,7 +8,7 @@ repo_name: alanliangdev/alanliangdev.github.io
 edit_uri: ""
 
 # 404 page
-use_directory_urls: false
+use_directory_urls: true
 
 theme:
   name: material
