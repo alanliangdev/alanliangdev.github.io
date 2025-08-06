@@ -10,12 +10,7 @@ keywords: Alan Liang, Staff Platform Engineer, AWS, Kubernetes, DevOps, Cloud Ar
   <div class="hero-content">
     <p class="hero-bio">I'm a staff platform engineer who's helped scale cloud-native Kubernetes platforms at Commonwealth Bank of Australia, built infrastructure for Telstra's Prepaid Business Support System, and supported a diverse range of EKS and ECS customers at AWS. I'm now building a scalable, resilient and robust telemetry system from the ground up at Commonwealth Bank of Australia.</p>
     
-    <nav class="hero-actions" role="navigation" aria-label="Primary actions">
-      <!-- <a href="portfolio/" class="cta-button primary" aria-describedby="portfolio-desc">View My Work</a>
-      <span id="portfolio-desc" class="sr-only">Navigate to portfolio showcasing professional projects and achievements</span> -->
-      <a href="resume/" class="cta-button secondary" aria-describedby="resume-desc">Download Resume</a>
-      <span id="resume-desc" class="sr-only">Download professional resume in PDF format</span>
-    </nav>
+
     
     <nav class="social-links" role="navigation" aria-label="Social media links">
       <a href="https://github.com/alanliangdev" class="social-link" aria-label="Visit Alan Liang's GitHub profile (opens in new tab)" target="_blank" rel="noopener noreferrer">
@@ -94,35 +89,16 @@ keywords: Alan Liang, Staff Platform Engineer, AWS, Kubernetes, DevOps, Cloud Ar
 
 ## Latest Blog Posts
 
-<section class="blog-grid" role="region" aria-labelledby="latest-blog-heading">
+<section class="blog-grid single-post" role="region" aria-labelledby="latest-blog-heading">
   
   <article class="blog-card">
-    <a href="blog/2024/07/15/kubernetes-enterprise-scaling.html" class="blog-card-link" aria-describedby="k8s-blog-desc">
-      <div class="blog-card-image kubernetes" role="img" aria-label="Kubernetes blog post thumbnail">
-        <div class="blog-card-date" aria-label="Published July 15, 2024">Jul 15, 24</div>
+    <a href="blog/2025/07/24/kubernetes-lessons-learned/" class="blog-card-link" aria-describedby="k8s-lessons-desc">
+      <div class="blog-card-image" role="img" aria-label="Kubernetes lessons learned blog post thumbnail">
+        <img src="assets/images/blog/kubernetes-logo.svg" alt="Kubernetes lessons learned thumbnail" />
+        <div class="blog-card-date" aria-label="Published July 24, 2025">Jul 24, 25</div>
       </div>
-      <h3 class="blog-card-title">Scaling Kubernetes at Enterprise Level</h3>
-      <p id="k8s-blog-desc" class="blog-card-description">Taking enterprise Kubernetes from complex to manageable with proper governance and automation...</p>
-    </a>
-  </article>
-  
-  <article class="blog-card">
-    <a href="blog/2024/07/08/aws-cost-optimization-strategies.html" class="blog-card-link" aria-describedby="aws-blog-desc">
-      <div class="blog-card-image aws" role="img" aria-label="AWS cost optimization blog post thumbnail">
-        <div class="blog-card-date" aria-label="Published July 8, 2024">Jul 08, 24</div>
-      </div>
-      <h3 class="blog-card-title">AWS Cost Optimization Strategies</h3>
-      <p id="aws-blog-desc" class="blog-card-description">How we reduced our AWS bill by 40% without compromising performance or reliability...</p>
-    </a>
-  </article>
-  
-  <article class="blog-card">
-    <a href="blog/2024/07/01/gitops-argocd-best-practices.html" class="blog-card-link" aria-describedby="gitops-blog-desc">
-      <div class="blog-card-image gitops" role="img" aria-label="GitOps with ArgoCD blog post thumbnail">
-        <div class="blog-card-date" aria-label="Published July 1, 2024">Jul 01, 24</div>
-      </div>
-      <h3 class="blog-card-title">GitOps with ArgoCD: Best Practices</h3>
-      <p id="gitops-blog-desc" class="blog-card-description">Implementing GitOps workflows that scale across multiple environments and teams...</p>
+      <h3 class="blog-card-title">5 Things I Wish I Knew Before Diving Into Kubernetes</h3>
+      <p id="k8s-lessons-desc" class="blog-card-description">My journey with Kubernetes has been a love-hate relationship. Here are the key lessons I learned from building and scaling Kubernetes platforms...</p>
     </a>
   </article>
 </section>

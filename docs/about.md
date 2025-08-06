@@ -6,33 +6,36 @@ keywords: Alan Liang, Staff Platform Engineer, Commonwealth Bank, AWS Expert, Ku
 
 # About Me
 
-I'm a passionate Staff Platform Engineer at Commonwealth Bank of Australia with extensive experience building and scaling cloud-native infrastructure. I specialize in AWS cloud architecture, DevOps automation, and Kubernetes orchestration, helping teams deliver reliable, scalable solutions.
+<div class="hero-section" role="banner" aria-labelledby="about-heading">
+  <div class="hero-content">
+    <p class="hero-bio">Hi, I'm Alan.</p>
+    
+    <ul class="about-details">
+      <li>I work at <a href="https://www.commbank.com.au/" target="_blank" rel="noopener noreferrer">Commonwealth Bank of Australia</a> as a Staff Platform Engineer in the Network Monitoring Observability squad.</li>
+      <li>I've recently been exploring and learning AI/LLM, it's infra and vibe coding.</li>
+      <li>I helped build, design and scale Commonwealth Bank of Australia's Kubernetes Platform offering. Over 100+ EKS clusters.</li>
+      <li>Here's my <a href="/resume/">resume</a>.</li>
+      <li>Here's my <a href="https://www.linkedin.com/in/alanliangdev/" target="_blank" rel="noopener noreferrer">linkedin</a>.</li>
+      <li>Here's my <a href="https://github.com/alanliangdev/" target="_blank" rel="noopener noreferrer">github</a>.</li>
+    </ul>
+  </div>
+  
+  <div class="hero-image">
+    <img src="/assets/images/profile-photo.jpeg" alt="Professional headshot of Alan Liang, Staff Platform Engineer, smiling and wearing business attire">
+  </div>
+</div>
 
-I love solving complex distributed systems challenges and mentoring teams on cloud-native best practices. My expertise spans infrastructure as code, CI/CD pipelines, and container orchestration at enterprise scale.
+<div class="about-interests-section">
+  <div class="about-interests-content">
+    <h2>Interests</h2>
+    
+    <ul class="interests-list">
+      <li>Badminton</li>
+      <li>Board Games</li>
+      <li>Video Games</li>
+      <li>Hiking</li>
+      <li>Vibe Coding</li>
+    </ul>
+  </div>
+</div>
 
-## Skills
-
-- AWS
-- Kubernetes
-- Docker
-- Terraform
-- Jenkins
-- Python
-- Go
-- GitOps
-
-## Work Experience
-
-### Staff Platform Engineer - Commonwealth Bank of Australia
-*2020 - Present*
-
-- Led enterprise-scale migration of legacy systems to AWS, implementing microservices architecture with 99.9% uptime and 40% cost reduction.
-- Built automated deployment pipelines reducing deployment time from hours to minutes, with comprehensive testing and rollback capabilities.
-- Designed and implemented self-service Kubernetes platform serving 50+ development teams with automated scaling and monitoring.
-
-### Senior DevOps Engineer - Previous Company
-*2017 - 2020*
-
-- Implemented CI/CD pipelines using Jenkins and GitLab CI, reducing deployment time by 70%.
-- Migrated on-premise infrastructure to AWS, resulting in 30% cost savings and improved scalability.
-- Introduced containerization with Docker and Kubernetes, improving application portability and resource utilization.

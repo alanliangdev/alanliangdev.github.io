@@ -13,7 +13,7 @@ tags:
 authors:
   - alan
 readtime: 10
-image: assets/images/blog/kubernetes-scaling.svg
+image: assets/images/blog/kubernetes-logo.svg
 description: 5 Things I Wish I Knew Before Diving into Kubernetes
 slug: kubernetes-lessons-learned
 ---
