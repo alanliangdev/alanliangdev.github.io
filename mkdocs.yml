@@ -131,13 +131,13 @@ nav:
   - Home: index.md
   - About: about.md
   - Resume: resume.md
-  - Portfolio: 
-    - portfolio/index.md
-    - Projects:
-      - Enterprise Kubernetes Platform: portfolio/kubernetes-platform.md
-      - Cloud Migration & Cost Optimization: portfolio/aws-migration.md
-      - GitOps CI/CD Pipeline: portfolio/gitops-pipeline.md
-      - Observability Platform: portfolio/observability-platform.md
-      - Infrastructure as Code Framework: portfolio/iac-framework.md
-      - Security & Compliance Automation: portfolio/security-automation.md
+  # - Portfolio: 
+  #   - portfolio/index.md
+  #   - Projects:
+  #     - Enterprise Kubernetes Platform: portfolio/kubernetes-platform.md
+  #     - Cloud Migration & Cost Optimization: portfolio/aws-migration.md
+  #     - GitOps CI/CD Pipeline: portfolio/gitops-pipeline.md
+  #     - Observability Platform: portfolio/observability-platform.md
+  #     - Infrastructure as Code Framework: portfolio/iac-framework.md
+  #     - Security & Compliance Automation: portfolio/security-automation.md
   - Blog: blog/index.md

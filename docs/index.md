@@ -11,8 +11,8 @@ keywords: Alan Liang, Staff Platform Engineer, AWS, Kubernetes, DevOps, Cloud Ar
     <p class="hero-bio">I'm a staff platform engineer who's helped scale cloud-native Kubernetes platforms at Commonwealth Bank of Australia, built infrastructure for Telstra's Prepaid Business Support System, and supported a diverse range of EKS and ECS customers at AWS. I'm now building a scalable, resilient and robust telemetry system from the ground up at Commonwealth Bank of Australia.</p>
     
     <nav class="hero-actions" role="navigation" aria-label="Primary actions">
-      <a href="portfolio/" class="cta-button primary" aria-describedby="portfolio-desc">View My Work</a>
-      <span id="portfolio-desc" class="sr-only">Navigate to portfolio showcasing professional projects and achievements</span>
+      <!-- <a href="portfolio/" class="cta-button primary" aria-describedby="portfolio-desc">View My Work</a>
+      <span id="portfolio-desc" class="sr-only">Navigate to portfolio showcasing professional projects and achievements</span> -->
       <a href="resume/" class="cta-button secondary" aria-describedby="resume-desc">Download Resume</a>
       <span id="resume-desc" class="sr-only">Download professional resume in PDF format</span>
     </nav>
@@ -32,7 +32,7 @@ keywords: Alan Liang, Staff Platform Engineer, AWS, Kubernetes, DevOps, Cloud Ar
   </div>
 </div>
 
-## Featured Projects
+<!-- ## Featured Projects
 
 <section class="featured-projects" role="region" aria-labelledby="featured-projects-heading">
   
@@ -90,7 +90,7 @@ keywords: Alan Liang, Staff Platform Engineer, AWS, Kubernetes, DevOps, Cloud Ar
 
 <div class="view-all-projects">
   <a href="portfolio/" class="view-all-link">View All Projects <i class="fas fa-arrow-right"></i></a>
-</div>
+</div> -->
 
 ## Latest Blog Posts
 
