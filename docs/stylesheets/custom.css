@@ -2825,6 +2825,51 @@ ilter Styles */
   }
 }
 
+/* Fix mobile navigation menu */
+@media screen and (max-width: 76.1875em) {
+  /* Ensure mobile navigation is visible */
+  .md-nav--primary {
+    display: block !important;
+  }
+  
+  /* Ensure hamburger menu button is visible */
+  .md-header__button.md-icon {
+    display: block !important;
+  }
+  
+  /* Style the mobile navigation drawer */
+  .md-nav--primary .md-nav__list {
+    background-color: var(--md-default-bg-color);
+  }
+  
+  /* Style navigation items in mobile menu */
+  .md-nav--primary .md-nav__item {
+    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  }
+  
+  .md-nav--primary .md-nav__link {
+    padding: 1rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--md-default-fg-color);
+  }
+  
+  .md-nav--primary .md-nav__link:hover {
+    background-color: var(--md-default-fg-color--lightest);
+    color: var(--portfolio-primary);
+  }
+  
+  /* Hide tabs on mobile to show hamburger menu */
+  .md-tabs {
+    display: none;
+  }
+  
+  /* Ensure header button (hamburger) is visible */
+  .md-header__button {
+    display: block;
+  }
+}
+
 /* Enhanced mobile touch interactions for all interactive elements */
 @media screen and (max-width: 768px) {
 
