@@ -1,15 +1,10 @@
 ---
 title: "5 Things I Wish I Knew Before Diving Into Kubernetes"
-date: 2025-07-24
+date: 2025-08-06
 categories:
   - Kubernetes
   - Platform Engineering
   - DevOps
-tags:
-  - kubernetes
-  - lessons-learned
-  - best-practices
-  - managed-services
 authors:
   - alan
 readtime: 10
@@ -66,14 +61,14 @@ If you're not autoscaling in Kubernetes, you're missing the point. Manual scalin
 Kubernetes Secrets are just base64-encoded strings—not encrypted. For production workloads, integrate with proper secret management systems like AWS Secrets Manager, HashiCorp Vault, or Azure Key Vault.
 
 ### Security & Policy
-**Tools**: Falco, OPA Gatekeeper, Pod Security Standards
+**Tools**: Kyverno, OPA Gatekeeper, Pod Security Standards
 
-Security isn't an afterthought. With high-profile breaches making headlines, implementing proper security controls from day one is crucial.
+Security isn't an afterthought. With high-profile breaches making headlines, implementing proper security controls from day one is crucial. From my experience working on Kubernetes platforms across large-scale enterprises, is, if not done properly from the very start, very hard to lock down once production applications depend on the platform.
 
 ### GitOps
-**Tools**: ArgoCD, Flux
+**Tools**: Argo CD, Flux
 
-GitOps transforms how you deploy applications. Your Git repository becomes the single source of truth, and tools like ArgoCD ensure your cluster state matches your desired configuration.
+GitOps transforms how you deploy applications. Your Git repository becomes the single source of truth, and tools like Argo CD ensure your cluster state matches your desired configuration.
 
 ## 3. Kubernetes Isn't for Everyone
 
@@ -105,97 +100,34 @@ The hidden cost everyone overlooks is operational complexity:
 - Multiple microservices
 - Need for auto-scaling
 - Complex deployment patterns
-- Team size > 10 developers
 
 **When NOT to use Kubernetes:**
 - Simple monolithic applications
-- Small teams (< 5 developers)
 - Tight budget constraints
 - Limited operational expertise
 
-## 4. Networking Will Make or Break You
+## 4. Build for Tomorrow, Not Just for Today
 
-Kubernetes networking is where most people get stuck. Understanding the four types of communication is crucial:
+It's tempting to take shortcuts when you're starting out, but the future you will pay for it. My experience has taught me that building your Kubernetes platform with best practices from day one is non-negotiable. This means avoiding "click-ops" and ensuring your entire cluster can be rebuilt from source code.
 
-### Pod-to-Pod Communication
-Every pod gets its own IP address. Pods can communicate directly without NAT, but this requires a Container Network Interface (CNI) plugin.
+One of the biggest mistakes I've seen is choosing a less-than-ideal Infrastructure as Code (IaC) tool. I once worked on a platform that used a combination of Ansible, CodeBuild, and `eksctl` to manage EKS clusters. While it worked, we knew it wasn't the right way. Migrating to a more modern, industry-standard tool like Terraform took years of effort, and the only benefit was a simpler, more maintainable stack. We should have started with it from the beginning.
 
-**Popular CNI options:**
-- **AWS VPC CNI**: Native AWS integration, uses ENIs
-- **Calico**: Network policies, cross-cloud compatibility
-- **Cilium**: eBPF-based, advanced security features
+The lesson? Choose your tools wisely. Invest in a robust, modern IaC framework that offers features like a deployment plan—so you can forecast changes before they happen. Your future self, and your team, will thank you for making the right choice early on.
 
-### Service Discovery
-Services provide stable endpoints for pods. Understanding the different service types is essential:
+## 5. Always Expect to Be Learning
 
-- **ClusterIP**: Internal cluster communication
-- **NodePort**: Exposes service on each node's IP
-- **LoadBalancer**: Cloud provider load balancer
-- **ExternalName**: DNS CNAME record
+Kubernetes is a rapidly evolving ecosystem. What was a "best practice" a few years ago might be considered a bad practice today. My biggest lesson is that you must constantly be learning and adapting to new tools and patterns.
 
-### Ingress Controllers
-For HTTP/HTTPS traffic, you need an Ingress controller:
+I've seen this firsthand with GitOps. Many teams, including one I was on, would manually render every Helm chart to see the final Kubernetes manifests before deploying. This was a tedious process, but it was the only way to have full visibility into what was being applied to the cluster.
 
-- **AWS Load Balancer Controller**: Native AWS ALB/NLB integration
-- **NGINX Ingress**: Most popular, feature-rich
-- **Traefik**: Modern, cloud-native approach
-
-### Network Policies
-By default, all pods can communicate with each other. Network policies provide micro-segmentation:
-
-```yaml
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: deny-all
-spec:
-  podSelector: {}
-  policyTypes:
-  - Ingress
-  - Egress
-```
-
-**Pro tip**: Start with a "deny-all" policy and explicitly allow required traffic.
-
-## 5. Start Small, Think Big
-
-The biggest mistake I see is trying to implement everything at once. Kubernetes has a steep learning curve, and complexity compounds quickly.
-
-### Phase 1: Foundation (Months 1-3)
-- Set up managed Kubernetes (EKS/GKE)
-- Deploy simple applications
-- Implement basic monitoring (Prometheus/Grafana)
-- Learn kubectl and basic troubleshooting
-
-### Phase 2: Production Readiness (Months 4-6)
-- Implement proper secret management
-- Set up ingress controllers
-- Add autoscaling (HPA/VPA)
-- Implement backup strategies
-
-### Phase 3: Advanced Features (Months 7-12)
-- GitOps workflows (ArgoCD/Flux)
-- Advanced networking (service mesh)
-- Multi-cluster management
-- Cost optimization strategies
-
-### Phase 4: Platform Engineering (Year 2+)
-- Self-service developer platforms
-- Advanced security policies
-- Custom operators and controllers
-- Multi-cloud strategies
+Recently, I discovered a new open-source tool called `make-argocd-fly` that automates this entire workflow. It can render your Helm charts and other templates, then automatically commit the final manifests to Git. This provides the transparency needed for confident code reviews while eliminating a significant operational burden. The existence of such tools proves that the community is always innovating to improve upon established workflows. The Kubernetes journey is one of continuous discovery.
 
 ## Key Takeaways
 
 1. **Use managed services**: Don't self-manage control planes unless you absolutely have to
 2. **Invest in addons**: Observability, autoscaling, and security aren't optional
 3. **Evaluate complexity**: Kubernetes isn't always the right solution
-4. **Master networking**: It's the foundation everything else builds on
-5. **Start simple**: Build complexity gradually as your team's expertise grows
+4. **Build for the Future**: Use industry-standard tools and best practices from day one
+5. **Always Be Learning**: Staying up-to-date with new tools and best practices is the only way to build a platform that can last.
 
 Kubernetes is incredibly powerful, but respect its complexity. Take time to understand the fundamentals before diving into advanced features. Your future self (and your team) will thank you.
-
----
-
-*Have you had similar experiences with Kubernetes? What would you add to this list? Let me know in the comments below.* 
-

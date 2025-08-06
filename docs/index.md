@@ -92,10 +92,10 @@ keywords: Alan Liang, Staff Platform Engineer, AWS, Kubernetes, DevOps, Cloud Ar
 <section class="blog-grid single-post" role="region" aria-labelledby="latest-blog-heading">
   
   <article class="blog-card">
-    <a href="blog/2025/07/24/kubernetes-lessons-learned/" class="blog-card-link" aria-describedby="k8s-lessons-desc">
+    <a href="blog/2025/08/06/kubernetes-lessons-learned/" class="blog-card-link" aria-describedby="k8s-lessons-desc">
       <div class="blog-card-image" role="img" aria-label="Kubernetes lessons learned blog post thumbnail">
         <img src="assets/images/blog/kubernetes-logo.svg" alt="Kubernetes lessons learned thumbnail" />
-        <div class="blog-card-date" aria-label="Published July 24, 2025">Jul 24, 25</div>
+        <div class="blog-card-date" aria-label="Published August 6, 2025">Aug 6, 25</div>
       </div>
       <h3 class="blog-card-title">5 Things I Wish I Knew Before Diving Into Kubernetes</h3>
       <p id="k8s-lessons-desc" class="blog-card-description">My journey with Kubernetes has been a love-hate relationship. Here are the key lessons I learned from building and scaling Kubernetes platforms...</p>
