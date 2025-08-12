@@ -7,79 +7,6 @@ contact:
   linkedin: "https://www.linkedin.com/in/alanliangdev/"
   github: "https://github.com/alanliangdev"
   location: "Australia"
-skills:
-  - category: "Cloud Platforms"
-    items: 
-      - name: "AWS"
-        details: "EC2, EKS, RDS, Lambda, CloudFormation, IAM, VPC, Route53"
-      - name: "Azure"
-        details: "AKS, Azure DevOps, ARM Templates"
-      - name: "Google Cloud"
-        details: "GKE, Cloud Build, Cloud Functions"
-  - category: "Container Orchestration"
-    items:
-      - name: "Kubernetes"
-        details: "Cluster management, RBAC, networking, storage, operators"
-      - name: "Docker"
-        details: "Containerization, multi-stage builds, registry management"
-      - name: "Amazon ECS"
-        details: "Task definitions, service management, auto-scaling"
-  - category: "Infrastructure as Code"
-    items:
-      - name: "Terraform"
-        details: "Module development, state management, enterprise patterns"
-      - name: "CloudFormation"
-        details: "Template development, stack management"
-      - name: "Pulumi"
-        details: "Infrastructure automation with modern programming languages"
-  - category: "CI/CD & GitOps"
-    items:
-      - name: "GitHub Actions"
-        details: "Workflow automation, custom actions, enterprise deployment"
-      - name: "ArgoCD"
-        details: "GitOps deployment, application management, multi-cluster setup"
-      - name: "Jenkins"
-        details: "Pipeline development, plugin management, enterprise integration"
-  - category: "Monitoring & Observability"
-    items:
-      - name: "Prometheus"
-        details: "Metrics collection, alerting rules, service discovery"
-      - name: "Grafana"
-        details: "Dashboard development, data source integration"
-      - name: "DataDog"
-        details: "APM, infrastructure monitoring, log management"
-  - category: "Programming Languages"
-    items:
-      - name: "Python"
-        details: "Automation scripts, API development, data processing"
-      - name: "Go"
-        details: "CLI tools, microservices, Kubernetes operators"
-      - name: "TypeScript/JavaScript"
-        details: "Web applications, automation tools"
-      - name: "Bash"
-        details: "System administration, deployment scripts"
-education:
-  - degree: "Bachelor of Electrical Engineering (Honours) and Information Technology"
-    institution: "James Cook University Townsville"
-    duration: "January 2015 - March 2020"
-    location: "Townsville, Australia"
-    details:
-      - "Relevant coursework in distributed systems, software engineering, and computer networks"
-      - "Focus on cloud computing and infrastructure automation"
-      - "Final year project on container orchestration and microservices architecture"
-certifications:
-  - name: "AWS Certified Solutions Architect - Associate (SAA-C03)"
-    status: "Planned"
-    expected: "2025"
-  - name: "Certified Kubernetes Application Developer (CKAD)"
-    status: "Completed"
-    expected: "2022"
-  - name: "Certified Kubernetes Administrator (CKA)"
-    status: "Completed"
-    expected: "2022"
-  - name: "Kubernetes and Cloud Native Associate (KCNA)"
-    status: "Completed"
-    expected: "2021"
 ---
 
 # Resume
@@ -129,26 +56,27 @@ Staff Platform Engineer with six years experience in cloud infrastructure, DevOp
       </div>
     </div>
 
-    <p class="experience-description">Building the banks Network Monitoring Observability platform on-top of a cloud native, modern and scalable tech stack; Grafana Mimir, Telegraf and ClickHouse.</p>
+    <p class="experience-description">Contributed to the development of the bank's Network Monitoring Observability (NMO) platform; a cloud-native, containerised, and scalable tech stack using Grafana Mimir, Telegraf, and various exporters.</p>
 
     <div class="achievements">
       <h4>Key Responsibilities & Achievements:</h4>
       <ul>
-        <li>Led enterprise-scale migration initiatives to AWS, improving system reliability and reducing operational costs</li>
-        <li>Built and maintained self-service Kubernetes platforms serving hundreds of development teams</li>
-        <li>Designed and implemented CI/CD pipelines and GitOps workflows using ArgoCD and GitHub Actions</li>
-        <li>Established monitoring and observability practices using Prometheus, Grafana, and DataDog</li>
-        <li>Mentored junior engineers and contributed to platform engineering best practices</li>
+        <li>Led the design and implementation of a greenfield NetFlow ingestion and observability feature, expanding the NMO platform to provide new network flow analysis capabilities.</li>
+        <li>Designed the end-to-end data pipeline, using Telegraf to collect NetFlow data, stream it to a data lake (S3), and leverage ClickHouse for high-performance analysis.</li>
+        <li>Architected the infrastructure and deployment pipeline on AWS, Kubernetes, utilising GitOps principles with Argo CD to manage all containerised services.</li>
+        <li>Engineered and optimised the ClickHouse database with advanced techniques to achieve sub-second query response times on terabytes of NetFlow data.</li>
+        <li>Built CI/CD pipelines for Infrastructure as Code (IaC) using GitHub Actions, reducing manual operations by 1 hour per week.</li>
+        <li>Developed a helm template and diff check pipeline to generate raw Kubernetes manifests and validate changes to the raw resources before deploying to clusters. This reduced the number of unexpected changes and failed deployments.</li>
+        <li>Integrated an MS Teams CoPilot AI chatbot called ChatIT with product documentation to enhance the tenant support and user experience.</li>
+        <li>Conducted two knowledge sharing sessions in my first three months in the team.</li>
+        <li>Mentoring for two engineers in the group outside of my domain; API Gateway/Risk.</li>
       </ul>
     </div>
 
     <div class="key-metrics">
       <h4>Impact & Results:</h4>
       <ul class="metrics-list">
-        <li>Reduced deployment time by 75% through automated CI/CD pipeline implementation</li>
-        <li>Led cost optimization initiatives resulting in 40% reduction in cloud infrastructure spend</li>
-        <li>Built self-service Kubernetes platform adopted by 200+ development teams</li>
-        <li>Established enterprise-wide monitoring standards and practices</li>
+        <li>Improved observability of Network Devices using NetFlow significantly reducing MTTR.</li>
       </ul>
     </div>
   </div>
